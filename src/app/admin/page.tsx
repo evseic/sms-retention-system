@@ -128,9 +128,6 @@ export default function AdminPage() {
                 placeholder="Įveskite saugos raktą"
                 className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm text-white placeholder-white/30 focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none transition-all"
               />
-              <p className="text-[10px] text-white/40 mt-1">
-                Numatytasis vietinis raktas: <code className="text-emerald-growth">{DEFAULT_TOKEN}</code>
-              </p>
             </div>
 
             {authError && (
