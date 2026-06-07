@@ -73,7 +73,7 @@ const workflowSteps = [
 const faqItems = [
   {
     question: "Per kiek laiko pamatysiu rezultatus?",
-    answer: "Pirmieji papildomi užsakymai ir sugrąžinti klientai pasirodo jau per pirmąsias 48 valandas po sistemos paleidimo. Stabilios pakartotinės pajamos iš šio kanalo nusistovi per pirmąsias 30 dienų.",
+    answer: "Pirmieji  užsakymai ir sugrąžinti klientai pasirodo jau per pirmąsias 7 Dienas po sistemos paleidimo. Stabilios pakartotinės pajamos iš šio kanalo nusistovi per pirmąsias 30 dienų.",
   },
   {
     question: "Ką tiksliai gaunu už €350/mėn. fiksuotą mokestį?",
@@ -89,7 +89,7 @@ const faqItems = [
   },
   {
     question: "Kaip skaičiuojamas papildomų žinučių (SMS/WhatsApp) siuntimo mokestis?",
-    answer: "Into €350/mėn. paslaugos kainą įeina pilnas sistemos valdymas. Pačių žinučių siuntimo išlaidos (keli centai už žinutę) yra mokamos tiesiogiai paslaugų tiekėjui pagal faktinį sunaudojimą.",
+    answer: "I €350/mėn. paslaugos kainą įeina pilnas sistemos valdymas. Pačių žinučių siuntimo išlaidos (keli centai už žinutę) yra mokamos tiesiogiai paslaugų tiekėjui pagal faktinį sunaudojimą.",
   },
 ];
 
@@ -371,15 +371,15 @@ export default function Home() {
         }`}
       >
         <div className="max-w-container-max mx-auto h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <svg className="w-8 h-8 text-deep-navy" viewBox="0 0 100 100" fill="none">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <svg className="w-6 h-6 sm:w-8 h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
               <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
                     stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
               <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
                 SMS
               </text>
             </svg>
-            <span className="text-xl font-display font-bold text-deep-navy tracking-tight">
+            <span className="text-base sm:text-xl font-display font-bold text-deep-navy tracking-tight shrink-0">
               SMSflow
             </span>
           </div>
@@ -404,7 +404,7 @@ export default function Home() {
 
           <a
             href="#audit"
-            className="bg-deep-navy text-white px-5 py-3 rounded-full text-sm font-bold hover:scale-95 transition-transform"
+            className="bg-deep-navy text-white px-3.5 py-2.5 sm:px-5 sm:py-3 rounded-full text-xs sm:text-sm font-bold hover:scale-95 transition-transform shrink-0 whitespace-nowrap"
           >
             Nemokamas auditas
           </a>
@@ -1189,15 +1189,15 @@ export default function Home() {
       <footer className="bg-surface-container-lowest border-t border-border-subtle w-full py-12 relative z-10">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="flex items-center gap-2">
-              <svg className="w-6 h-6 text-deep-navy" viewBox="0 0 100 100" fill="none">
+            <div className="flex items-center gap-1 sm:gap-2">
+              <svg className="w-5 h-5 sm:w-6 h-6 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
                 <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
                       stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
                 <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
                   SMS
                 </text>
               </svg>
-              <span className="text-lg font-display font-bold text-deep-navy tracking-tight">
+              <span className="text-sm sm:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
                 SMSflow
               </span>
             </div>
