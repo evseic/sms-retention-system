@@ -371,7 +371,7 @@ export default function AdminPage() {
                     <p className="text-xs text-white font-medium">{selectedLead.answers.turnover || "Nenurodyta"}</p>
                   </div>
                   <div className="p-3.5 bg-white/5 rounded-lg border border-white/5">
-                    <p className="text-[10px] text-white/50 font-semibold mb-1">2. SMS ir „WhatsApp“ rinkodara</p>
+                    <p className="text-[10px] text-white/50 font-semibold mb-1">2. SMS rinkodara</p>
                     <p className="text-xs text-white font-medium">{selectedLead.answers.currentUsage || "Nenurodyta"}</p>
                   </div>
                   <div className="p-3.5 bg-white/5 rounded-lg border border-white/5">
