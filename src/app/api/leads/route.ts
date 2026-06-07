@@ -41,10 +41,23 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const token = searchParams.get("token");
 
-    // Standard dev fallback password
-    const adminToken = process.env.ADMIN_TOKEN || "returna_secret_key_2026";
+    // Retrieve the admin token securely from environment variables
+    const adminToken = process.env.ADMIN_TOKEN;
+    const isDev = process.env.NODE_ENV === "development";
+    
+    // In production, we require ADMIN_TOKEN to be configured for safety
+    if (!adminToken && !isDev) {
+      console.error("Saugumo klaida: ADMIN_TOKEN nėra sukonfigūruotas aplinkos kintamuosiuose.");
+      return NextResponse.json(
+        { error: "Serverio konfigūracijos klaida (Authentication not configured)." },
+        { status: 500 }
+      );
+    }
 
-    if (token !== adminToken) {
+    // Default fallback allowed ONLY in local development
+    const effectiveToken = adminToken || "returna_secret_key_2026";
+
+    if (token !== effectiveToken) {
       return NextResponse.json({ error: "Nėra prieigos (Unauthorized)" }, { status: 401 });
     }
 
