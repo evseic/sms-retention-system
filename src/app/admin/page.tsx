@@ -31,11 +31,11 @@ export default function AdminPage() {
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
 
   // Default fallback admin token matching the route.ts default
-  const DEFAULT_TOKEN = "returna_secret_key_2026";
+  const DEFAULT_TOKEN = "smsflow_secret_key_2026";
 
   useEffect(() => {
     // Check if token is already saved in localStorage
-    const savedToken = localStorage.getItem("returna_admin_token");
+    const savedToken = localStorage.getItem("smsflow_admin_token");
     if (savedToken) {
       setToken(savedToken);
       setIsAuthenticated(true);
@@ -59,7 +59,7 @@ export default function AdminPage() {
       console.error(err);
       setAuthError(err.message || "Serverio klaida.");
       // Clear invalid token
-      localStorage.removeItem("returna_admin_token");
+      localStorage.removeItem("smsflow_admin_token");
       setIsAuthenticated(false);
     } finally {
       setIsLoading(false);
@@ -75,14 +75,14 @@ export default function AdminPage() {
     }
 
     // Attempt auth with user input token
-    localStorage.setItem("returna_admin_token", passwordInput);
+    localStorage.setItem("smsflow_admin_token", passwordInput);
     setToken(passwordInput);
     setIsAuthenticated(true);
     fetchLeads(passwordInput);
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("returna_admin_token");
+    localStorage.removeItem("smsflow_admin_token");
     setToken("");
     setIsAuthenticated(false);
     setPasswordInput("");
@@ -114,7 +114,7 @@ export default function AdminPage() {
             <svg className="w-10 h-10 mx-auto text-emerald-growth mb-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
             </svg>
-            <h1 className="font-display text-2xl font-bold tracking-tight text-white">Returna Admin</h1>
+            <h1 className="font-display text-2xl font-bold tracking-tight text-white">SMSflow Admin</h1>
             <p className="text-xs text-white/50 mt-1">Prisijunkite prie administravimo skydelio</p>
           </div>
 
@@ -165,7 +165,7 @@ export default function AdminPage() {
               </text>
             </svg>
             <span className="font-display font-bold text-base text-white tracking-tight">
-              Returna Admin
+              SMSflow Admin
             </span>
             <span className="bg-emerald-growth/10 text-emerald-growth text-[9px] font-bold px-2 py-0.5 rounded-full">
               LIVE
