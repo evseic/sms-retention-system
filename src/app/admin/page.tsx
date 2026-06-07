@@ -31,7 +31,7 @@ export default function AdminPage() {
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
 
   // Default fallback admin token matching the route.ts default
-  const DEFAULT_TOKEN = "smsflow_secret_key_2026";
+  const DEFAULT_TOKEN = "Tudasudaimillion28$";
 
   useEffect(() => {
     // Check if token is already saved in localStorage
