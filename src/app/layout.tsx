@@ -15,9 +15,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SMSflow | SMS & WhatsApp klientų išlaikymo sistemos",
-  description: "Automatizuotos SMS ir WhatsApp klientų sugrąžinimo sekos vietiniams ir paslaugų verslams. Tik €350/mėn. pilnas valdymas.",
-  keywords: ["klientu išlaikymas", "SMS rinkodara", "WhatsApp rinkodara", "marketingo automatizavimas", "vietinis verslas"],
+  title: "SMSflow | SMS klientų išlaikymo sistemos",
+  description: "Automatizuotos SMS klientų sugrąžinimo sekos vietiniams ir paslaugų verslams. Tik €350/mėn. pilnas valdymas.",
+  keywords: ["klientu išlaikymas", "SMS rinkodara", "marketingo automatizavimas", "vietinis verslas"],
 };
 
 export default function RootLayout({
