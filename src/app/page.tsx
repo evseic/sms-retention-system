@@ -495,21 +495,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Logo Strip */}
-      <section className="py-12 border-y border-border-subtle bg-white overflow-hidden">
-        <div className="max-w-container-max mx-auto px-margin-mobile text-center">
-          <p className="text-xs uppercase font-bold tracking-wider text-on-surface-variant/60 mb-6">
-            Mumis pasitiki paslaugų ir vietiniai verslai Lietuvoje pakartotiniams užsakymams gauti
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale">
-            <span className="text-lg font-bold tracking-widest text-deep-navy">SALONAS.AUGIMAS</span>
-            <span className="text-lg font-bold tracking-widest text-deep-navy">KLINIKA.PRO</span>
-            <span className="text-lg font-bold tracking-widest text-deep-navy">FITNESS.SYSTEMS</span>
-            <span className="text-lg font-bold tracking-widest text-deep-navy">AUTO.SPARK</span>
-          </div>
-        </div>
-      </section>
-
       {/* Intro Section with interactive Revenue Calculator */}
       <section id="about" className="relative py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-emerald-growth/10 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
