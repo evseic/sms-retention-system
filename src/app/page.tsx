@@ -322,7 +322,7 @@ export default function Home() {
               </text>
             </svg>
             <span className="text-xl font-display font-bold text-deep-navy tracking-tight">
-              Returna
+              SMSflow
             </span>
           </div>
 
@@ -796,7 +796,7 @@ export default function Home() {
             
             <div className="relative z-10">
               <span className="inline-block border border-white/30 bg-white/10 text-[9px] uppercase tracking-wider font-bold rounded-full px-3 py-1 text-white mb-8">
-                RETURNA · PAKETAS
+                SMSFLOW · PAKETAS
               </span>
               
               <h3 className="font-display text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
@@ -882,7 +882,7 @@ export default function Home() {
                 </div>
               </a>
               <p className="text-center text-[10px] text-white/30 mt-4">
-                50+ Lietuvos verslų jau pasitiki Returna.lt
+                50+ Lietuvos verslų jau pasitiki smsflow.lt
               </p>
             </div>
 
@@ -1132,16 +1132,16 @@ export default function Home() {
                 </text>
               </svg>
               <span className="text-lg font-display font-bold text-deep-navy tracking-tight">
-                Returna
+                SMSflow
               </span>
             </div>
             
             <div className="flex flex-col items-center md:items-start gap-2 text-xs text-on-surface-variant font-medium">
-              <a href="mailto:info@returna.lt" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
+              <a href="mailto:info@smsflow.lt" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5 text-on-surface-variant/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                info@returna.lt
+                info@smsflow.lt
               </a>
               <a href="tel:+37067911191" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5 text-on-surface-variant/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1153,7 +1153,7 @@ export default function Home() {
           </div>
 
           <div className="text-xs text-on-surface-variant opacity-60 md:self-end">
-            © 2026 Returna. Visos teisės saugomos.
+            © 2026 SMSflow. Visos teisės saugomos.
           </div>
         </div>
       </footer>
