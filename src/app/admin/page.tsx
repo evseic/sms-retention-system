@@ -154,14 +154,14 @@ export default function AdminPage() {
       <header className="border-b border-white/5 bg-[#121824]/60 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto h-16 px-4 md:px-8 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <svg className="w-6 h-6 text-emerald-growth" viewBox="0 0 100 100" fill="none">
+            <svg className="w-5 h-5 sm:w-6 h-6 text-emerald-growth" viewBox="0 0 100 100" fill="none">
               <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
                     stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
               <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
                 SMS
               </text>
             </svg>
-            <span className="font-display font-bold text-base text-white tracking-tight">
+            <span className="font-display font-bold text-sm sm:text-base text-white tracking-tight">
               SMSflow Admin
             </span>
             <span className="bg-emerald-growth/10 text-emerald-growth text-[9px] font-bold px-2 py-0.5 rounded-full">
