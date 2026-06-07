@@ -368,19 +368,19 @@ export default function AdminPage() {
                 <div className="space-y-4">
                   <div className="p-3.5 bg-white/5 rounded-lg border border-white/5">
                     <p className="text-[10px] text-white/50 font-semibold mb-1">1. Mėnesinė apyvarta</p>
-                    <p className="text-xs text-white font-medium">{selectedLead.answers.turnover || "Nenurodyta"}</p>
+                    <p className="text-xs text-white font-medium">{selectedLead.answers?.turnover || "Nenurodyta"}</p>
                   </div>
                   <div className="p-3.5 bg-white/5 rounded-lg border border-white/5">
                     <p className="text-[10px] text-white/50 font-semibold mb-1">2. SMS rinkodara</p>
-                    <p className="text-xs text-white font-medium">{selectedLead.answers.currentUsage || "Nenurodyta"}</p>
+                    <p className="text-xs text-white font-medium">{selectedLead.answers?.currentUsage || "Nenurodyta"}</p>
                   </div>
                   <div className="p-3.5 bg-white/5 rounded-lg border border-white/5">
                     <p className="text-[10px] text-white/50 font-semibold mb-1">3. Kontaktų bazės dydis</p>
-                    <p className="text-xs text-white font-medium">{selectedLead.answers.listSize || "Nenurodyta"}</p>
+                    <p className="text-xs text-white font-medium">{selectedLead.answers?.listSize || "Nenurodyta"}</p>
                   </div>
                   <div className="p-3.5 bg-white/5 rounded-lg border border-white/5">
                     <p className="text-[10px] text-white/50 font-semibold mb-1">4. Didžiausias iššūkis</p>
-                    <p className="text-xs text-white font-medium">{selectedLead.answers.challenge || "Nenurodyta"}</p>
+                    <p className="text-xs text-white font-medium">{selectedLead.answers?.challenge || "Nenurodyta"}</p>
                   </div>
                 </div>
               </div>
