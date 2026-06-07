@@ -55,7 +55,7 @@ export async function GET(request: Request) {
     }
 
     // Default fallback allowed ONLY in local development
-    const effectiveToken = adminToken || "returna_secret_key_2026";
+    const effectiveToken = adminToken || "smsflow_secret_key_2026";
 
     if (token !== effectiveToken) {
       return NextResponse.json({ error: "Nėra prieigos (Unauthorized)" }, { status: 401 });
