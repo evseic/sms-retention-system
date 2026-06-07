@@ -15,7 +15,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const newLead = addLead({
+    const newLead = await addLead({
       name,
       email,
       phone,
@@ -61,7 +61,7 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: "Nėra prieigos (Unauthorized)" }, { status: 401 });
     }
 
-    const leads = readLeads();
+    const leads = await readLeads();
     return NextResponse.json({ leads });
   } catch (error) {
     console.error("API error in GET /api/leads:", error);
