@@ -30,7 +30,7 @@ const workflowSteps = [
     subtitle: "Sujungiame jūsų CRM ar registracijų sistemą be jokių programuotojų pagalbos.",
     bullets: [
       "POS / registracijos sistemos integracija",
-      "SMS ir WhatsApp siuntėjo paskyrų konfigūravimas",
+      "SMS siuntėjo paskyros konfigūravimas",
       "Kontaktų rinkimo formų diegimas",
     ],
   },
@@ -88,7 +88,7 @@ const faqItems = [
     answer: "Ne. Mes teikiame pilną paslaugą (done-for-you). Patys parašome visus žinučių tekstus, suderiname siuntimo laikus ir atliekame techninius nustatymus. Jums tereikia patvirtinti galutinius tekstus.",
   },
   {
-    question: "Kaip skaičiuojamas papildomų žinučių (SMS/WhatsApp) siuntimo mokestis?",
+    question: "Kaip skaičiuojamas papildomų SMS žinučių siuntimo mokestis?",
     answer: "I €350/mėn. paslaugos kainą įeina pilnas sistemos valdymas. Pačių žinučių siuntimo išlaidos (keli centai už žinutę) yra mokamos tiesiogiai paslaugų tiekėjui pagal faktinį sunaudojimą.",
   },
 ];
@@ -230,13 +230,13 @@ export default function Home() {
     },
     {
       id: "currentUsage",
-      title: "SMS ir „WhatsApp“ rinkodara",
+      title: "SMS rinkodara",
       subtitle: "Kaip šiuo metu naudojate klientų išlaikymo įrankius savo versle?",
       options: [
         "Reguliariai siunčiame žinutes ir turime automatinius srautus",
         "Kartais išsiunčiame pasiūlymus rankiniu būdu, be automatizacijos",
         "Turime klientų bazę, bet jos praktiškai nenaudojame",
-        "Rinkodaros per SMS ar „WhatsApp“ dar visiškai nedarome",
+        "Rinkodaros per SMS dar visiškai nedarome",
       ],
     },
     {
@@ -427,7 +427,7 @@ export default function Home() {
               Padidinkite pajamas ir sugrąžinkite buvusius klientus automatiškai
             </h1>
             <p className="text-body-lg text-on-surface-variant mb-8 max-w-lg">
-              Padėsime įdarbinti jūsų turimą kontaktų bazę per automatizuotą SMS ir „WhatsApp“ komunikaciją. Pilnas paslaugos administravimas — už fiksuotą €350/mėn. mokestį.
+              Padėsime įdarbinti jūsų turimą kontaktų bazę per automatizuotą SMS komunikaciją. Pilnas paslaugos administravimas — už fiksuotą €350/mėn. mokestį.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -508,7 +508,7 @@ export default function Home() {
               Uždirbkite daugiau iš to, <span className="text-emerald-growth italic">ką jau turite</span>.
             </h2>
             <p className="text-body-lg text-on-surface-variant leading-relaxed mb-6">
-              Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius SMS bei „WhatsApp“ pranešimus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.
+              Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius SMS pranešimus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.
             </p>
           </div>
 
@@ -684,7 +684,7 @@ export default function Home() {
             <span className="text-emerald-growth italic font-medium">per 7 dienas.</span>
           </h2>
           <p className="text-white/60 text-sm md:text-base max-w-xl mb-12 font-medium relative z-10">
-            Ne mėnesiai derinimo. Žingsnis po žingsnio — nuo audito iki pilnai automatizuoto, pajamas nešančio SMS ir „WhatsApp“ kanalo per vieną savaitę.
+            Ne mėnesiai derinimo. Žingsnis po žingsnio — nuo audito iki pilnai automatizuoto, pajamas nešančio SMS kanalo per vieną savaitę.
           </p>
 
           {/* Horizontal Timeline Switcher */}
@@ -834,7 +834,7 @@ export default function Home() {
             Pradėkite uždirbti <span className="text-emerald-growth italic font-medium">jau šį mėnesį.</span>
           </h2>
           <p className="text-white/60 text-sm md:text-base max-w-xl mx-auto font-medium">
-            Vienas mėnesinis paketas, kuris padengia visą SMS ir WhatsApp kanalą — nuo strategijos iki kasdieninės priežiūros.
+            Vienas mėnesinis paketas, kuris padengia visą SMS kanalą — nuo strategijos iki kasdieninės priežiūros.
           </p>
         </div>
 
@@ -903,7 +903,7 @@ export default function Home() {
                 <span className="text-[10px] text-white/40 uppercase font-bold tracking-wider block mb-4">KĄ GAUSITE</span>
                 <ul className="space-y-3">
                   {[
-                    "Pilnai automatizuota SMS ir WhatsApp sistema",
+                    "Pilnai automatizuota SMS sistema",
                     "4-6 tikslinės žinučių kampanijos per mėnesį",
                     "A/B testai, profesionalūs tekstai ir pilna priežiūra",
                     "Be jokių integracijos mokesčių ar staigmenų",
