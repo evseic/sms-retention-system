@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 import { addLead, readLeads } from "@/lib/db";
+import { Resend } from "resend";
+
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 // POST handler: Saves new lead submissions
 export async function POST(request: Request) {
@@ -23,6 +26,55 @@ export async function POST(request: Request) {
       answers: answers || {},
       status: status || "qualified",
     });
+
+    // Send emails using Resend if configured
+    if (resend) {
+      // 1. Send notification to admin
+      try {
+        const quizSummary = Object.entries(answers || {})
+          .map(([key, val]) => `<li><strong>${key}:</strong> ${val}</li>`)
+          .join("");
+
+        await resend.emails.send({
+          from: "SMSflow Leads <onboarding@resend.dev>",
+          to: "info@smsflow.lt",
+          subject: `⚡️ Nauja užklausa iš SMSflow: ${website}`,
+          html: `
+            <h2>Gauta nauja kvalifikacinės viktorinos užklausa</h2>
+            <p><strong>Vardas:</strong> ${name}</p>
+            <p><strong>El. paštas:</strong> ${email}</p>
+            <p><strong>Telefonas:</strong> ${phone}</p>
+            <p><strong>Svetainė:</strong> ${website}</p>
+            <p><strong>Statusas:</strong> ${status || "qualified"}</p>
+            <h3>Viktorinos atsakymai:</h3>
+            <ul>${quizSummary || "<li>Atsakymų nėra</li>"}</ul>
+          `,
+        });
+      } catch (adminEmailError) {
+        console.error("Failed to send admin notification email:", adminEmailError);
+      }
+
+      // 2. Send follow-up to client
+      try {
+        await resend.emails.send({
+          from: "SMSflow <onboarding@resend.dev>",
+          to: email,
+          subject: "Gauta jūsų audito užklausa – SMSflow",
+          html: `
+            <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; line-height: 1.6;">
+              <h2 style="color: #0F172A;">Sveiki, ${name}!</h2>
+              <p>Dėkojame, kad užpildėte kvalifikacinį klausimyną nemokamam SMS ir WhatsApp klientų išlaikymo auditui gauti.</p>
+              <p>Mes jau pradėjome analizuoti jūsų svetainę <strong>${website}</strong> bei pateiktus atsakymus. Mūsų komanda susisieks su jumis per artimiausias 24 valandas pateikdama rezultatus ir konkretų sugrąžinimo planą.</p>
+              <p>Jei turite skubių klausimų, galite susisiekti su mumis tiesiogiai el. paštu <a href="mailto:info@smsflow.lt">info@smsflow.lt</a> arba telefonu +370 679 11191.</p>
+              <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 30px 0;" />
+              <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>SMSflow komanda</strong><br />www.smsflow.lt</p>
+            </div>
+          `,
+        });
+      } catch (clientEmailError) {
+        console.error("Failed to send client follow-up email:", clientEmailError);
+      }
+    }
 
     return NextResponse.json({ success: true, lead: newLead });
   } catch (error) {
