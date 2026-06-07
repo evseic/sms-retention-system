@@ -110,41 +110,37 @@ export async function addLead(leadData: Omit<Lead, "id" | "createdAt">): Promise
   };
 
   if (supabase) {
-    try {
-      // Insert with both keys to support both table schemas (createdAt vs created_at)
-      const insertData = {
-        id,
-        name: leadData.name,
-        email: leadData.email,
-        phone: leadData.phone,
-        website: leadData.website,
-        answers: leadData.answers,
-        status: leadData.status,
-        createdAt,
-        created_at: createdAt
-      };
-      
-      const { error } = await supabase.from("leads").insert([insertData]);
-      if (error) {
-        console.warn("Supabase insert error, trying standard columns:", error.message);
-        // Retry with standard camelCase only, or standard snake_case only
-        const camelData = { id, name: leadData.name, email: leadData.email, phone: leadData.phone, website: leadData.website, answers: leadData.answers, status: leadData.status, createdAt };
-        const { error: errorCamel } = await supabase.from("leads").insert([camelData]);
-        if (errorCamel) {
-          const snakeData = { id, name: leadData.name, email: leadData.email, phone: leadData.phone, website: leadData.website, answers: leadData.answers, status: leadData.status, created_at: createdAt };
-          const { error: errorSnake } = await supabase.from("leads").insert([snakeData]);
-          if (errorSnake) {
-            throw new Error(`Supabase insert failed: ${errorSnake.message}`);
-          }
+    // Insert with both keys to support both table schemas (createdAt vs created_at)
+    const insertData = {
+      id,
+      name: leadData.name,
+      email: leadData.email,
+      phone: leadData.phone,
+      website: leadData.website,
+      answers: leadData.answers,
+      status: leadData.status,
+      createdAt,
+      created_at: createdAt
+    };
+    
+    const { error } = await supabase.from("leads").insert([insertData]);
+    if (error) {
+      console.warn("Supabase insert error, trying standard columns:", error.message);
+      // Retry with standard camelCase only, or standard snake_case only
+      const camelData = { id, name: leadData.name, email: leadData.email, phone: leadData.phone, website: leadData.website, answers: leadData.answers, status: leadData.status, createdAt };
+      const { error: errorCamel } = await supabase.from("leads").insert([camelData]);
+      if (errorCamel) {
+        const snakeData = { id, name: leadData.name, email: leadData.email, phone: leadData.phone, website: leadData.website, answers: leadData.answers, status: leadData.status, created_at: createdAt };
+        const { error: errorSnake } = await supabase.from("leads").insert([snakeData]);
+        if (errorSnake) {
+          throw new Error(`Supabase insert failed: ${errorSnake.message}`);
         }
       }
-      return newLead;
-    } catch (e) {
-      console.warn("Supabase write failed, falling back to local JSON file:", e);
     }
+    return newLead;
   }
 
-  // Fallback to local JSON file
+  // Fallback to local JSON file (only when Supabase is not configured)
   try {
     let leads: Lead[] = [];
     if (fs.existsSync(DB_FILE)) {
@@ -155,6 +151,7 @@ export async function addLead(leadData: Omit<Lead, "id" | "createdAt">): Promise
     fs.writeFileSync(DB_FILE, JSON.stringify(leads, null, 2), "utf-8");
   } catch (error) {
     console.error("Error writing to database file:", error);
+    throw error;
   }
 
   return newLead;
