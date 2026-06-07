@@ -77,10 +77,10 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ success: true, lead: newLead });
-  } catch (error) {
+  } catch (error: any) {
     console.error("API error in POST /api/leads:", error);
     return NextResponse.json(
-      { error: "Nepavyko išsaugoti užklausos. Serverio klaida." },
+      { error: `Nepavyko išsaugoti užklausos: ${error?.message || error}` },
       { status: 500 }
     );
   }
@@ -115,10 +115,10 @@ export async function GET(request: Request) {
 
     const leads = await readLeads();
     return NextResponse.json({ leads });
-  } catch (error) {
+  } catch (error: any) {
     console.error("API error in GET /api/leads:", error);
     return NextResponse.json(
-      { error: "Nepavyko nuskaityti užklausų. Serverio klaida." },
+      { error: `Nepavyko nuskaityti užklausų: ${error?.message || error}` },
       { status: 500 }
     );
   }
