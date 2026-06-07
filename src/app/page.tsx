@@ -126,8 +126,8 @@ export default function Home() {
   // FAQ Active Index State
   const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(null);
 
-  // SMS Live simulation state
-  const [visibleSMSCount, setVisibleSMSCount] = useState(1);
+  // SMS Live simulation state (iPhone-style sequence)
+  const [chatMessages, setChatMessages] = useState<{ sender: string; text: string; isTyping?: boolean }[]>([]);
 
   // Database Calculator State
   const [calcContacts, setCalcContacts] = useState(1500);
@@ -145,17 +145,75 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Loop SMS preview animation
+  // iPhone SMS animation sequence with typing bubbles
   useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleSMSCount((prev) => {
-        if (prev >= smsMessages.length) {
-          return 1; // Restart loop
-        }
-        return prev + 1;
-      });
-    }, 4000);
-    return () => clearInterval(interval);
+    let timeoutId: NodeJS.Timeout;
+    let sequenceStep = 0;
+
+    const runSequence = () => {
+      if (sequenceStep === 0) {
+        // Show first business message
+        setChatMessages([
+          { sender: "system", text: "Sveiki! Pastebėjome, kad praėjo 3 mėnesiai po jūsų paskutinio vizito klinikoje. Ar norėtumėte užsiregistruoti profilaktinei patikrai?" }
+        ]);
+        sequenceStep = 1;
+        timeoutId = setTimeout(runSequence, 3000);
+      } else if (sequenceStep === 1) {
+        // Show second business message (coupon code)
+        setChatMessages((prev) => [
+          ...prev,
+          { sender: "system", text: "Dovanojame €10 nuolaidą šiam vizitui. Registruokitės čia: gp.lt/auditas" }
+        ]);
+        sequenceStep = 2;
+        timeoutId = setTimeout(runSequence, 3500);
+      } else if (sequenceStep === 2) {
+        // Show client typing bubble
+        setChatMessages((prev) => [
+          ...prev,
+          { sender: "client", text: "", isTyping: true }
+        ]);
+        sequenceStep = 3;
+        timeoutId = setTimeout(runSequence, 1500);
+      } else if (sequenceStep === 3) {
+        // Replace typing bubble with client response
+        setChatMessages((prev) => {
+          const list = prev.filter(m => !m.isTyping);
+          return [
+            ...list,
+            { sender: "client", text: "Sveiki, taip, norėčiau. Ar turite laisvą laiką šį penktadienį po pietų?" }
+          ];
+        });
+        sequenceStep = 4;
+        timeoutId = setTimeout(runSequence, 2500);
+      } else if (sequenceStep === 4) {
+        // Show business typing bubble
+        setChatMessages((prev) => [
+          ...prev,
+          { sender: "system", text: "", isTyping: true }
+        ]);
+        sequenceStep = 5;
+        timeoutId = setTimeout(runSequence, 1500);
+      } else if (sequenceStep === 5) {
+        // Replace typing bubble with final confirmation response
+        setChatMessages((prev) => {
+          const list = prev.filter(m => !m.isTyping);
+          return [
+            ...list,
+            { sender: "system", text: "Taip! Turime laisvą laiką penktadienį 15:30 val. Registraciją patvirtinome, lauksime jūsų! 🌟" }
+          ];
+        });
+        sequenceStep = 6;
+        timeoutId = setTimeout(runSequence, 6000); // Hold final screen for 6s
+      } else if (sequenceStep === 6) {
+        // Reset and clear chat
+        setChatMessages([]);
+        sequenceStep = 0;
+        timeoutId = setTimeout(runSequence, 1000);
+      }
+    };
+
+    runSequence();
+    return () => clearTimeout(timeoutId);
   }, []);
 
   // Calculator logic values (smaller, more realistic coefficients: 20% lost annually, 10% recoverable monthly of the annual lost amount)
@@ -400,7 +458,7 @@ export default function Home() {
                   <svg className="w-4 h-4 text-emerald-growth" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
                   </svg>
-                  <span>Mano Klinika</span>
+                  <span>SMSflow</span>
                 </div>
                 <span className="text-[10px] bg-emerald-growth/10 text-emerald-growth px-2 py-0.5 rounded uppercase tracking-tighter">
                   SMS Aktyvuota
@@ -409,16 +467,24 @@ export default function Home() {
 
               {/* Chat thread mockup container */}
               <div className="space-y-3 h-[380px] max-h-[380px] overflow-y-auto transition-all duration-300 pr-1 flex flex-col justify-end">
-                {smsMessages.slice(0, visibleSMSCount).map((msg, idx) => (
+                {chatMessages.map((msg, idx) => (
                   <div
                     key={idx}
-                    className={`flex flex-col max-w-[85%] rounded-[18px] px-4 py-2.5 text-xs md:text-sm leading-relaxed transition-all duration-500 scale-95 origin-bottom ${
+                    className={`flex items-center max-w-[85%] rounded-[18px] px-4 py-2.5 text-xs md:text-sm leading-relaxed transition-all duration-300 origin-bottom animate-sms-pop ${
                       msg.sender === "system"
                         ? "bg-[#E9E9EB] text-black self-start rounded-tl-[4px]"
                         : "bg-[#007AFF] text-white self-end rounded-tr-[4px] ml-auto"
                     }`}
                   >
-                    <p>{msg.text}</p>
+                    {msg.isTyping ? (
+                      <div className="flex items-center gap-1.5 py-1 px-1">
+                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                      </div>
+                    ) : (
+                      <p>{msg.text}</p>
+                    )}
                   </div>
                 ))}
               </div>
