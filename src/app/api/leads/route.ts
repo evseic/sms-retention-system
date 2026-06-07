@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
         await resend.emails.send({
           from: "SMSflow Leads <onboarding@resend.dev>",
-          to: "info@smsflow.lt",
+          to: "info@smsflow.eu",
           subject: `⚡️ Nauja užklausa iš SMSflow: ${website}`,
           html: `
             <h2>Gauta nauja kvalifikacinės viktorinos užklausa</h2>
@@ -65,7 +65,7 @@ export async function POST(request: Request) {
               <h2 style="color: #0F172A;">Sveiki, ${name}!</h2>
               <p>Dėkojame, kad užpildėte kvalifikacinį klausimyną nemokamam SMS klientų išlaikymo auditui gauti.</p>
               <p>Mes jau pradėjome analizuoti jūsų svetainę <strong>${website}</strong> bei pateiktus atsakymus. Mūsų komanda susisieks su jumis per artimiausias 24 valandas pateikdama rezultatus ir konkretų sugrąžinimo planą.</p>
-              <p>Jei turite skubių klausimų, galite susisiekti su mumis tiesiogiai el. paštu <a href="mailto:info@smsflow.lt">info@smsflow.lt</a> arba telefonu +370 679 11191.</p>
+              <p>Jei turite skubių klausimų, galite susisiekti su mumis tiesiogiai el. paštu <a href="mailto:info@smsflow.eu">info@smsflow.eu</a> arba telefonu +370 679 11191.</p>
               <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 30px 0;" />
               <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>SMSflow komanda</strong><br />www.smsflow.lt</p>
             </div>
