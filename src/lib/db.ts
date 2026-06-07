@@ -25,6 +25,20 @@ const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABAS
 
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
+// Helper to parse answers if stored as string/text
+const parseAnswers = (answers: any) => {
+  if (!answers) return {};
+  if (typeof answers === "string") {
+    try {
+      return JSON.parse(answers);
+    } catch (e) {
+      console.warn("Failed to parse answers JSON string:", e);
+      return {};
+    }
+  }
+  return answers;
+};
+
 // Helper to read leads
 export async function readLeads(): Promise<Lead[]> {
   if (supabase) {
@@ -50,14 +64,23 @@ export async function readLeads(): Promise<Lead[]> {
             email: item.email,
             phone: item.phone,
             website: item.website,
-            answers: item.answers,
+            answers: parseAnswers(item.answers),
             status: item.status,
             createdAt: item.createdAt || item.created_at || new Date().toISOString()
           })) as Lead[];
         }
         throw error;
       }
-      return data as Lead[];
+      return (data || []).map(item => ({
+        id: item.id,
+        name: item.name,
+        email: item.email,
+        phone: item.phone,
+        website: item.website,
+        answers: parseAnswers(item.answers),
+        status: item.status,
+        createdAt: item.createdAt || item.created_at || new Date().toISOString()
+      })) as Lead[];
     } catch (e) {
       console.warn("Supabase fetch failed, falling back to local JSON file:", e);
     }
