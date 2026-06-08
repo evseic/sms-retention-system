@@ -154,7 +154,7 @@ export default function Home() {
       if (sequenceStep === 0) {
         // Show first business message
         setChatMessages([
-          { sender: "system", text: "Sveiki! Pastebėjome, kad praėjo 3 mėnesiai po jūsų paskutinio vizito klinikoje. Ar norėtumėte užsiregistruoti profilaktinei patikrai?" }
+          { sender: smsMessages[0].sender, text: smsMessages[0].text }
         ]);
         sequenceStep = 1;
         timeoutId = setTimeout(runSequence, 3000);
@@ -162,7 +162,7 @@ export default function Home() {
         // Show second business message (coupon code)
         setChatMessages((prev) => [
           ...prev,
-          { sender: "system", text: "Dovanojame €10 nuolaidą šiam vizitui. Registruokitės čia: gp.lt/auditas" }
+          { sender: smsMessages[1].sender, text: smsMessages[1].text }
         ]);
         sequenceStep = 2;
         timeoutId = setTimeout(runSequence, 3500);
@@ -180,7 +180,7 @@ export default function Home() {
           const list = prev.filter(m => !m.isTyping);
           return [
             ...list,
-            { sender: "client", text: "Sveiki, taip, norėčiau. Ar turite laisvą laiką šį penktadienį po pietų?" }
+            { sender: smsMessages[2].sender, text: smsMessages[2].text }
           ];
         });
         sequenceStep = 4;
@@ -199,7 +199,7 @@ export default function Home() {
           const list = prev.filter(m => !m.isTyping);
           return [
             ...list,
-            { sender: "system", text: "Taip! Turime laisvą laiką penktadienį 15:30 val. Registraciją patvirtinome, lauksime jūsų! 🌟" }
+            { sender: smsMessages[3].sender, text: smsMessages[3].text }
           ];
         });
         sequenceStep = 6;
