@@ -371,15 +371,15 @@ export default function Home() {
         }`}
       >
         <div className="max-w-container-max mx-auto h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-          <div className="flex items-center gap-1 sm:gap-2">
-            <svg className="w-5 h-5 sm:w-8 h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
+          <div className="flex items-center gap-2">
+            <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
               <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
                     stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
               <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
                 SMS
               </text>
             </svg>
-            <span className="text-sm sm:text-xl font-display font-bold text-deep-navy tracking-tight shrink-0">
+            <span className="text-base sm:text-lg md:text-xl font-display font-bold text-deep-navy tracking-tight shrink-0">
               SMSflow
             </span>
           </div>
@@ -411,8 +411,182 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Quiz / Audit Section */}
+      <section id="audit" className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-deep-navy text-white border-b border-white/10 overflow-hidden">
+        {/* Animated Background Blobs */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-growth/10 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
+
+        <div className="max-w-[700px] mx-auto px-margin-mobile relative z-10">
+          <div className="text-center mb-10">
+            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
+              NEMOKAMA KONSULTACIJA
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 relative z-10">
+              Užsiregistruokite nemokamai konsultacijai — <br className="hidden md:inline" /> atsakykite į kelis klausimus.
+            </h2>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-md relative z-10">
+            {quizStep === "intro" && (
+              <div className="text-center py-6">
+                <p className="text-white/80 mb-6">
+                  Atsakykite į kelis trumpus klausimus ir užsiregistruokite nemokamai konsultacijai.
+                </p>
+                <button
+                  onClick={handleStartQuiz}
+                  className="bg-emerald-growth text-deep-navy font-bold px-8 py-4 rounded-full hover:scale-95 transition-transform"
+                >
+                  Pradėti
+                </button>
+              </div>
+            )}
+
+            {quizStep === "questions" && (
+              <div>
+                <div className="flex justify-between items-center mb-6 text-xs text-white/50">
+                  <span>Klausimas {currentQuestionIdx + 1} iš {questions.length}</span>
+                  <span>{Math.round(((currentQuestionIdx + 1) / questions.length) * 100)}% Atlikta</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">
+                  {questions[currentQuestionIdx].title}
+                </h3>
+                <p className="text-sm text-white/60 mb-6">
+                  {questions[currentQuestionIdx].subtitle}
+                </p>
+                <div className="space-y-3">
+                  {questions[currentQuestionIdx].options.map((option, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleOptionSelect(option)}
+                      className="w-full text-left p-4 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-growth/50 hover:bg-white/10 transition-all text-sm font-semibold"
+                    >
+                      {option}
+                    </button>
+                  ))}
+                </div>
+                <div className="flex justify-between items-center mt-6">
+                  <button
+                    onClick={handlePrevQuestion}
+                    className="text-xs text-white/50 hover:text-white transition-colors flex items-center gap-1"
+                  >
+                    ← Atgal
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {quizStep === "disqualified" && (
+              <div className="text-center py-6">
+                <div className="text-red-400 mb-4">
+                  <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Apyvarta per maža</h3>
+                <p className="text-sm text-white/65 leading-relaxed mb-6">
+                  Mūsų paslaugos efektyviausiai atsiperka paslaugų verslams, generuojantiems virš €5 000 mėnesinės apyvartos. Esant mažesnei apyvartai, €350/mėn. administravimo kaina gali neduoti teigiamo ROI.
+                </p>
+                <button
+                  onClick={() => setQuizStep("intro")}
+                  className="text-emerald-growth text-sm font-bold hover:underline"
+                >
+                  Pradėti iš naujo
+                </button>
+              </div>
+            )}
+
+            {quizStep === "form" && (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <h3 className="text-xl font-bold mb-4">Įveskite savo kontaktus nemokamai konsultacijai gauti</h3>
+                
+                <div>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Jūsų vardas</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={contactInfo.name}
+                    onChange={handleInputChange}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
+                    placeholder="Vardas Pavardė"
+                  />
+                  {errors.name && <span className="text-red-400 text-xs mt-1 block">{errors.name}</span>}
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Svetainės adresas (arba įmonės pavadinimas)</label>
+                  <input
+                    type="text"
+                    name="website"
+                    value={contactInfo.website}
+                    onChange={handleInputChange}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
+                    placeholder="manosvetaine.lt"
+                  />
+                  {errors.website && <span className="text-red-400 text-xs mt-1 block">{errors.website}</span>}
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Darbinis el. paštas</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={contactInfo.email}
+                    onChange={handleInputChange}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
+                    placeholder="vardas@imone.lt"
+                  />
+                  {errors.email && <span className="text-red-400 text-xs mt-1 block">{errors.email}</span>}
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Telefono numeris</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={contactInfo.phone}
+                    onChange={handleInputChange}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
+                    placeholder="+370 600 00000"
+                  />
+                  {errors.phone && <span className="text-red-400 text-xs mt-1 block">{errors.phone}</span>}
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-emerald-growth text-deep-navy font-bold py-4 rounded-full hover:scale-95 transition-all text-sm mt-4 disabled:opacity-50"
+                >
+                  {isSubmitting ? "Siunčiama..." : "Gauti nemokamą konsultaciją"}
+                </button>
+                {errors.submit && <span className="text-red-400 text-xs mt-2 text-center block">{errors.submit}</span>}
+              </form>
+            )}
+
+            {quizStep === "success" && (
+              <div className="text-center py-6">
+                <div className="text-emerald-growth mb-4">
+                  <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Užklausą sėkmingai gavome!</h3>
+                <p className="text-sm text-white/60 mb-6 leading-relaxed">
+                  Ačiū, {contactInfo.name}. Pradėjome analizuoti svetainės `{contactInfo.website}` klientų išlaikymo potencialą. Per 24 valandas susisieksime su jumis el. paštu `{contactInfo.email}` suderinti nemokamo skambučio laiko.
+                </p>
+                <button
+                  onClick={() => setQuizStep("intro")}
+                  className="text-emerald-growth text-sm font-bold hover:underline"
+                >
+                  Pateikti kitą užklausą
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-mesh-gradient">
+      <section className="relative py-20 md:py-28 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-mesh-gradient">
         {/* Animated Background Blobs with fixed z-index above background but below text */}
         <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-emerald-growth/15 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-deep-navy/10 rounded-full blur-[120px] animate-float-reverse pointer-events-none z-0"></div>
@@ -514,10 +688,7 @@ export default function Home() {
 
           {/* Interactive Calculator widget */}
           <div className="bg-white rounded-2xl border border-border-subtle p-6 md:p-8 shadow-xl">
-            <h3 className="font-display text-lg font-bold text-deep-navy mb-6 text-center">
-              Apskaičiuokite savo bazės potencialą 📊
-            </h3>
-            
+
             <div className="space-y-6">
               <div>
                 <div className="flex justify-between items-center text-sm font-semibold mb-2">
@@ -993,180 +1164,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quiz / Audit Section */}
-      <section id="audit" className="relative py-20 md:py-28 bg-deep-navy text-white border-t border-white/10 overflow-hidden">
-        {/* Animated Background Blobs */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-growth/10 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
-
-        <div className="max-w-[700px] mx-auto px-margin-mobile relative z-10">
-          <div className="text-center mb-10">
-            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
-              NEMOKAMAS AUGIMO AUDITAS
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 relative z-10">
-              Sužinokite savo bazės potencialą
-            </h2>
-            <p className="text-sm text-white/60 relative z-10">
-              Atsakykite į 4 klausimus ir sužinokite, ar jūsų duomenų bazė gali sugeneruoti papildomus €3 000+ per mėnesį.
-            </p>
-          </div>
-
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-md relative z-10">
-            {quizStep === "intro" && (
-              <div className="text-center py-6">
-                <p className="text-white/80 mb-6">
-                  Pasiruošę įvertinti savo klientų bazės galimybes? Auditas užtruks vos 60 sekundžių.
-                </p>
-                <button
-                  onClick={handleStartQuiz}
-                  className="bg-emerald-growth text-deep-navy font-bold px-8 py-4 rounded-full hover:scale-95 transition-transform"
-                >
-                  Pradėti auditą
-                </button>
-              </div>
-            )}
-
-            {quizStep === "questions" && (
-              <div>
-                <div className="flex justify-between items-center mb-6 text-xs text-white/50">
-                  <span>Klausimas {currentQuestionIdx + 1} iš {questions.length}</span>
-                  <span>{Math.round(((currentQuestionIdx + 1) / questions.length) * 100)}% Atlikta</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">
-                  {questions[currentQuestionIdx].title}
-                </h3>
-                <p className="text-sm text-white/60 mb-6">
-                  {questions[currentQuestionIdx].subtitle}
-                </p>
-                <div className="space-y-3">
-                  {questions[currentQuestionIdx].options.map((option, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleOptionSelect(option)}
-                      className="w-full text-left p-4 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-growth/50 hover:bg-white/10 transition-all text-sm font-semibold"
-                    >
-                      {option}
-                    </button>
-                  ))}
-                </div>
-                <div className="flex justify-between items-center mt-6">
-                  <button
-                    onClick={handlePrevQuestion}
-                    className="text-xs text-white/50 hover:text-white transition-colors flex items-center gap-1"
-                  >
-                    ← Atgal
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {quizStep === "disqualified" && (
-              <div className="text-center py-6">
-                <div className="text-red-400 mb-4">
-                  <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Apyvarta per maža</h3>
-                <p className="text-sm text-white/65 leading-relaxed mb-6">
-                  Mūsų paslaugos efektyviausiai atsiperka paslaugų verslams, generuojantiems virš €5 000 mėnesinės apyvartos. Esant mažesnei apyvartai, €350/mėn. administravimo kaina gali neduoti teigiamo ROI.
-                </p>
-                <button
-                  onClick={() => setQuizStep("intro")}
-                  className="text-emerald-growth text-sm font-bold hover:underline"
-                >
-                  Pradėti iš naujo
-                </button>
-              </div>
-            )}
-
-            {quizStep === "form" && (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <h3 className="text-xl font-bold mb-4">Įveskite savo kontaktus nemokamam auditui gauti</h3>
-                
-                <div>
-                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Jūsų vardas</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={contactInfo.name}
-                    onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
-                    placeholder="Vardas Pavardė"
-                  />
-                  {errors.name && <span className="text-red-400 text-xs mt-1 block">{errors.name}</span>}
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Svetainės adresas (arba įmonės pavadinimas)</label>
-                  <input
-                    type="text"
-                    name="website"
-                    value={contactInfo.website}
-                    onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
-                    placeholder="manosvetaine.lt"
-                  />
-                  {errors.website && <span className="text-red-400 text-xs mt-1 block">{errors.website}</span>}
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Darbinis el. paštas</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={contactInfo.email}
-                    onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
-                    placeholder="vardas@imone.lt"
-                  />
-                  {errors.email && <span className="text-red-400 text-xs mt-1 block">{errors.email}</span>}
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Telefono numeris</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={contactInfo.phone}
-                    onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
-                    placeholder="+370 600 00000"
-                  />
-                  {errors.phone && <span className="text-red-400 text-xs mt-1 block">{errors.phone}</span>}
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-emerald-growth text-deep-navy font-bold py-4 rounded-full hover:scale-95 transition-all text-sm mt-4 disabled:opacity-50"
-                >
-                  {isSubmitting ? "Siunčiama..." : "Gauti nemokamą audito sesiją"}
-                </button>
-                {errors.submit && <span className="text-red-400 text-xs mt-2 text-center block">{errors.submit}</span>}
-              </form>
-            )}
-
-            {quizStep === "success" && (
-              <div className="text-center py-6">
-                <div className="text-emerald-growth mb-4">
-                  <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Užklausą sėkmingai gavome!</h3>
-                <p className="text-sm text-white/60 mb-6 leading-relaxed">
-                  Ačiū, {contactInfo.name}. Pradėjome analizuoti svetainės `{contactInfo.website}` klientų išlaikymo potencialą. Per 24 valandas susisieksime su jumis el. paštu `{contactInfo.email}` suderinti nemokamo skambučio laiko.
-                </p>
-                <button
-                  onClick={() => setQuizStep("intro")}
-                  className="text-emerald-growth text-sm font-bold hover:underline"
-                >
-                  Pateikti kitą užklausą
-                </button>
-              </div>
-            )}
-          </div>
+      {/* Final CTA Section */}
+      <section className="relative py-20 md:py-28 bg-[#0B0F14] text-white border-t border-white/10 overflow-hidden text-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-emerald-growth/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
+        
+        <div className="max-w-[800px] mx-auto px-margin-mobile relative z-10">
+          <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
+            Užsiregistruokite nemokamai konsultacijai
+          </h2>
+          <p className="text-white/60 text-sm md:text-base mb-8 max-w-lg mx-auto">
+            Atsakykite į kelis trumpus klausimus ir užsiregistruokite nemokamai konsultacijai.
+          </p>
+          <a
+            href="#audit"
+            className="inline-block bg-emerald-growth text-deep-navy font-bold px-8 py-4 rounded-full hover:scale-95 transition-transform animate-pulse"
+          >
+            Registruotis
+          </a>
         </div>
       </section>
 
@@ -1174,15 +1188,15 @@ export default function Home() {
       <footer className="bg-surface-container-lowest border-t border-border-subtle w-full py-12 relative z-10">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="flex items-center gap-1 sm:gap-2">
-              <svg className="w-4 h-4 sm:w-6 h-6 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 sm:w-6 h-6 md:w-8 md:h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
                 <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
                       stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
                 <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
                   SMS
                 </text>
               </svg>
-              <span className="text-xs sm:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
+              <span className="text-sm sm:text-base md:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
                 SMSflow
               </span>
             </div>
