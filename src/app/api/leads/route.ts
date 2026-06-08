@@ -76,6 +76,43 @@ export async function POST(request: Request) {
       }
     }
 
+    // Send Telegram Notification if configured
+    const telegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
+    const telegramChatId = process.env.TELEGRAM_CHAT_ID;
+
+    if (telegramBotToken && telegramChatId) {
+      try {
+        const quizDetails = Object.entries(answers || {})
+          .map(([key, val]) => `*${key}:* ${val}`)
+          .join("\n");
+
+        const text = `⚡️ *Nauja užklausa iš SMSflow!*
+
+👤 *Vardas:* ${name}
+📧 *El. paštas:* ${email}
+📞 *Telefonas:* ${phone}
+🌐 *Svetainė:* ${website}
+🎯 *Statusas:* ${status || "qualified"}
+
+*Viktorinos atsakymai:*
+${quizDetails || "Atsakymų nėra"}`;
+
+        await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: telegramChatId,
+            text: text,
+            parse_mode: "Markdown",
+          }),
+        });
+      } catch (telegramError) {
+        console.error("Failed to send Telegram notification:", telegramError);
+      }
+    }
+
     return NextResponse.json({ success: true, lead: newLead });
   } catch (error: any) {
     console.error("API error in POST /api/leads:", error);
