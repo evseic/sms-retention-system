@@ -411,8 +411,173 @@ export default function Home() {
         </div>
       </header>
 
+
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-mesh-gradient">
+        {/* Animated Background Blobs with fixed z-index above background but below text */}
+        <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-emerald-growth/15 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-deep-navy/10 rounded-full blur-[120px] animate-float-reverse pointer-events-none z-0"></div>
+
+        <div className="grid md:grid-cols-2 gap-stack-lg items-center relative z-10">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-wider mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-growth animate-pulse"></span>
+              PILNAS KANALŲ VALDYMAS
+            </div>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-deep-navy leading-none mb-6">
+              Padidinkite pajamas ir sugrąžinkite buvusius klientus automatiškai
+            </h1>
+            <p className="text-body-lg text-on-surface-variant mb-8 max-w-lg">
+              Padėsime įdarbinti jūsų turimą kontaktų bazę per automatizuotą SMS komunikaciją. Pilnas paslaugos administravimas — už fiksuotą €350/mėn. mokestį.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#audit"
+                className="bg-deep-navy text-white text-center px-8 py-4 rounded-full font-bold hover:bg-black transition-all shadow-lg flex items-center justify-center gap-2"
+              >
+                Gauti nemokamą auditą
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="#pillars"
+                className="bg-white border border-border-subtle text-deep-navy text-center px-8 py-4 rounded-full font-bold hover:bg-surface-container transition-all"
+              >
+                Sužinoti daugiau
+              </a>
+            </div>
+          </div>
+
+          {/* Animated SMS iPhone-style Preview Mockup Container */}
+          <div className="relative mt-8 md:mt-0 flex flex-col gap-6">
+            <div className="bg-white rounded-2xl border border-border-subtle p-6 md:p-8 shadow-xl relative z-10">
+              
+              {/* Phone Status bar mock */}
+              <div className="flex items-center justify-between border-b border-border-subtle pb-4 mb-4 text-xs text-on-surface-variant font-semibold">
+                <div className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4 text-emerald-growth" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
+                  </svg>
+                  <span>SMSflow</span>
+                </div>
+                <span className="text-[10px] bg-emerald-growth/10 text-emerald-growth px-2 py-0.5 rounded uppercase tracking-tighter">
+                  SMS Aktyvuota
+                </span>
+              </div>
+
+              {/* Chat thread mockup container */}
+              <div className="space-y-3 h-[380px] max-h-[380px] overflow-y-auto transition-all duration-300 pr-1 flex flex-col justify-end">
+                {chatMessages.map((msg, idx) => (
+                  <div
+                    key={idx}
+                    className={`flex items-center max-w-[85%] rounded-[18px] px-4 py-2.5 text-xs md:text-sm leading-relaxed transition-all duration-300 origin-bottom animate-sms-pop ${
+                      msg.sender === "system"
+                        ? "bg-[#E9E9EB] text-black self-start rounded-tl-[4px]"
+                        : "bg-[#007AFF] text-white self-end rounded-tr-[4px] ml-auto"
+                    }`}
+                  >
+                    {msg.isTyping ? (
+                      <div className="flex items-center gap-1.5 py-1 px-1">
+                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                      </div>
+                    ) : (
+                      <p>{msg.text}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Decorative stack shadow backing */}
+            <div className="absolute -top-6 -right-6 w-full h-full bg-deep-navy/5 rounded-2xl -z-10"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro Section with interactive Revenue Calculator */}
+      <section id="about" className="relative py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-emerald-growth/10 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+          <div>
+            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
+              Klientų bazės įdarbinimas
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-deep-navy leading-tight mb-6">
+              Uždirbkite daugiau iš to, <span className="text-emerald-growth italic">ką jau turite</span>.
+            </h2>
+            <p className="text-body-lg text-on-surface-variant leading-relaxed mb-6">
+              Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius SMS pranešimus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.
+            </p>
+          </div>
+
+          {/* Interactive Calculator widget */}
+          <div className="bg-white rounded-2xl border border-border-subtle p-6 md:p-8 shadow-xl">
+
+            <div className="space-y-6">
+              <div>
+                <div className="flex justify-between items-center text-sm font-semibold mb-2">
+                  <span className="text-on-surface-variant">Turimų kontaktų skaičius:</span>
+                  <span className="text-deep-navy font-bold">{formatNumber(calcContacts)}</span>
+                </div>
+                <input
+                  type="range"
+                  min="100"
+                  max="10000"
+                  step="100"
+                  value={calcContacts}
+                  onChange={(e) => setCalcContacts(Number(e.target.value))}
+                  className="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-emerald-growth"
+                />
+              </div>
+
+              <div>
+                <div className="flex justify-between items-center text-sm font-semibold mb-2">
+                  <span className="text-on-surface-variant">Vidutinė paslaugos / krepšelio vertė:</span>
+                  <span className="text-deep-navy font-bold">{calcTicket} €</span>
+                </div>
+                <input
+                  type="range"
+                  min="10"
+                  max="150"
+                  step="5"
+                  value={calcTicket}
+                  onChange={(e) => setCalcTicket(Number(e.target.value))}
+                  className="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-emerald-growth"
+                />
+              </div>
+
+              <div className="pt-6 border-t border-border-subtle grid grid-cols-2 gap-4 text-center">
+                <div className="p-3 bg-red-500/5 rounded-xl border border-red-500/10">
+                  <span className="text-[10px] text-on-surface-variant uppercase font-bold">Prarandate kasmet</span>
+                  <p className="font-display text-base md:text-lg font-bold text-red-500 mt-1">
+                    -{formatNumber(lostAnnualRevenue)} €
+                  </p>
+                </div>
+                <div className="p-3 bg-emerald-growth/5 rounded-xl border border-emerald-growth/10">
+                  <span className="text-[10px] text-on-surface-variant uppercase font-bold">Sugrąžinsime kas mėnesį</span>
+                  <p className="font-display text-base md:text-lg font-bold text-emerald-growth mt-1">
+                    +{formatNumber(monthlyRecoverable)} €
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="#audit"
+                className="block text-center w-full bg-deep-navy hover:bg-black text-white font-bold py-3.5 rounded-full text-sm transition-all"
+              >
+                Gauti išsamų mano bazės auditą
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quiz / Audit Section */}
-      <section id="audit" className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-deep-navy text-white border-b border-white/10 overflow-hidden">
+      <section id="audit" className="relative py-20 md:py-28 bg-deep-navy text-white border-y border-white/10 overflow-hidden">
         {/* Animated Background Blobs */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-growth/10 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
 
@@ -581,169 +746,6 @@ export default function Home() {
                 </button>
               </div>
             )}
-          </div>
-        </div>
-      </section>
-
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-28 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-mesh-gradient">
-        {/* Animated Background Blobs with fixed z-index above background but below text */}
-        <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-emerald-growth/15 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-deep-navy/10 rounded-full blur-[120px] animate-float-reverse pointer-events-none z-0"></div>
-
-        <div className="grid md:grid-cols-2 gap-stack-lg items-center relative z-10">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-wider mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-growth animate-pulse"></span>
-              PILNAS KANALŲ VALDYMAS
-            </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-deep-navy leading-none mb-6">
-              Padidinkite pajamas ir sugrąžinkite buvusius klientus automatiškai
-            </h1>
-            <p className="text-body-lg text-on-surface-variant mb-8 max-w-lg">
-              Padėsime įdarbinti jūsų turimą kontaktų bazę per automatizuotą SMS komunikaciją. Pilnas paslaugos administravimas — už fiksuotą €350/mėn. mokestį.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#audit"
-                className="bg-deep-navy text-white text-center px-8 py-4 rounded-full font-bold hover:bg-black transition-all shadow-lg flex items-center justify-center gap-2"
-              >
-                Gauti nemokamą auditą
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-              <a
-                href="#pillars"
-                className="bg-white border border-border-subtle text-deep-navy text-center px-8 py-4 rounded-full font-bold hover:bg-surface-container transition-all"
-              >
-                Sužinoti daugiau
-              </a>
-            </div>
-          </div>
-
-          {/* Animated SMS iPhone-style Preview Mockup Container */}
-          <div className="relative mt-8 md:mt-0 flex flex-col gap-6">
-            <div className="bg-white rounded-2xl border border-border-subtle p-6 md:p-8 shadow-xl relative z-10">
-              
-              {/* Phone Status bar mock */}
-              <div className="flex items-center justify-between border-b border-border-subtle pb-4 mb-4 text-xs text-on-surface-variant font-semibold">
-                <div className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-emerald-growth" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
-                  </svg>
-                  <span>SMSflow</span>
-                </div>
-                <span className="text-[10px] bg-emerald-growth/10 text-emerald-growth px-2 py-0.5 rounded uppercase tracking-tighter">
-                  SMS Aktyvuota
-                </span>
-              </div>
-
-              {/* Chat thread mockup container */}
-              <div className="space-y-3 h-[380px] max-h-[380px] overflow-y-auto transition-all duration-300 pr-1 flex flex-col justify-end">
-                {chatMessages.map((msg, idx) => (
-                  <div
-                    key={idx}
-                    className={`flex items-center max-w-[85%] rounded-[18px] px-4 py-2.5 text-xs md:text-sm leading-relaxed transition-all duration-300 origin-bottom animate-sms-pop ${
-                      msg.sender === "system"
-                        ? "bg-[#E9E9EB] text-black self-start rounded-tl-[4px]"
-                        : "bg-[#007AFF] text-white self-end rounded-tr-[4px] ml-auto"
-                    }`}
-                  >
-                    {msg.isTyping ? (
-                      <div className="flex items-center gap-1.5 py-1 px-1">
-                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '300ms' }}></span>
-                      </div>
-                    ) : (
-                      <p>{msg.text}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Decorative stack shadow backing */}
-            <div className="absolute -top-6 -right-6 w-full h-full bg-deep-navy/5 rounded-2xl -z-10"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro Section with interactive Revenue Calculator */}
-      <section id="about" className="relative py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-emerald-growth/10 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
-              Klientų bazės įdarbinimas
-            </span>
-            <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-deep-navy leading-tight mb-6">
-              Uždirbkite daugiau iš to, <span className="text-emerald-growth italic">ką jau turite</span>.
-            </h2>
-            <p className="text-body-lg text-on-surface-variant leading-relaxed mb-6">
-              Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius SMS pranešimus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.
-            </p>
-          </div>
-
-          {/* Interactive Calculator widget */}
-          <div className="bg-white rounded-2xl border border-border-subtle p-6 md:p-8 shadow-xl">
-
-            <div className="space-y-6">
-              <div>
-                <div className="flex justify-between items-center text-sm font-semibold mb-2">
-                  <span className="text-on-surface-variant">Turimų kontaktų skaičius:</span>
-                  <span className="text-deep-navy font-bold">{formatNumber(calcContacts)}</span>
-                </div>
-                <input
-                  type="range"
-                  min="100"
-                  max="10000"
-                  step="100"
-                  value={calcContacts}
-                  onChange={(e) => setCalcContacts(Number(e.target.value))}
-                  className="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-emerald-growth"
-                />
-              </div>
-
-              <div>
-                <div className="flex justify-between items-center text-sm font-semibold mb-2">
-                  <span className="text-on-surface-variant">Vidutinė paslaugos / krepšelio vertė:</span>
-                  <span className="text-deep-navy font-bold">{calcTicket} €</span>
-                </div>
-                <input
-                  type="range"
-                  min="10"
-                  max="150"
-                  step="5"
-                  value={calcTicket}
-                  onChange={(e) => setCalcTicket(Number(e.target.value))}
-                  className="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-emerald-growth"
-                />
-              </div>
-
-              <div className="pt-6 border-t border-border-subtle grid grid-cols-2 gap-4 text-center">
-                <div className="p-3 bg-red-500/5 rounded-xl border border-red-500/10">
-                  <span className="text-[10px] text-on-surface-variant uppercase font-bold">Prarandate kasmet</span>
-                  <p className="font-display text-base md:text-lg font-bold text-red-500 mt-1">
-                    -{formatNumber(lostAnnualRevenue)} €
-                  </p>
-                </div>
-                <div className="p-3 bg-emerald-growth/5 rounded-xl border border-emerald-growth/10">
-                  <span className="text-[10px] text-on-surface-variant uppercase font-bold">Sugrąžinsime kas mėnesį</span>
-                  <p className="font-display text-base md:text-lg font-bold text-emerald-growth mt-1">
-                    +{formatNumber(monthlyRecoverable)} €
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href="#audit"
-                className="block text-center w-full bg-deep-navy hover:bg-black text-white font-bold py-3.5 rounded-full text-sm transition-all"
-              >
-                Gauti išsamų mano bazės auditą
-              </a>
-            </div>
           </div>
         </div>
       </section>
