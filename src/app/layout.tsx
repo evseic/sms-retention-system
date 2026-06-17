@@ -30,18 +30,20 @@ export default function RootLayout({
     <html lang="lt" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
       <body className="font-sans bg-surface text-on-surface antialiased">
         {children}
-        <Script id="omnisend" strategy="afterInteractive">
-          {`
-            window.omnisend = window.omnisend || [];
-            window.omnisend.push(["brandID", "6a32ec1f813d927fc4a68725"]);
-            window.omnisend.push(["track", "$pageViewed"]);
-            !function(){var e=document.createElement("script");
-            e.type="text/javascript",e.async=!0,
-            e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
-            var t=document.getElementsByTagName("script")[0];
-            t.parentNode.insertBefore(e,t)}();
-          `}
-        </Script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.omnisend = window.omnisend || [];
+              window.omnisend.push(["brandID", "6a32ec1f813d927fc4a68725"]);
+              window.omnisend.push(["track", "$pageViewed"]);
+              !function(){var e=document.createElement("script");
+              e.type="text/javascript",e.async=!0,
+              e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
+              var t=document.getElementsByTagName("script")[0];
+              t.parentNode.insertBefore(e,t)}();
+            `,
+          }}
+        />
       </body>
     </html>
   );
