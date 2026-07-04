@@ -437,7 +437,7 @@ export default function Home() {
               Padidinkite pajamas ir sugrąžinkite buvusius klientus automatiškai
             </h1>
             <p className="text-body-lg text-on-surface-variant mb-8 max-w-lg">
-              Padėsime įdarbinti jūsų turimą kontaktų bazę per automatizuotą el. pašto ir SMS komunikaciją. Pilnas paslaugos administravimas — už fiksuotą €350/mėn. mokestį.
+              SMSflow | Uždirbkite daugiau iš esamų klientų
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
