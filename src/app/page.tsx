@@ -20,7 +20,7 @@ const workflowSteps = [
     bullets: [
       "Esamos duomenų bazės kokybės auditas",
       "Pristatomumo ir siuntėjo reputacijos patikra",
-      "Individuali strategija ir aiškus planas",
+      "Individuali el. pašto ir SMS strategija",
     ],
   },
   {
@@ -30,7 +30,7 @@ const workflowSteps = [
     subtitle: "Sujungiame jūsų CRM ar registracijų sistemą be jokių programuotojų pagalbos.",
     bullets: [
       "POS / registracijos sistemos integracija",
-      "SMS siuntėjo paskyros konfigūravimas",
+      "El. pašto ir SMS paskyrų konfigūravimas",
       "Kontaktų rinkimo formų diegimas",
     ],
   },
@@ -40,7 +40,7 @@ const workflowSteps = [
     title: "Tekstų kūrimas ir automatizacijos",
     subtitle: "Parašome konvertuojančius tekstus ir sujungiame automatinius srautus.",
     bullets: [
-      "Pasisveikinimo ir sugrąžinimo žinučių copywritingas",
+      "Laiškų ir SMS žinučių copywritingas",
       "Automatiniai apleistų krepšelių / praleistų vizitų srautai",
       "Asmeniniai pasiūlymai pagal tikslinius segmentus",
     ],
@@ -52,7 +52,7 @@ const workflowSteps = [
     subtitle: "Tikriname pranešimų gavimą ir suderiname techninius SPF/DKIM nustatymus.",
     bullets: [
       "Pilnas techninis testavimas prieš paleidimą",
-      "Gavėjo ekrano (inbox delivery) pasiekiamumo testai",
+      "El. pašto dėžutės ir SMS pasiekiamumo testai",
       "Pirmųjų testinių kontaktų aktyvavimas",
     ],
   },
@@ -73,23 +73,31 @@ const workflowSteps = [
 const faqItems = [
   {
     question: "Per kiek laiko pamatysiu rezultatus?",
-    answer: "Pirmieji  užsakymai ir sugrąžinti klientai pasirodo jau per pirmąsias 7 Dienas po sistemos paleidimo. Stabilios pakartotinės pajamos iš šio kanalo nusistovi per pirmąsias 30 dienų.",
+    answer: "Pirmieji rezultatai matomi per 2-4 savaites – kai paleidžiami pagrindiniai automatizuoti srautai (welcome serija, apleisto krepšelio, po pirkimo). Stabilus +20-30% pajamų augimas iš el. pašto kanalo paprastai pasiekiamas per 60-90 dienų, kai įsibėgėja kampanijos ir segmentacija.",
   },
   {
-    question: "Ką tiksliai gaunu už €350/mėn. fiksuotą mokestį?",
-    answer: "Pilną klientų išlaikymo kanalo valdymą: esamos bazės auditą, strategijos paruošimą, integracijų su CRM/POS pajungimą, profesionalų tekstų rašymą (copywriting), automatinių srautų valdymą, reguliarių kampanijų siuntimą bei kasmėnesines ataskaitas.",
+    question: "Su kokiomis platformomis dirbate?",
+    answer: "Dirbame su populiariausiomis el. pašto rinkodaros ir SMS platformomis (Klaviyo, Omnisend, Mailerlite, ActiveCampaign) bei integruojame jas su visomis TVS/CRM sistemomis (Shopify, WooCommerce, Wix, custom TVS).",
   },
   {
-    question: "Ar tai tinka mažesniems paslaugų verslams?",
-    answer: "Taip, mūsų sprendimas idealiai tinka klinikoms, grožio salonams, automobilių servisams ir kitiems vietiniams verslams. Vienintelis reikalavimas — jūsų mėnesinė apyvarta turėtų viršyti €5 000, kad investicija atneštų aukštą ROI.",
+    question: "Ar tinka mažesniam verslui ar tik dideliems?",
+    answer: "Tinka tiek mažesniems, tiek didesniems prekybos ar paslaugų verslams. Svarbiausia sąlyga — turėti bent minimalų klientų / kontaktų sąrašą (rekomenduojama nuo 500-1000 kontaktų), kad investicija greitai atsipirktų ir neštų aukštą ROI.",
   },
   {
-    question: "Ar turime patys kurti žinučių tekstus?",
-    answer: "Ne. Mes teikiame pilną paslaugą (done-for-you). Patys parašome visus žinučių tekstus, suderiname siuntimo laikus ir atliekame techninius nustatymus. Jums tereikia patvirtinti galutinius tekstus.",
+    question: "Ar privalau jau turėti didelį el. pašto sąrašą?",
+    answer: "Ne, didelio sąrašo nereikia. Pradėti galime ir su keliais šimtais kontaktų. Kartu su automatizacijomis svetainėje įdiegiame kontaktų rinkimo formas ir pop-up'us, kurie padeda kasdien organiškai ir greitai auginti jūsų gavėjų sąrašą.",
   },
   {
-    question: "Kaip skaičiuojamas papildomų SMS žinučių siuntimo mokestis?",
-    answer: "I €350/mėn. paslaugos kainą įeina pilnas sistemos valdymas. Pačių žinučių siuntimo išlaidos (keli centai už žinutę) yra mokamos tiesiogiai paslaugų tiekėjui pagal faktinį sunaudojimą.",
+    question: "Ką gaunu už mėnesinį mokestį?",
+    answer: "Už fiksuotą mokestį gaunate pilną kanalų valdymą: strategiją, techninį paruošimą (SPF/DKIM/DMARC), dizaino šablonus, tekstų kūrimą (copywriting), automatinių srautų valdymą, reguliarių kampanijų siuntimą bei kasnesines ataskaitas su rezultatų analize.",
+  },
+  {
+    question: "Ar tai tinka tik el. parduotuvėms?",
+    answer: "Ne, el. pašto ir SMS rinkodara puikiai veikia ir vietiniams bei paslaugų verslams (klinikoms, salonams, automobilių servisams, B2B įmonėms). Ji padeda automatizuoti vizitų priminimus, sugrąžinti neaktyvius klientus ir skatinti pakartotines registracijas.",
+  },
+  {
+    question: "Kiek užtrunka projekto paleidimas?",
+    answer: "Pilnas sistemos paruošimas, techniniai pajungimai, dizaino derinimas ir pirmųjų automatinių srautų aktyvavimas užtrunka iki 7 dienų. Jūsų el. pašto ir SMS kanalai pradeda nešti pajamas jau pirmąją savaitę.",
   },
 ];
 
@@ -230,13 +238,13 @@ export default function Home() {
     },
     {
       id: "currentUsage",
-      title: "SMS rinkodara",
+      title: "El. pašto ir SMS rinkodara",
       subtitle: "Kaip šiuo metu naudojate klientų išlaikymo įrankius savo versle?",
       options: [
-        "Reguliariai siunčiame žinutes ir turime automatinius srautus",
+        "Reguliariai siunčiame laiškus/žinutes ir turime automatinius srautus",
         "Kartais išsiunčiame pasiūlymus rankiniu būdu, be automatizacijos",
         "Turime klientų bazę, bet jos praktiškai nenaudojame",
-        "Rinkodaros per SMS dar visiškai nedarome",
+        "El. pašto ir SMS rinkodaros dar visiškai nedarome",
       ],
     },
     {
@@ -251,7 +259,7 @@ export default function Home() {
       subtitle: "Kas šiuo metu labiausiai trukdo didinti pakartotinius pardavimus?",
       options: [
         "Trūksta laiko ir vidinių resursų sistemai prižiūrėti",
-        "Mažas gavėjų įsitraukimas (žemas žinučių atidarymo rodiklis)",
+        "Mažas gavėjų įsitraukimas (žemas žinučių/laiškų atidarymo rodiklis)",
         "Neturime veikiančių automatinių žinučių srautų",
         "Trūksta aiškaus plano (ką ir kada reikėtų siųsti)",
       ],
@@ -429,7 +437,7 @@ export default function Home() {
               Padidinkite pajamas ir sugrąžinkite buvusius klientus automatiškai
             </h1>
             <p className="text-body-lg text-on-surface-variant mb-8 max-w-lg">
-              Padėsime įdarbinti jūsų turimą kontaktų bazę per automatizuotą SMS komunikaciją. Pilnas paslaugos administravimas — už fiksuotą €350/mėn. mokestį.
+              Padėsime įdarbinti jūsų turimą kontaktų bazę per automatizuotą el. pašto ir SMS komunikaciją. Pilnas paslaugos administravimas — už fiksuotą €350/mėn. mokestį.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -463,7 +471,7 @@ export default function Home() {
                   <span>SMSflow</span>
                 </div>
                 <span className="text-[10px] bg-emerald-growth/10 text-emerald-growth px-2 py-0.5 rounded uppercase tracking-tighter">
-                  SMS Aktyvuota
+                  El. paštas + SMS
                 </span>
               </div>
 
@@ -510,7 +518,7 @@ export default function Home() {
               Uždirbkite daugiau iš to, <span className="text-emerald-growth italic">ką jau turite</span>.
             </h2>
             <p className="text-body-lg text-on-surface-variant leading-relaxed mb-6">
-              Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius SMS pranešimus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.
+              Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius el. laiškus ir SMS pranešimus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.
             </p>
           </div>
 
@@ -857,7 +865,7 @@ export default function Home() {
             <span className="text-emerald-growth italic font-medium">per 7 dienas.</span>
           </h2>
           <p className="text-white/60 text-sm md:text-base max-w-xl mb-12 font-medium relative z-10">
-            Ne mėnesiai derinimo. Žingsnis po žingsnio — nuo audito iki pilnai automatizuoto, pajamas nešančio SMS kanalo per vieną savaitę.
+            Ne mėnesiai derinimo. Žingsnis po žingsnio — nuo audito iki pilnai automatizuotų, pajamas nešančių el. pašto ir SMS kanalų per vieną savaitę.
           </p>
 
           {/* Horizontal Timeline Switcher */}
@@ -1007,7 +1015,7 @@ export default function Home() {
             Pradėkite uždirbti <span className="text-emerald-growth italic font-medium">jau šį mėnesį.</span>
           </h2>
           <p className="text-white/60 text-sm md:text-base max-w-xl mx-auto font-medium">
-            Vienas mėnesinis paketas, kuris padengia visą SMS kanalą — nuo strategijos iki kasdieninės priežiūros.
+            Vienas mėnesinis paketas, kuris padengia el. pašto ir SMS kanalus — nuo strategijos iki kasdieninės priežiūros.
           </p>
         </div>
 
@@ -1076,8 +1084,8 @@ export default function Home() {
                 <span className="text-[10px] text-white/40 uppercase font-bold tracking-wider block mb-4">KĄ GAUSITE</span>
                 <ul className="space-y-3">
                   {[
-                    "Pilnai automatizuota SMS sistema",
-                    "4-6 tikslinės žinučių kampanijos per mėnesį",
+                    "Pilnai automatizuota el. pašto ir SMS sistema",
+                    "4-6 tikslinės el. pašto ir SMS kampanijos per mėnesį",
                     "A/B testai, profesionalūs tekstai ir pilna priežiūra",
                     "Be jokių integracijos mokesčių ar staigmenų",
                     "Mėnesinė ataskaita su rezultatais ir įžvalgomis",
