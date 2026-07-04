@@ -63,7 +63,7 @@ export async function POST(request: Request) {
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; line-height: 1.6;">
               <h2 style="color: #0F172A;">Sveiki, ${name}!</h2>
-              <p>Dėkojame, kad užpildėte kvalifikacinį klausimyną nemokamam SMS klientų išlaikymo auditui gauti.</p>
+              <p>Dėkojame, kad užpildėte kvalifikacinį klausimyną nemokamam el. pašto ir SMS klientų išlaikymo auditui gauti.</p>
               <p>Mes jau pradėjome analizuoti jūsų svetainę <strong>${website}</strong> bei pateiktus atsakymus. Mūsų komanda susisieks su jumis per artimiausias 24 valandas pateikdama rezultatus ir konkretų sugrąžinimo planą.</p>
               <p>Jei turite skubių klausimų, galite susisiekti su mumis tiesiogiai el. paštu <a href="mailto:info@smsflow.eu">info@smsflow.eu</a> arba telefonu +370 679 11191.</p>
               <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 30px 0;" />
