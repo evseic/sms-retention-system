@@ -101,13 +101,76 @@ const faqItems = [
   },
 ];
 
-// SMS Live Conversation mock data
-const smsMessages = [
-  { sender: "system", text: "Sveiki! Pastebėjome, kad praėjo 3 mėnesiai po jūsų paskutinio vizito klinikoje. Ar norėtumėte užsiregistruoti profilaktinei patikrai?" },
-  { sender: "system", text: "Dovanojame €10 nuolaidą šiam vizitui. Registruokitės čia: gp.lt/auditas" },
-  { sender: "client", text: "Sveiki, taip, norėčiau. Ar turite laisvą laiką šį penktadienį po pietų?" },
-  { sender: "system", text: "Taip! Turime laisvą laiką penktadienį 15:30 val. Registraciją patvirtinome, lauksime jūsų! 🌟" },
+// Live Dashboard mock states (matching user request image variations)
+const dashboardStates = [
+  {
+    totalRevenue: 578,
+    items: [
+      { id: "1", type: "user", title: "Naujas prenumeratorius", subtitle: "Pop-up forma · -10% kodas išsiųstas", badge: "✓", isSuccess: true },
+      { id: "2", type: "email", title: "Po-pirkiminis srautas", subtitle: "Cross-sell pasiūlymas → papildomas užsakymas", badge: "+€66" },
+      { id: "3", type: "send", title: "Savaitės kampanija išsiųsta", subtitle: "Akcijos laiškas · 4 821 gavėjui", badge: "+€356" },
+      { id: "4", type: "star", title: "Welcome serija · 2 laiškas", subtitle: "Naujas prenumeratorius → pirmas pirkimas", badge: "+€26" },
+      { id: "5", type: "cart", title: "Apleistas krepšelis atgautas", subtitle: "Priminimo laiškas → užsakymas", badge: "+€130" },
+    ]
+  },
+  {
+    totalRevenue: 2496,
+    items: [
+      { id: "6", type: "star", title: "Welcome serija · 1 laiškas", subtitle: "Pasisveikinimas + bestselerių gidas", badge: "+€48" },
+      { id: "7", type: "email", title: "Atsiliepimo prašymas", subtitle: "Klientas paliko 5★ įvertinimą", badge: "✓", isSuccess: true },
+      { id: "8", type: "send", title: "Segmentuota kampanija", subtitle: "VIP klientams · pakartotiniai pirkimai", badge: "+€164" },
+      { id: "9", type: "cart", title: "Apleistas krepšelis atgautas", subtitle: "2-as priminimas su nuolaida → užsakymas", badge: "+€128" },
+      { id: "10", type: "user", title: "Naujas prenumeratorius", subtitle: "Pop-up forma · -10% kodas išsiųstas", badge: "✓", isSuccess: true },
+    ]
+  },
+  {
+    totalRevenue: 2892,
+    items: [
+      { id: "11", type: "send", title: "Savaitės kampanija išsiųsta", subtitle: "Akcijos laiškas · 4 821 gavėjui", badge: "+€169" },
+      { id: "12", type: "star", title: "Welcome serija · 2 laiškas", subtitle: "Naujas prenumeratorius → pirmas pirkimas", badge: "+€85" },
+      { id: "13", type: "cart", title: "Apleistas krepšelis atgautas", subtitle: "Priminimo laiškas → užsakymas", badge: "+€142" },
+      { id: "14", type: "star", title: "Welcome serija · 1 laiškas", subtitle: "Pasisveikinimas + bestselerių gidas", badge: "+€48" },
+      { id: "15", type: "email", title: "Atsiliepimo prašymas", subtitle: "Klientas paliko 5★ įvertinimą", badge: "✓", isSuccess: true },
+    ]
+  }
 ];
+
+const renderDashboardIcon = (type: string) => {
+  switch (type) {
+    case "user":
+      return (
+        <svg className="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      );
+    case "email":
+      return (
+        <svg className="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      );
+    case "send":
+      return (
+        <svg className="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+      );
+    case "star":
+      return (
+        <svg className="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.907c.961 0 1.36 1.246.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.564-.386-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+        </svg>
+      );
+    case "cart":
+      return (
+        <svg className="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+};
 
 // Helper to format numbers consistently to prevent hydration mismatches
 const formatNumber = (num: number) => {
@@ -134,8 +197,8 @@ export default function Home() {
   // FAQ Active Index State
   const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(null);
 
-  // SMS Live simulation state (iPhone-style sequence)
-  const [chatMessages, setChatMessages] = useState<{ sender: string; text: string; isTyping?: boolean }[]>([]);
+  // Live Dashboard active state index
+  const [activeDashboardStateIdx, setActiveDashboardStateIdx] = useState(0);
 
   // Database Calculator State
   const [calcContacts, setCalcContacts] = useState(1500);
@@ -153,75 +216,12 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // iPhone SMS animation sequence with typing bubbles
+  // Live Dashboard simulation cycle
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    let sequenceStep = 0;
-
-    const runSequence = () => {
-      if (sequenceStep === 0) {
-        // Show first business message
-        setChatMessages([
-          { sender: smsMessages[0].sender, text: smsMessages[0].text }
-        ]);
-        sequenceStep = 1;
-        timeoutId = setTimeout(runSequence, 3000);
-      } else if (sequenceStep === 1) {
-        // Show second business message (coupon code)
-        setChatMessages((prev) => [
-          ...prev,
-          { sender: smsMessages[1].sender, text: smsMessages[1].text }
-        ]);
-        sequenceStep = 2;
-        timeoutId = setTimeout(runSequence, 3500);
-      } else if (sequenceStep === 2) {
-        // Show client typing bubble
-        setChatMessages((prev) => [
-          ...prev,
-          { sender: "client", text: "", isTyping: true }
-        ]);
-        sequenceStep = 3;
-        timeoutId = setTimeout(runSequence, 1500);
-      } else if (sequenceStep === 3) {
-        // Replace typing bubble with client response
-        setChatMessages((prev) => {
-          const list = prev.filter(m => !m.isTyping);
-          return [
-            ...list,
-            { sender: smsMessages[2].sender, text: smsMessages[2].text }
-          ];
-        });
-        sequenceStep = 4;
-        timeoutId = setTimeout(runSequence, 2500);
-      } else if (sequenceStep === 4) {
-        // Show business typing bubble
-        setChatMessages((prev) => [
-          ...prev,
-          { sender: "system", text: "", isTyping: true }
-        ]);
-        sequenceStep = 5;
-        timeoutId = setTimeout(runSequence, 1500);
-      } else if (sequenceStep === 5) {
-        // Replace typing bubble with final confirmation response
-        setChatMessages((prev) => {
-          const list = prev.filter(m => !m.isTyping);
-          return [
-            ...list,
-            { sender: smsMessages[3].sender, text: smsMessages[3].text }
-          ];
-        });
-        sequenceStep = 6;
-        timeoutId = setTimeout(runSequence, 6000); // Hold final screen for 6s
-      } else if (sequenceStep === 6) {
-        // Reset and clear chat
-        setChatMessages([]);
-        sequenceStep = 0;
-        timeoutId = setTimeout(runSequence, 1000);
-      }
-    };
-
-    runSequence();
-    return () => clearTimeout(timeoutId);
+    const interval = setInterval(() => {
+      setActiveDashboardStateIdx((prev) => (prev + 1) % dashboardStates.length);
+    }, 4500);
+    return () => clearInterval(interval);
   }, []);
 
   // Calculator logic values (smaller, more realistic coefficients: 20% lost annually, 10% recoverable monthly of the annual lost amount)
@@ -458,49 +458,84 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Animated SMS iPhone-style Preview Mockup Container */}
-          <div className="relative mt-8 md:mt-0 flex flex-col gap-6">
-            <div className="bg-white rounded-2xl border border-border-subtle p-6 md:p-8 shadow-xl relative z-10">
+          {/* Animated Automation Live Dashboard Preview Mockup Container */}
+          <div className="relative mt-8 md:mt-0 flex flex-col gap-6 w-full max-w-[480px] mx-auto">
+            <div className="bg-[#FAFDFD] rounded-3xl border border-border-subtle p-5 md:p-6 shadow-xl relative z-10">
               
-              {/* Phone Status bar mock */}
-              <div className="flex items-center justify-between border-b border-border-subtle pb-4 mb-4 text-xs text-on-surface-variant font-semibold">
-                <div className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-emerald-growth" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
-                  </svg>
-                  <span>SMSflow</span>
+              {/* Dashboard Top bar mock */}
+              <div className="flex items-center justify-between border-b border-border-subtle/60 pb-4 mb-5 text-xs text-on-surface-variant font-semibold">
+                <div className="flex items-center gap-4">
+                  <div className="flex gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-black/10"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-black/10"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-black/10"></span>
+                  </div>
+                  <span className="text-[11px] text-black/50 font-mono tracking-wider">SMSflow · automatizacijos</span>
                 </div>
-                <span className="text-[10px] bg-emerald-growth/10 text-emerald-growth px-2 py-0.5 rounded uppercase tracking-tighter">
-                  El. paštas + SMS
-                </span>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse"></span>
+                  <span className="text-[10px] text-[#10B981] uppercase font-bold tracking-wider font-sans">GYVAI</span>
+                </div>
               </div>
 
-              {/* Chat thread mockup container */}
-              <div className="space-y-3 h-[380px] max-h-[380px] overflow-y-auto transition-all duration-300 pr-1 flex flex-col justify-end">
-                {chatMessages.map((msg, idx) => (
+              {/* Today Earnings Display */}
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-black/40 block mb-1">
+                    EL. PAŠTAS IR SMS ŠIANDIEN UŽDIRBO
+                  </span>
+                </div>
+                <div className="text-right">
+                  <span className="text-3xl md:text-4xl font-display font-bold text-[#0F5A47] tracking-tight">
+                    €{dashboardStates[activeDashboardStateIdx].totalRevenue}
+                  </span>
+                </div>
+              </div>
+
+              {/* Dashboard live rows container with transitions */}
+              <div className="space-y-2.5 h-[340px] max-h-[340px] overflow-hidden flex flex-col justify-start">
+                {dashboardStates[activeDashboardStateIdx].items.map((item) => (
                   <div
-                    key={idx}
-                    className={`flex items-center max-w-[85%] rounded-[18px] px-4 py-2.5 text-xs md:text-sm leading-relaxed transition-all duration-300 origin-bottom animate-sms-pop ${
-                      msg.sender === "system"
-                        ? "bg-[#E9E9EB] text-black self-start rounded-tl-[4px]"
-                        : "bg-[#007AFF] text-white self-end rounded-tr-[4px] ml-auto"
-                    }`}
+                    key={item.id}
+                    className="flex items-center justify-between p-3.5 bg-white border border-[#E9ECEF]/70 rounded-2xl transition-all duration-500 hover:border-emerald-500/30 hover:shadow-sm animate-sms-pop"
                   >
-                    {msg.isTyping ? (
-                      <div className="flex items-center gap-1.5 py-1 px-1">
-                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                        <span className="w-2 h-2 rounded-full bg-current opacity-40 animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                    <div className="flex items-center gap-3.5 min-w-0">
+                      <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
+                        {renderDashboardIcon(item.type)}
                       </div>
-                    ) : (
-                      <p>{msg.text}</p>
-                    )}
+                      <div className="min-w-0">
+                        <h4 className="text-[13px] font-semibold text-black/85 truncate">{item.title}</h4>
+                        <p className="text-[11px] text-black/45 truncate mt-0.5">{item.subtitle}</p>
+                      </div>
+                    </div>
+                    <div className="shrink-0 pl-2">
+                      <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${
+                        item.isSuccess 
+                          ? "bg-slate-100 text-slate-600 border border-slate-200" 
+                          : "bg-emerald-50 text-emerald-700 border border-emerald-100"
+                      }`}>
+                        {item.badge}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
+
+              {/* Bottom live stats caption */}
+              <div className="border-t border-[#E9ECEF]/60 mt-5 pt-3 text-center">
+                <p className="text-[10px] text-black/35 font-mono">
+                  Taip atrodo jūsų parduotuvės savaitė su el. pašto ir SMS komunikacija – simuliacija pagal realius srautus
+                </p>
+              </div>
+
             </div>
             {/* Decorative stack shadow backing */}
-            <div className="absolute -top-6 -right-6 w-full h-full bg-deep-navy/5 rounded-2xl -z-10"></div>
+            <div className="absolute -top-6 -right-6 w-full h-full bg-deep-navy/5 rounded-3xl -z-10"></div>
+
+            {/* Red tilted badge on top */}
+            <div className="absolute -top-6 right-8 z-20 transform rotate-[6deg] bg-[#E06A4E]/10 border border-[#E06A4E]/30 rounded px-2.5 py-0.5 text-[10px] text-[#C2583F] font-bold tracking-wider uppercase shadow-sm">
+              VEIKIA 24/7
+            </div>
           </div>
         </div>
       </section>
