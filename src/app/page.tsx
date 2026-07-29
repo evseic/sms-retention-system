@@ -388,7 +388,7 @@ export default function Home() {
               </text>
             </svg>
             <span className="text-base sm:text-lg md:text-xl font-display font-bold text-deep-navy tracking-tight shrink-0">
-              SmsFlow
+              SMSflow
             </span>
           </div>
 
@@ -437,7 +437,7 @@ export default function Home() {
               El. paštas, kuris generuoja pajamas
             </h1>
             <p className="text-body-lg text-on-surface-variant mb-8 max-w-lg">
-              SmsFlow | Uždirbkite daugiau iš esamų klientų
+              SMSflow | Uždirbkite daugiau iš esamų klientų
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -474,7 +474,7 @@ export default function Home() {
                     <span className="w-2.5 h-2.5 rounded-full bg-black/10"></span>
                     <span className="w-2.5 h-2.5 rounded-full bg-black/10"></span>
                   </div>
-                  <span className="text-[11px] text-black/50 font-mono tracking-wider">SmsFlow · automatizacijos</span>
+                  <span className="text-[11px] text-black/50 font-mono tracking-wider">SMSflow · automatizacijos</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse"></span>
@@ -1246,7 +1246,7 @@ export default function Home() {
                 </text>
               </svg>
               <span className="text-sm sm:text-base md:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
-                SmsFlow
+                SMSflow
               </span>
             </div>
             
@@ -1267,7 +1267,7 @@ export default function Home() {
           </div>
 
           <div className="text-xs text-on-surface-variant opacity-60 md:self-end">
-            © 2026 SmsFlow. Visos teisės saugomos.
+            © 2026 SMSflow. Visos teisės saugomos.
           </div>
         </div>
       </footer>
