@@ -375,7 +375,7 @@ export default function Home() {
         }`}
       >
         <div className="max-w-container-max mx-auto h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <a href="#" className="flex items-center gap-2 hover:opacity-85 transition-opacity">
             <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
               <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
                     stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
@@ -386,7 +386,7 @@ export default function Home() {
             <span className="text-base sm:text-lg md:text-xl font-display font-bold text-deep-navy tracking-tight shrink-0">
               SMSflow
             </span>
-          </div>
+          </a>
 
           <div className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-sm font-semibold text-on-surface-variant hover:text-emerald-growth transition-colors">
@@ -1245,7 +1245,7 @@ export default function Home() {
       <footer className="bg-surface-container-lowest border-t border-border-subtle w-full py-12 relative z-10">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <div className="flex items-center gap-2">
+            <a href="#" className="flex items-center gap-2 hover:opacity-85 transition-opacity">
               <svg className="w-5 h-5 sm:w-6 h-6 md:w-8 md:h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
                 <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
                       stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
@@ -1256,7 +1256,7 @@ export default function Home() {
               <span className="text-sm sm:text-base md:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
                 SMSflow
               </span>
-            </div>
+            </a>
             
             <div className="flex flex-col items-center md:items-start gap-2 text-xs text-on-surface-variant font-medium">
               <a href="mailto:info@smsflow.eu" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
