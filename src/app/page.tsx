@@ -73,11 +73,7 @@ const workflowSteps = [
 const faqItems = [
   {
     question: "Per kiek laiko pamatysiu rezultatus?",
-    answer: "Pirmieji rezultatai matomi per 2-4 savaites – kai paleidžiami pagrindiniai automatizuoti srautai (welcome serija, apleisto krepšelio, po pirkimo). Stabilus +20-30% pajamų augimas iš el. pašto kanalo paprastai pasiekiamas per 60-90 dienų, kai įsibėgėja kampanijos ir segmentacija.",
-  },
-  {
-    question: "Su kokiomis platformomis dirbate?",
-    answer: "Dirbame su populiariausiomis el. pašto rinkodaros platformomis (Klaviyo, Omnisend, Mailerlite, ActiveCampaign) bei integruojame jas su visomis TVS/CRM sistemomis (Shopify, WooCommerce, Wix, custom TVS).",
+    answer: "Pirmieji rezultatai matomi jau po 3–6 savaičių. Įdiegus automatizuotus el. pašto srautus ir optimizavus kampanijas, el. pašto kanalas tampa vienu pelningiausių pardavimų augimo šaltinių. Stabilus augimas ir didžiausias poveikis rezultatams paprastai pasiekiami per 60–120 dienų.",
   },
   {
     question: "Ar tinka mažesniam verslui ar tik dideliems?",
@@ -89,7 +85,7 @@ const faqItems = [
   },
   {
     question: "Ką gaunu už mėnesinį mokestį?",
-    answer: "Už fiksuotą mokestį gaunate pilną kanalo valdymą: strategiją, techninį paruošimą (SPF/DKIM/DMARC), dizaino šablonus, tekstų kūrimą (copywriting), automatinių srautų valdymą, reguliarių kampanijų siuntimą bei kasnesines ataskaitas su rezultatų analizę.",
+    answer: "El. pašto sistema, kuri dirba jūsų pardavimams.\n\nSukuriame ir valdome visą kanalą: nuo automatinių srautų ir segmentacijos iki reguliarių kampanijų, testavimo ir rezultatų analizės.\nJūs gaunate veikiančią sistemą, kuri padeda generuoti daugiau pajamų iš esamų klientų.",
   },
   {
     question: "Ar tai tinka tik el. parduotuvėms?",
@@ -97,7 +93,7 @@ const faqItems = [
   },
   {
     question: "Kiek užtrunka projekto paleidimas?",
-    answer: "Pilnas sistemos paruošimas, techniniai pajungimai, dizaino derinimas ir pirmųjų automatinių srautų aktyvavimas užtrunka iki 7 dienų. Jūsų el. pašto kanalas pradeda nešti pajamas jau pirmąją savaitę.",
+    answer: "Pilnas sistemos paruošimas, techniniai pajungimai, dizaino suderinimas ir pirmųjų automatinių srautų aktyvavimas užtrunka iki 7 dienų. Per pirmąjį mėnesį sukuriamas tvirtas email marketingo pagrindas, o vėlesniuose etapuose dėmesys skiriamas augimui, rezultatų optimizavimui ir naujų kampanijų plėtrai.",
   },
 ];
 
@@ -195,7 +191,7 @@ export default function Home() {
   const [activeWorkflowStepIdx, setActiveWorkflowStepIdx] = useState(0);
   
   // FAQ Active Index State
-  const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(null);
+  const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(0);
 
   // Live Dashboard active state index
   const [activeDashboardStateIdx, setActiveDashboardStateIdx] = useState(0);
@@ -1212,10 +1208,10 @@ export default function Home() {
                 </button>
                 <div 
                   className={`transition-all duration-300 overflow-hidden ${
-                    openFaqIdx === idx ? "max-h-[300px] border-t border-border-subtle" : "max-h-0"
+                    openFaqIdx === idx ? "max-h-[500px] border-t border-border-subtle" : "max-h-0"
                   }`}
                 >
-                  <p className="p-6 text-sm text-on-surface-variant leading-relaxed bg-white">
+                  <p className="p-6 text-sm text-on-surface-variant leading-relaxed bg-white whitespace-pre-line">
                     {faq.answer}
                   </p>
                 </div>
