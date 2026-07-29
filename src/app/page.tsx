@@ -20,7 +20,7 @@ const workflowSteps = [
     bullets: [
       "Esamos duomenų bazės kokybės auditas",
       "Pristatomumo ir siuntėjo reputacijos patikra",
-      "Individuali el. pašto ir SMS strategija",
+      "Individuali el. pašto strategija",
     ],
   },
   {
@@ -30,7 +30,7 @@ const workflowSteps = [
     subtitle: "Sujungiame jūsų CRM ar registracijų sistemą be jokių programuotojų pagalbos.",
     bullets: [
       "POS / registracijos sistemos integracija",
-      "El. pašto ir SMS paskyrų konfigūravimas",
+      "El. pašto paskyrų konfigūravimas",
       "Kontaktų rinkimo formų diegimas",
     ],
   },
@@ -40,7 +40,7 @@ const workflowSteps = [
     title: "Tekstų kūrimas ir automatizacijos",
     subtitle: "Parašome konvertuojančius tekstus ir sujungiame automatinius srautus.",
     bullets: [
-      "Laiškų ir SMS žinučių copywritingas",
+      "Naujienlaiškių ir laiškų copywritingas",
       "Automatiniai apleistų krepšelių / praleistų vizitų srautai",
       "Asmeniniai pasiūlymai pagal tikslinius segmentus",
     ],
@@ -52,7 +52,7 @@ const workflowSteps = [
     subtitle: "Tikriname pranešimų gavimą ir suderiname techninius SPF/DKIM nustatymus.",
     bullets: [
       "Pilnas techninis testavimas prieš paleidimą",
-      "El. pašto dėžutės ir SMS pasiekiamumo testai",
+      "El. pašto dėžutės pasiekiamumo testai",
       "Pirmųjų testinių kontaktų aktyvavimas",
     ],
   },
@@ -77,7 +77,7 @@ const faqItems = [
   },
   {
     question: "Su kokiomis platformomis dirbate?",
-    answer: "Dirbame su populiariausiomis el. pašto rinkodaros ir SMS platformomis (Klaviyo, Omnisend, Mailerlite, ActiveCampaign) bei integruojame jas su visomis TVS/CRM sistemomis (Shopify, WooCommerce, Wix, custom TVS).",
+    answer: "Dirbame su populiariausiomis el. pašto rinkodaros platformomis (Klaviyo, Omnisend, Mailerlite, ActiveCampaign) bei integruojame jas su visomis TVS/CRM sistemomis (Shopify, WooCommerce, Wix, custom TVS).",
   },
   {
     question: "Ar tinka mažesniam verslui ar tik dideliems?",
@@ -89,15 +89,15 @@ const faqItems = [
   },
   {
     question: "Ką gaunu už mėnesinį mokestį?",
-    answer: "Už fiksuotą mokestį gaunate pilną kanalų valdymą: strategiją, techninį paruošimą (SPF/DKIM/DMARC), dizaino šablonus, tekstų kūrimą (copywriting), automatinių srautų valdymą, reguliarių kampanijų siuntimą bei kasnesines ataskaitas su rezultatų analize.",
+    answer: "Už fiksuotą mokestį gaunate pilną kanalo valdymą: strategiją, techninį paruošimą (SPF/DKIM/DMARC), dizaino šablonus, tekstų kūrimą (copywriting), automatinių srautų valdymą, reguliarių kampanijų siuntimą bei kasnesines ataskaitas su rezultatų analizę.",
   },
   {
     question: "Ar tai tinka tik el. parduotuvėms?",
-    answer: "Ne, el. pašto ir SMS rinkodara puikiai veikia ir vietiniams bei paslaugų verslams (klinikoms, salonams, automobilių servisams, B2B įmonėms). Ji padeda automatizuoti vizitų priminimus, sugrąžinti neaktyvius klientus ir skatinti pakartotines registracijas.",
+    answer: "Ne, el. pašto rinkodara puikiai veikia ir vietiniams bei paslaugų verslams (klinikoms, salonams, automobilių servisams, B2B įmonėms). Ji padeda sugrąžinti neaktyvius klientus ir skatinti pakartotinius pirkimus ar registracijas.",
   },
   {
     question: "Kiek užtrunka projekto paleidimas?",
-    answer: "Pilnas sistemos paruošimas, techniniai pajungimai, dizaino derinimas ir pirmųjų automatinių srautų aktyvavimas užtrunka iki 7 dienų. Jūsų el. pašto ir SMS kanalai pradeda nešti pajamas jau pirmąją savaitę.",
+    answer: "Pilnas sistemos paruošimas, techniniai pajungimai, dizaino derinimas ir pirmųjų automatinių srautų aktyvavimas užtrunka iki 7 dienų. Jūsų el. pašto kanalas pradeda nešti pajamas jau pirmąją savaitę.",
   },
 ];
 
@@ -238,13 +238,13 @@ export default function Home() {
     },
     {
       id: "currentUsage",
-      title: "El. pašto ir SMS rinkodara",
+      title: "El. pašto rinkodara",
       subtitle: "Kaip šiuo metu naudojate klientų išlaikymo įrankius savo versle?",
       options: [
-        "Reguliariai siunčiame laiškus/žinutes ir turime automatinius srautus",
+        "Reguliariai siunčiame laiškus ir turime automatinius srautus",
         "Kartais išsiunčiame pasiūlymus rankiniu būdu, be automatizacijos",
         "Turime klientų bazę, bet jos praktiškai nenaudojame",
-        "El. pašto ir SMS rinkodaros dar visiškai nedarome",
+        "El. pašto rinkodaros dar visiškai nedarome",
       ],
     },
     {
@@ -379,16 +379,12 @@ export default function Home() {
         }`}
       >
         <div className="max-w-container-max mx-auto h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
-              <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
-                    stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
-              <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
-                SMS
-              </text>
+          <div className="flex items-center gap-2.5">
+            <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-deep-navy shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             <span className="text-base sm:text-lg md:text-xl font-display font-bold text-deep-navy tracking-tight shrink-0">
-              SMSflow
+              Emailflow
             </span>
           </div>
 
@@ -434,10 +430,10 @@ export default function Home() {
               PILNAS KANALŲ VALDYMAS
             </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-deep-navy leading-none mb-6">
-              Padidinkite pajamas ir sugrąžinkite buvusius klientus automatiškai
+              El. paštas, kuris generuoja pajamas
             </h1>
             <p className="text-body-lg text-on-surface-variant mb-8 max-w-lg">
-              SMSflow | Uždirbkite daugiau iš esamų klientų
+              Emailflow | Uždirbkite daugiau iš esamų klientų
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -456,6 +452,10 @@ export default function Home() {
                 Sužinoti daugiau
               </a>
             </div>
+            <p className="text-xs text-on-surface-variant/70 mt-3 pl-2 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-growth animate-pulse"></span>
+              10+ el. parduotuvių pasitiki
+            </p>
           </div>
 
           {/* Animated Automation Live Dashboard Preview Mockup Container */}
@@ -470,7 +470,7 @@ export default function Home() {
                     <span className="w-2.5 h-2.5 rounded-full bg-black/10"></span>
                     <span className="w-2.5 h-2.5 rounded-full bg-black/10"></span>
                   </div>
-                  <span className="text-[11px] text-black/50 font-mono tracking-wider">SMSflow · automatizacijos</span>
+                  <span className="text-[11px] text-black/50 font-mono tracking-wider">Emailflow · automatizacijos</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse"></span>
@@ -482,7 +482,7 @@ export default function Home() {
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <span className="text-[10px] uppercase font-bold tracking-widest text-black/40 block mb-1">
-                    EL. PAŠTAS IR SMS ŠIANDIEN UŽDIRBO
+                    EL. PAŠTAS ŠIANDIEN UŽDIRBO
                   </span>
                 </div>
                 <div className="text-right">
@@ -524,7 +524,7 @@ export default function Home() {
               {/* Bottom live stats caption */}
               <div className="border-t border-[#E9ECEF]/60 mt-5 pt-3 text-center">
                 <p className="text-[10px] text-black/35 font-mono">
-                  Taip atrodo jūsų parduotuvės savaitė su el. pašto ir SMS komunikacija – simuliacija pagal realius srautus
+                  Taip atrodo jūsų parduotuvės savaitė su el. pašto komunikacija – simuliacija pagal realius srautus
                 </p>
               </div>
 
@@ -553,7 +553,7 @@ export default function Home() {
               Uždirbkite daugiau iš to, <span className="text-emerald-growth italic">ką jau turite</span>.
             </h2>
             <p className="text-body-lg text-on-surface-variant leading-relaxed mb-6">
-              Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius el. laiškus ir SMS pranešimus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.
+              Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius el. laiškus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.
             </p>
           </div>
 
@@ -615,180 +615,6 @@ export default function Home() {
                 Gauti išsamų mano bazės auditą
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quiz / Audit Section */}
-      <section id="audit" className="relative py-20 md:py-28 bg-deep-navy text-white border-y border-white/10 overflow-hidden">
-        {/* Animated Background Blobs */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-growth/10 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
-
-        <div className="max-w-[700px] mx-auto px-margin-mobile relative z-10">
-          <div className="text-center mb-10">
-            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
-              NEMOKAMA KONSULTACIJA
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 relative z-10">
-              Užsiregistruokite nemokamai konsultacijai — <br className="hidden md:inline" /> atsakykite į kelis klausimus.
-            </h2>
-          </div>
-
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-md relative z-10">
-            {quizStep === "intro" && (
-              <div className="text-center py-6">
-                <p className="text-white/80 mb-6">
-                  Atsakykite į kelis trumpus klausimus ir užsiregistruokite nemokamai konsultacijai.
-                </p>
-                <button
-                  onClick={handleStartQuiz}
-                  className="bg-emerald-growth text-deep-navy font-bold px-8 py-4 rounded-full hover:scale-95 transition-transform"
-                >
-                  Pradėti
-                </button>
-              </div>
-            )}
-
-            {quizStep === "questions" && (
-              <div>
-                <div className="flex justify-between items-center mb-6 text-xs text-white/50">
-                  <span>Klausimas {currentQuestionIdx + 1} iš {questions.length}</span>
-                  <span>{Math.round(((currentQuestionIdx + 1) / questions.length) * 100)}% Atlikta</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">
-                  {questions[currentQuestionIdx].title}
-                </h3>
-                <p className="text-sm text-white/60 mb-6">
-                  {questions[currentQuestionIdx].subtitle}
-                </p>
-                <div className="space-y-3">
-                  {questions[currentQuestionIdx].options.map((option, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => handleOptionSelect(option)}
-                      className="w-full text-left p-4 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-growth/50 hover:bg-white/10 transition-all text-sm font-semibold"
-                    >
-                      {option}
-                    </button>
-                  ))}
-                </div>
-                <div className="flex justify-between items-center mt-6">
-                  <button
-                    onClick={handlePrevQuestion}
-                    className="text-xs text-white/50 hover:text-white transition-colors flex items-center gap-1"
-                  >
-                    ← Atgal
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {quizStep === "disqualified" && (
-              <div className="text-center py-6">
-                <div className="text-red-400 mb-4">
-                  <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Apyvarta per maža</h3>
-                <p className="text-sm text-white/65 leading-relaxed mb-6">
-                  Mūsų paslaugos efektyviausiai atsiperka paslaugų verslams, generuojantiems virš €5 000 mėnesinės apyvartos. Esant mažesnei apyvartai, €350/mėn. administravimo kaina gali neduoti teigiamo ROI.
-                </p>
-                <button
-                  onClick={() => setQuizStep("intro")}
-                  className="text-emerald-growth text-sm font-bold hover:underline"
-                >
-                  Pradėti iš naujo
-                </button>
-              </div>
-            )}
-
-            {quizStep === "form" && (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <h3 className="text-xl font-bold mb-4">Įveskite savo kontaktus nemokamai konsultacijai gauti</h3>
-                
-                <div>
-                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Jūsų vardas</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={contactInfo.name}
-                    onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
-                    placeholder="Vardas Pavardė"
-                  />
-                  {errors.name && <span className="text-red-400 text-xs mt-1 block">{errors.name}</span>}
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Svetainės adresas (arba įmonės pavadinimas)</label>
-                  <input
-                    type="text"
-                    name="website"
-                    value={contactInfo.website}
-                    onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
-                    placeholder="manosvetaine.lt"
-                  />
-                  {errors.website && <span className="text-red-400 text-xs mt-1 block">{errors.website}</span>}
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Darbinis el. paštas</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={contactInfo.email}
-                    onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
-                    placeholder="vardas@imone.lt"
-                  />
-                  {errors.email && <span className="text-red-400 text-xs mt-1 block">{errors.email}</span>}
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Telefono numeris</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={contactInfo.phone}
-                    onChange={handleInputChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
-                    placeholder="+370 600 00000"
-                  />
-                  {errors.phone && <span className="text-red-400 text-xs mt-1 block">{errors.phone}</span>}
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-emerald-growth text-deep-navy font-bold py-4 rounded-full hover:scale-95 transition-all text-sm mt-4 disabled:opacity-50"
-                >
-                  {isSubmitting ? "Siunčiama..." : "Gauti nemokamą konsultaciją"}
-                </button>
-                {errors.submit && <span className="text-red-400 text-xs mt-2 text-center block">{errors.submit}</span>}
-              </form>
-            )}
-
-            {quizStep === "success" && (
-              <div className="text-center py-6">
-                <div className="text-emerald-growth mb-4">
-                  <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Užklausą sėkmingai gavome!</h3>
-                <p className="text-sm text-white/60 mb-6 leading-relaxed">
-                  Ačiū, {contactInfo.name}. Pradėjome analizuoti svetainės `{contactInfo.website}` klientų išlaikymo potencialą. Per 24 valandas susisieksime su jumis el. paštu `{contactInfo.email}` suderinti nemokamo skambučio laiko.
-                </p>
-                <button
-                  onClick={() => setQuizStep("intro")}
-                  className="text-emerald-growth text-sm font-bold hover:underline"
-                >
-                  Pateikti kitą užklausą
-                </button>
-              </div>
-            )}
           </div>
         </div>
       </section>
@@ -900,7 +726,7 @@ export default function Home() {
             <span className="text-emerald-growth italic font-medium">per 7 dienas.</span>
           </h2>
           <p className="text-white/60 text-sm md:text-base max-w-xl mb-12 font-medium relative z-10">
-            Ne mėnesiai derinimo. Žingsnis po žingsnio — nuo audito iki pilnai automatizuotų, pajamas nešančių el. pašto ir SMS kanalų per vieną savaitę.
+            Ne mėnesiai derinimo. Žingsnis po žingsnio — nuo audito iki pilnai automatizuotų, pajamas nešančių el. pašto kanalų per vieną savaitę.
           </p>
 
           {/* Horizontal Timeline Switcher */}
@@ -1050,7 +876,7 @@ export default function Home() {
             Pradėkite uždirbti <span className="text-emerald-growth italic font-medium">jau šį mėnesį.</span>
           </h2>
           <p className="text-white/60 text-sm md:text-base max-w-xl mx-auto font-medium">
-            Vienas mėnesinis paketas, kuris padengia el. pašto ir SMS kanalus — nuo strategijos iki kasdieninės priežiūros.
+            Vienas mėnesinis paketas, kuris padengia el. pašto kanalą — nuo strategijos iki kasdieninės priežiūros.
           </p>
         </div>
 
@@ -1063,7 +889,7 @@ export default function Home() {
             
             <div className="relative z-10">
               <span className="inline-block border border-white/30 bg-white/10 text-[9px] uppercase tracking-wider font-bold rounded-full px-3 py-1 text-white mb-8">
-                SMSFLOW · PAKETAS
+                EMAILFLOW · PAKETAS
               </span>
               
               <h3 className="font-display text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
@@ -1104,7 +930,7 @@ export default function Home() {
                 <div>
                   <span className="text-[10px] text-white/40 uppercase font-bold tracking-wider block mb-1">KAINA</span>
                   <p className="font-display text-3xl font-bold text-white">
-                    350€ <span className="text-xs text-white/40 font-normal">/ mėn.</span>
+                    400€ <span className="text-xs text-white/40 font-normal">/ mėn.</span>
                   </p>
                 </div>
                 <div>
@@ -1119,8 +945,8 @@ export default function Home() {
                 <span className="text-[10px] text-white/40 uppercase font-bold tracking-wider block mb-4">KĄ GAUSITE</span>
                 <ul className="space-y-3">
                   {[
-                    "Pilnai automatizuota el. pašto ir SMS sistema",
-                    "4-6 tikslinės el. pašto ir SMS kampanijos per mėnesį",
+                    "Pilnai automatizuota el. pašto sistema",
+                    "4-6 tikslinės el. pašto kampanijos per mėnesį",
                     "A/B testai, profesionalūs tekstai ir pilna priežiūra",
                     "Be jokių integracijos mokesčių ar staigmenų",
                     "Mėnesinė ataskaita su rezultatais ir įžvalgomis",
@@ -1149,12 +975,183 @@ export default function Home() {
                 </div>
               </a>
               <p className="text-center text-[10px] text-white/30 mt-4">
-                50+ Lietuvos verslų jau pasitiki smsflow.lt
+                10+ el. parduotuvių pasitiki emailflow.lt
               </p>
             </div>
 
           </div>
 
+      {/* Quiz / Audit Section */}
+      <section id="audit" className="relative py-20 md:py-28 bg-deep-navy text-white border-y border-white/10 overflow-hidden">
+        {/* Animated Background Blobs */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-growth/10 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
+
+        <div className="max-w-[700px] mx-auto px-margin-mobile relative z-10">
+          <div className="text-center mb-10">
+            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
+              NEMOKAMA KONSULTACIJA
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 relative z-10">
+              Užsiregistruokite nemokamai konsultacijai — <br className="hidden md:inline" /> atsakykite į kelis klausimus.
+            </h2>
+          </div>
+
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-md relative z-10">
+            {quizStep === "intro" && (
+              <div className="text-center py-6">
+                <p className="text-white/80 mb-6">
+                  Atsakykite į kelis trumpus klausimus ir užsiregistruokite nemokamai konsultacijai.
+                </p>
+                <button
+                  onClick={handleStartQuiz}
+                  className="bg-emerald-growth text-deep-navy font-bold px-8 py-4 rounded-full hover:scale-95 transition-transform"
+                >
+                  Pradėti
+                </button>
+              </div>
+            )}
+
+            {quizStep === "questions" && (
+              <div>
+                <div className="flex justify-between items-center mb-6 text-xs text-white/50">
+                  <span>Klausimas {currentQuestionIdx + 1} iš {questions.length}</span>
+                  <span>{Math.round(((currentQuestionIdx + 1) / questions.length) * 100)}% Atlikta</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">
+                  {questions[currentQuestionIdx].title}
+                </h3>
+                <p className="text-sm text-white/60 mb-6">
+                  {questions[currentQuestionIdx].subtitle}
+                </p>
+                <div className="space-y-3">
+                  {questions[currentQuestionIdx].options.map((option, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleOptionSelect(option)}
+                      className="w-full text-left p-4 rounded-xl bg-white/5 border border-white/10 hover:border-emerald-growth/50 hover:bg-white/10 transition-all text-sm font-semibold"
+                    >
+                      {option}
+                    </button>
+                  ))}
+                </div>
+                <div className="flex justify-between items-center mt-6">
+                  <button
+                    onClick={handlePrevQuestion}
+                    className="text-xs text-white/50 hover:text-white transition-colors flex items-center gap-1"
+                  >
+                    ← Atgal
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {quizStep === "disqualified" && (
+              <div className="text-center py-6">
+                <div className="text-red-400 mb-4">
+                  <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Apyvarta per maža</h3>
+                <p className="text-sm text-white/65 leading-relaxed mb-6">
+                  Mūsų paslaugos efektyviausiai atsiperka paslaugų verslams, generuojantiems virš €5 000 mėnesinės apyvartos. Esant mažesnei apyvartai, €400/mėn. administravimo kaina gali neduoti teigiamo ROI.
+                </p>
+                <button
+                  onClick={() => setQuizStep("intro")}
+                  className="text-emerald-growth text-sm font-bold hover:underline"
+                >
+                  Pradėti iš naujo
+                </button>
+              </div>
+            )}
+
+            {quizStep === "form" && (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <h3 className="text-xl font-bold mb-4">Įveskite savo kontaktus nemokamai konsultacijai gauti</h3>
+                
+                <div>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Jūsų vardas</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={contactInfo.name}
+                    onChange={handleInputChange}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
+                    placeholder="Vardas Pavardė"
+                  />
+                  {errors.name && <span className="text-red-400 text-xs mt-1 block">{errors.name}</span>}
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Svetainės adresas (arba įmonės pavadinimas)</label>
+                  <input
+                    type="text"
+                    name="website"
+                    value={contactInfo.website}
+                    onChange={handleInputChange}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
+                    placeholder="manosvetaine.lt"
+                  />
+                  {errors.website && <span className="text-red-400 text-xs mt-1 block">{errors.website}</span>}
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Darbinis el. paštas</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={contactInfo.email}
+                    onChange={handleInputChange}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
+                    placeholder="vardas@imone.lt"
+                  />
+                  {errors.email && <span className="text-red-400 text-xs mt-1 block">{errors.email}</span>}
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5">Telefono numeris</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={contactInfo.phone}
+                    onChange={handleInputChange}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-sm focus:border-emerald-growth focus:ring-1 focus:ring-emerald-growth outline-none"
+                    placeholder="+370 600 00000"
+                  />
+                  {errors.phone && <span className="text-red-400 text-xs mt-1 block">{errors.phone}</span>}
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-emerald-growth text-deep-navy font-bold py-4 rounded-full hover:scale-95 transition-all text-sm mt-4 disabled:opacity-50"
+                >
+                  {isSubmitting ? "Siunčiama..." : "Gauti nemokamą konsultaciją"}
+                </button>
+                {errors.submit && <span className="text-red-400 text-xs mt-2 text-center block">{errors.submit}</span>}
+              </form>
+            )}
+
+            {quizStep === "success" && (
+              <div className="text-center py-6">
+                <div className="text-emerald-growth mb-4">
+                  <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Užklausą sėkmingai gavome!</h3>
+                <p className="text-sm text-white/60 mb-6 leading-relaxed">
+                  Ačiū, {contactInfo.name}. Pradėjome analizuoti svetainės `{contactInfo.website}` klientų išlaikymo potencialą. Per 24 valandas susisieksime su jumis el. paštu `{contactInfo.email}` suderinti nemokamo skambučio laiko.
+                </p>
+                <button
+                  onClick={() => setQuizStep("intro")}
+                  className="text-emerald-growth text-sm font-bold hover:underline"
+                >
+                  Pateikti kitą užklausą
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
@@ -1234,24 +1231,20 @@ export default function Home() {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 sm:w-6 h-6 md:w-8 md:h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
-                <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
-                      stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
-                <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
-                  SMS
-                </text>
+              <svg className="w-5 h-5 sm:w-6 h-6 md:w-8 md:h-8 text-deep-navy shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <span className="text-sm sm:text-base md:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
-                SMSflow
+                Emailflow
               </span>
             </div>
             
             <div className="flex flex-col items-center md:items-start gap-2 text-xs text-on-surface-variant font-medium">
-              <a href="mailto:info@smsflow.eu" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
+              <a href="mailto:info@emailflow.eu" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5 text-on-surface-variant/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                info@smsflow.eu
+                info@emailflow.eu
               </a>
               <a href="tel:+37067911191" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5 text-on-surface-variant/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1263,7 +1256,7 @@ export default function Home() {
           </div>
 
           <div className="text-xs text-on-surface-variant opacity-60 md:self-end">
-            © 2026 SMSflow. Visos teisės saugomos.
+            © 2026 Emailflow. Visos teisės saugomos.
           </div>
         </div>
       </footer>
