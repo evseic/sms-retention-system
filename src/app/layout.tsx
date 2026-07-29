@@ -16,9 +16,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SMSflow | El. pašto ir SMS klientų išlaikymo sistemos",
-  description: "Email and Sms klientu islaikymo sistemos",
-  keywords: ["klientu išlaikymas", "SMS rinkodara", "el. pašto rinkodara", "marketingo automatizavimas", "vietinis verslas"],
+  title: "Emailflow | El. pašto klientų išlaikymo sistemos",
+  description: "El. pašto klientų išlaikymo sistemos",
+  keywords: ["klientų išlaikymas", "el. pašto rinkodara", "marketingo automatizavimas", "naujienlaiškiai", "vietinis verslas"],
 };
 
 export default function RootLayout({
