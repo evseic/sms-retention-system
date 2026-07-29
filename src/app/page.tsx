@@ -985,6 +985,9 @@ export default function Home() {
 
           </div>
 
+        </div>
+      </section>
+
       {/* Quiz / Audit Section */}
       <section id="audit" className="relative py-20 md:py-28 bg-deep-navy text-white border-y border-white/10 overflow-hidden">
         {/* Animated Background Blobs */}
