@@ -36,9 +36,9 @@ export async function POST(request: Request) {
           .join("");
 
         await resend.emails.send({
-          from: "SMSflow Leads <onboarding@resend.dev>",
-          to: "info@smsflow.eu",
-          subject: `⚡️ Nauja užklausa iš SMSflow: ${website}`,
+          from: "Emailflow Leads <onboarding@resend.dev>",
+          to: "info@emailflow.eu",
+          subject: `⚡️ Nauja užklausa iš Emailflow: ${website}`,
           html: `
             <h2>Gauta nauja kvalifikacinės viktorinos užklausa</h2>
             <p><strong>Vardas:</strong> ${name}</p>
@@ -57,17 +57,17 @@ export async function POST(request: Request) {
       // 2. Send follow-up to client
       try {
         await resend.emails.send({
-          from: "SMSflow <onboarding@resend.dev>",
+          from: "Emailflow <onboarding@resend.dev>",
           to: email,
-          subject: "Gauta jūsų audito užklausa – SMSflow",
+          subject: "Gauta jūsų audito užklausa – Emailflow",
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; line-height: 1.6;">
-              <h2 style="color: #0F172A;">Sveiki, ${name}!</h2>
-              <p>Dėkojame, kad užpildėte kvalifikacinį klausimyną nemokamam el. pašto ir SMS klientų išlaikymo auditui gauti.</p>
-              <p>Mes jau pradėjome analizuoti jūsų svetainę <strong>${website}</strong> bei pateiktus atsakymus. Mūsų komanda susisieks su jumis per artimiausias 24 valandas pateikdama rezultatus ir konkretų sugrąžinimo planą.</p>
-              <p>Jei turite skubių klausimų, galite susisiekti su mumis tiesiogiai el. paštu <a href="mailto:info@smsflow.eu">info@smsflow.eu</a> arba telefonu +370 679 11191.</p>
-              <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 30px 0;" />
-              <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>SMSflow komanda</strong><br />www.smsflow.lt</p>
+               <h2 style="color: #0F172A;">Sveiki, ${name}!</h2>
+               <p>Dėkojame, kad užpildėte kvalifikacinį klausimyną nemokamam el. pašto klientų išlaikymo auditui gauti.</p>
+               <p>Mes jau pradėjome analizuoti jūsų svetainę <strong>${website}</strong> bei pateiktus atsakymus. Mūsų komanda susisieks su jumis per artimiausias 24 valandas pateikdama rezultatus ir konkretų sugrąžinimo planą.</p>
+               <p>Jei turite skubių klausimų, galite susisiekti su mumis tiesiogiai el. paštu <a href="mailto:info@emailflow.eu">info@emailflow.eu</a> arba telefonu +370 679 11191.</p>
+               <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 30px 0;" />
+               <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>Emailflow komanda</strong><br />www.emailflow.lt</p>
             </div>
           `,
         });
@@ -86,7 +86,7 @@ export async function POST(request: Request) {
           .map(([key, val]) => `*${key}:* ${val}`)
           .join("\n");
 
-        const text = `⚡️ *Nauja užklausa iš SMSflow!*
+        const text = `⚡️ *Nauja užklausa iš Emailflow!*
 
 👤 *Vardas:* ${name}
 📧 *El. paštas:* ${email}
