@@ -36,9 +36,9 @@ export async function POST(request: Request) {
           .join("");
 
         await resend.emails.send({
-          from: "SmsFlow Leads <onboarding@resend.dev>",
+          from: "SMSflow Leads <onboarding@resend.dev>",
           to: "info@smsflow.eu",
-          subject: `⚡️ Nauja užklausa iš SmsFlow: ${website}`,
+          subject: `⚡️ Nauja užklausa iš SMSflow: ${website}`,
           html: `
             <h2>Gauta nauja kvalifikacinės viktorinos užklausa</h2>
             <p><strong>Vardas:</strong> ${name}</p>
@@ -57,9 +57,9 @@ export async function POST(request: Request) {
       // 2. Send follow-up to client
       try {
         await resend.emails.send({
-          from: "SmsFlow <onboarding@resend.dev>",
+          from: "SMSflow <onboarding@resend.dev>",
           to: email,
-          subject: "Gauta jūsų audito užklausa – SmsFlow",
+          subject: "Gauta jūsų audito užklausa – SMSflow",
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; line-height: 1.6;">
                <h2 style="color: #0F172A;">Sveiki, ${name}!</h2>
@@ -67,7 +67,7 @@ export async function POST(request: Request) {
                <p>Mes jau pradėjome analizuoti jūsų svetainę <strong>${website}</strong> bei pateiktus atsakymus. Mūsų komanda susisieks su jumis per artimiausias 24 valandas pateikdama rezultatus ir konkretų sugrąžinimo planą.</p>
                <p>Jei turite skubių klausimų, galite susisiekti su mumis tiesiogiai el. paštu <a href="mailto:info@smsflow.eu">info@smsflow.eu</a> arba telefonu +370 679 11191.</p>
                <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 30px 0;" />
-               <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>SmsFlow komanda</strong><br />www.smsflow.lt</p>
+               <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>SMSflow komanda</strong><br />www.smsflow.lt</p>
             </div>
           `,
         });
@@ -86,7 +86,7 @@ export async function POST(request: Request) {
           .map(([key, val]) => `*${key}:* ${val}`)
           .join("\n");
 
-        const text = `⚡️ *Nauja užklausa iš SmsFlow!*
+        const text = `⚡️ *Nauja užklausa iš SMSflow!*
 
 👤 *Vardas:* ${name}
 📧 *El. paštas:* ${email}
