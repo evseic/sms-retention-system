@@ -59,13 +59,16 @@ export async function POST(request: Request) {
         await resend.emails.send({
           from: "SMSflow <onboarding@resend.dev>",
           to: email,
-          subject: "Gauta jūsų audito užklausa – SMSflow",
+          subject: "Sužinokite, kiek papildomų pajamų gali generuoti jūsų el. pašto kanalas",
           html: `
-            <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; line-height: 1.6;">
+            <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #0F172A;">
                <h2 style="color: #0F172A;">Sveiki, ${name}!</h2>
-               <p>Dėkojame, kad užpildėte kvalifikacinį klausimyną nemokamam el. pašto klientų išlaikymo auditui gauti.</p>
-               <p>Mes jau pradėjome analizuoti jūsų svetainę <strong>${website}</strong> bei pateiktus atsakymus. Mūsų komanda susisieks su jumis per artimiausias 24 valandas pateikdama rezultatus ir konkretų sugrąžinimo planą.</p>
-               <p>Jei turite skubių klausimų, galite susisiekti su mumis tiesiogiai el. paštu <a href="mailto:info@smsflow.eu">info@smsflow.eu</a> arba telefonu +370 679 11191.</p>
+               <p>Per 15–20 minučių parodysime, kur šiuo metu prarandate potencialius pardavimus ir kokios galimybės gali atnešti didžiausią grąžą jūsų el. parduotuvei.</p>
+               <p style="font-weight: bold; margin-top: 24px;">📅 Rezervuokite strateginį pokalbį dabar:</p>
+               <p style="margin: 16px 0;">
+                 <a href="https://calendly.com/smsflow/smsflow" style="display: inline-block; background-color: #10B981; color: #0B0F14; font-weight: bold; padding: 12px 28px; border-radius: 9999px; text-decoration: none;">Rezervuoti konsultaciją</a>
+               </p>
+               <p style="font-size: 14px; color: #64748B;">Vietų skaičius ribotas, todėl rekomenduojame rezervuoti laiką kuo anksčiau.</p>
                <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 30px 0;" />
                <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>SMSflow komanda</strong><br />www.smsflow.lt</p>
             </div>
