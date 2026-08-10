@@ -128,63 +128,55 @@ const workflowStepsEN = [
 
 const faqItemsLT = [
   {
-    question: "Su kokiomis platformomis dirbate?",
-    answer: "Omnisend",
-  },
-  {
-    question: "Ar tai tinka mažesniam verslui, ar tik dideliems?",
-    answer: "Mūsų klientų mėnesinė apyvarta svyruoja nuo 10 000 € iki 500 000 €+. Mažesnėms parduotuvėms el. paštas dažnai atneša didžiausią ROI — tiesiog reikia tinkamai suderinti pagrindus. Atsisakome dirbti tik su tais verslais, kurių mėnesinė apyvarta vis dar nesiekia 10 000 € — šiame etape investicija į el. paštą tiesiog neatsipirktų.",
-  },
-  {
-    question: "Ar man jau reikia turėti didelį el. pašto sąrašą?",
-    answer: "Ne. Jei jūsų sąrašas mažas arba jo visai neturite — pirmasis žingsnis yra registracijos formos ir iššokantys langai (pop-up). Per 30–60 dienų sąrašas paprastai išauga 3–5 kartus. Dirbame su viskuo — nuo nulinių kontaktų sąrašų iki 50 000+ kontaktų duomenų bazių.",
-  },
-  {
-    question: "Kaip greitai pamatysiu rezultatus?",
+    question: "Kokių rezultatų galiu tikėtis?",
     answer: "Pirmieji rezultatai pasirodo per 2–4 savaites, kai paleidžiami pagrindiniai automatiniai srautai (sveikinimo serija, apleistas krepšelis, po-pirkiminis srautas). Stabilus +20–30 % pajamų padidėjimas iš el. pašto kanalo paprastai pasiekiamas per 60–90 dienų, kai įsibėgėja kampanijos ir segmentavimas.",
+  },
+  {
+    question: "Ar tinka mano verslui?",
+    answer: "Mūsų klientų mėnesinė apyvarta svyruoja nuo 10 000 € iki 500 000 €+. Nors el. prekyba yra pagrindinė mūsų sritis, sėkmingai dirbame ir su paslaugų verslais (agentūromis, konsultacijomis, B2B SaaS). Atsisakome dirbti tik su tais verslais, kurių mėnesinė apyvarta vis dar nesiekia 10 000 € — šiame etape investicija tiesiog neatsipirktų.",
+  },
+  {
+    question: "Ar man jau reikia turėti el. pašto sąrašą?",
+    answer: "Ne. Jei jūsų sąrašas mažas arba jo visai neturite — pirmasis žingsnis yra registracijos formos ir iššokantys langai (pop-up). Per 30–60 dienų sąrašas paprastai išauga 3–5 kartus. Dirbame su viskuo — nuo nulinių kontaktų sąrašų iki 50 000+ kontaktų duomenų bazių.",
   },
   {
     question: "Ką gaunu už mėnesinį mokestį?",
     answer: "Pilnas jūsų el. pašto kanalo valdymas: auditas, strategija, sukurtos 5+ automatinės sekos, reguliarios kampanijos (8 per mėnesį), tekstų rašymas, dizainas, A/B testavimas, segmentavimas, pristatymo rodiklių stebėjimas ir ataskaitos. Jokių papildomų sąskaitų — viskas įskaičiuota.",
   },
   {
-    question: "Ar tai skirta tik el. parduotuvėms?",
-    answer: "El. prekyba yra pagrindinė mūsų sritis, tačiau sėkmingai dirbame ir su paslaugų verslais (agentūromis, konsultacijomis, kursais, B2B SaaS). Skiriasi tik strateginis akcentas — kai el. parduotuvė automatizuoja pirkimo srautus, paslaugų verslas naudoja el. paštą potencialių klientų pritraukimui ir esamų išlaikymui.",
-  },
-  {
     question: "Kiek laiko užtrunka paleidimas?",
     answer: "Auditas ir strategija — per 12–24 valandas po pirmojo skambučio. Pagrindiniai automatiniai srautai — per 5 darbo dienas, o pirmoji kampanija startuoja per 2–3 savaites. Pilnas pagrindas paruošiamas per pirmąjį mėnesį, o tolesni mėnesiai skiriami augimui, optimizavimui ir naujų kampanijų kūrimui.",
+  },
+  {
+    question: "Su kokiomis platformomis dirbate?",
+    answer: "Omnisend",
   },
 ];
 
 const faqItemsEN = [
   {
-    question: "Which platforms do you work with?",
-    answer: "Omnisend",
-  },
-  {
-    question: "Does this work for smaller businesses or only big ones?",
-    answer: "Monthly revenue among our clients ranges from €10,000 to €500,000+. For smaller stores, email often delivers the highest ROI — the fundamentals just need to be set up properly. We only turn away businesses whose monthly revenue is still under €10,000 — at that stage, the investment in email simply would not pay off.",
-  },
-  {
-    question: "Do I need a big email list already?",
-    answer: "No. If your list is small — or you do not have one at all — the first step is signup forms and pop-ups. Within 30-60 days the list typically grows 3-5x. We work with everything from zero-contact lists to 50,000+ contact databases.",
-  },
-  {
-    question: "How quickly will I see results?",
+    question: "What results can I expect?",
     answer: "The first results show up within 2-4 weeks – once the core automated flows go live (welcome series, abandoned cart, post-purchase). A stable +20-30% revenue lift from the email channel is typically reached within 60-90 days, as campaigns and segmentation gain momentum.",
+  },
+  {
+    question: "Is it suitable for my business?",
+    answer: "Monthly revenue among our clients ranges from €10,000 to €500,000+. While e-commerce is our core focus, we also work successfully with service businesses (agencies, consulting, B2B SaaS). We only turn away businesses whose monthly revenue is still under €10,000 — at that stage, the investment simply would not pay off.",
+  },
+  {
+    question: "Do I need to have an email list already?",
+    answer: "No. If your list is small — or you do not have one at all — the first step is signup forms and pop-ups. Within 30-60 days the list typically grows 3-5x. We work with everything from zero-contact lists to 50,000+ contact databases.",
   },
   {
     question: "What do I get for the monthly fee?",
     answer: "Full management of your email channel: audit, strategy, 5+ automated flows built, regular campaigns (8 per month), copywriting, design, A/B testing, segmentation, deliverability monitoring and reporting. No extra invoices — everything is included.",
   },
   {
-    question: "Is this only for online stores?",
-    answer: "E-commerce is our core focus, but we also work successfully with service businesses (agencies, consulting, courses, B2B SaaS). Only the strategic emphasis differs — where an online store automates purchase flows, a service business uses email for lead nurturing and client retention.",
+    question: "How long does the launch take?",
+    answer: "Audit and strategy — 12-24 hours after the first call. Core automated flows — 5 business days, with the first campaign launching within 2-3 weeks. The full foundation is live within the first month; the months after that are about growth, optimization and rolling out new campaigns.",
   },
   {
-    question: "How long does it take to launch?",
-    answer: "Audit and strategy — 12-24 hours after the first call. Core automated flows — 5 business days, with the first campaign launching within 2-3 weeks. The full foundation is live within the first month; the months after that are about growth, optimization and rolling out new campaigns.",
+    question: "Which platforms do you work with?",
+    answer: "Omnisend",
   },
 ];
 
@@ -227,34 +219,34 @@ const dashboardStatesLT = [
 const dashboardStatesEN = [
   {
     totalRevenue: 578,
-    symbol: "$",
+    symbol: "£",
     items: [
       { id: "1", type: "user", title: "New subscriber", subtitle: "Pop-up form · -10% code sent", badge: "✓", isSuccess: true },
-      { id: "2", type: "email", title: "Post-purchase flow", subtitle: "Cross-sell offer → extra order", badge: "+$66" },
-      { id: "3", type: "send", title: "Weekly campaign sent", subtitle: "Promo email · to 4 821 recipients", badge: "+$356" },
-      { id: "4", type: "star", title: "Welcome series · email 2", subtitle: "New subscriber → first purchase", badge: "+$26" },
-      { id: "5", type: "cart", title: "Abandoned cart recovered", subtitle: "Reminder email → order", badge: "+$130" },
+      { id: "2", type: "email", title: "Post-purchase flow", subtitle: "Cross-sell offer → extra order", badge: "+£66" },
+      { id: "3", type: "send", title: "Weekly campaign sent", subtitle: "Promo email · to 4 821 recipients", badge: "+£356" },
+      { id: "4", type: "star", title: "Welcome series · email 2", subtitle: "New subscriber → first purchase", badge: "+£26" },
+      { id: "5", type: "cart", title: "Abandoned cart recovered", subtitle: "Reminder email → order", badge: "+£130" },
     ]
   },
   {
     totalRevenue: 2496,
-    symbol: "$",
+    symbol: "£",
     items: [
-      { id: "6", type: "star", title: "Welcome series · email 1", subtitle: "Welcome + bestsellers guide", badge: "+$48" },
+      { id: "6", type: "star", title: "Welcome series · email 1", subtitle: "Welcome + bestsellers guide", badge: "+£48" },
       { id: "7", type: "email", title: "Review request", subtitle: "Customer left a 5★ rating", badge: "✓", isSuccess: true },
-      { id: "8", type: "send", title: "Segmented campaign", subtitle: "To VIP customers · repeat purchases", badge: "+$164" },
-      { id: "9", type: "cart", title: "Abandoned cart recovered", subtitle: "2nd reminder with discount → order", badge: "+$128" },
+      { id: "8", type: "send", title: "Segmented campaign", subtitle: "To VIP customers · repeat purchases", badge: "+£164" },
+      { id: "9", type: "cart", title: "Abandoned cart recovered", subtitle: "2nd reminder with discount → order", badge: "+£128" },
       { id: "10", type: "user", title: "New subscriber", subtitle: "Pop-up form · -10% code sent", badge: "✓", isSuccess: true },
     ]
   },
   {
     totalRevenue: 2892,
-    symbol: "$",
+    symbol: "£",
     items: [
-      { id: "11", type: "send", title: "Weekly campaign sent", subtitle: "Promo email · to 4 821 recipients", badge: "+$169" },
-      { id: "12", type: "star", title: "Welcome series · email 2", subtitle: "New subscriber → first purchase", badge: "+$85" },
-      { id: "13", type: "cart", title: "Abandoned cart recovered", subtitle: "Reminder email → order", badge: "+$142" },
-      { id: "14", type: "star", title: "Welcome series · email 1", subtitle: "Welcome + bestsellers guide", badge: "+$48" },
+      { id: "11", type: "send", title: "Weekly campaign sent", subtitle: "Promo email · to 4 821 recipients", badge: "+£169" },
+      { id: "12", type: "star", title: "Welcome series · email 2", subtitle: "New subscriber → first purchase", badge: "+£85" },
+      { id: "13", type: "cart", title: "Abandoned cart recovered", subtitle: "Reminder email → order", badge: "+£142" },
+      { id: "14", type: "star", title: "Welcome series · email 1", subtitle: "Welcome + bestsellers guide", badge: "+£48" },
       { id: "15", type: "email", title: "Review request", subtitle: "Customer left a 5★ rating", badge: "✓", isSuccess: true },
     ]
   }
@@ -577,7 +569,7 @@ const TRANSLATIONS = {
         title: "Full system",
         desc: "Monthly package that covers the entire communication channel — no extra bills.",
         kaina: "PRICE",
-        priceValue: "800$",
+        priceValue: "800£",
         pricePeriod: "/ mo.",
         avgResultLabel: "AVERAGE RESULT",
         avgResultValue: "+20%",
@@ -604,7 +596,7 @@ const TRANSLATIONS = {
       backBtn: "← Back",
       disqualified: {
         title: "Turnover too low",
-        desc: "Our services are most effective for businesses generating over 10 000 $ monthly turnover. Below that, the 800$/mo. management fee may not yield a positive ROI.",
+        desc: "Our services are most effective for businesses generating over 10 000 £ monthly turnover. Below that, the 800£/mo. management fee may not yield a positive ROI.",
         restart: "Start over"
       },
       form: {
@@ -688,7 +680,7 @@ const questionsEN = [
     id: "turnover",
     title: "Monthly turnover",
     subtitle: "What is your business's average monthly turnover?",
-    options: ["Up to 10 000 $", "10 000 – 20 000 $", "20 000 – 50 000 $", "More than 50 000 $"],
+    options: ["Up to 10 000 £", "10 000 – 20 000 £", "20 000 – 50 000 £", "More than 50 000 £"],
   },
   {
     id: "currentUsage",
@@ -791,7 +783,7 @@ export default function Home() {
     setAnswers(newAnswers);
 
     // Disqualification check: if turnover is under 10,000 € / $
-    if (questionId === "turnover" && (option === "Iki 10 000 €" || option === "Up to 10 000 $")) {
+    if (questionId === "turnover" && (option === "Iki 10 000 €" || option === "Up to 10 000 £")) {
       setQuizStep("disqualified");
       return;
     }
@@ -895,10 +887,16 @@ export default function Home() {
         }`}
       >
         <div className="max-w-container-max mx-auto h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-          <a href="#" className="flex items-center gap-1.5 hover:opacity-85 transition-opacity">
-            <span className="text-xl sm:text-2xl font-sans font-bold text-[#7c8fa6]">e</span>
-            <span className="text-xl sm:text-2xl font-sans font-extrabold text-deep-navy tracking-tight">
-              {language === "LT" ? "Laiškai" : "Emails"}
+          <a href="#" className="flex items-center gap-2 hover:opacity-85 transition-opacity">
+            <svg className="w-5 h-5 sm:w-6 h-6 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
+              <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
+                    stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
+              <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
+                SMS
+              </text>
+            </svg>
+            <span className="text-base sm:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
+              SMSflow
             </span>
           </a>
 
@@ -1020,7 +1018,7 @@ export default function Home() {
               {t.hero.tag}
             </div>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-deep-navy leading-none mb-6">
-              {t.hero.title1}<br />{t.hero.title2}<span className="text-emerald-growth underline decoration-wavy underline-offset-4">{t.hero.underline}</span>
+              {t.hero.title1}<br />{t.hero.title2}<span className="text-emerald-growth underline underline-offset-8 decoration-3 decoration-emerald-growth">{t.hero.underline}</span>
             </h1>
             <p className="text-body-lg text-on-surface-variant mb-8 max-w-lg">
               {t.hero.subtitle}
@@ -1157,13 +1155,13 @@ export default function Home() {
             {/* Revenue label + large number */}
             <p className="text-[10px] uppercase tracking-widest text-white/50 font-bold mb-2">{t.calculator.revenueLabel}</p>
             <p className="font-display text-4xl font-bold text-white mb-5">
-              {language === "LT" ? "€" : "$"}{formatNumber(calcRevenue)}
+              {language === "LT" ? "€" : "£"}{formatNumber(calcRevenue)}
             </p>
 
             {/* Slider */}
             <input
               type="range"
-              min="1000"
+              min="10000"
               max="200000"
               step="1000"
               value={calcRevenue}
@@ -1175,13 +1173,13 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
                 <p className="font-display text-2xl font-bold text-emerald-growth leading-tight mb-2">
-                  {language === "LT" ? "€" : "$"}{formatNumber(monthlyEmailLow)}–<br/>{formatNumber(monthlyEmailHigh)}
+                  {language === "LT" ? "€" : "£"}{formatNumber(monthlyEmailLow)}–<br/>{formatNumber(monthlyEmailHigh)}
                 </p>
                 <p className="text-[11px] text-white/50 leading-snug">{t.calculator.monthlyLabel}</p>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
                 <p className="font-display text-2xl font-bold text-white leading-tight mb-2">
-                  {language === "LT" ? "€" : "$"}{formatNumber(annualEmailAdditional)}+
+                  {language === "LT" ? "€" : "£"}{formatNumber(annualEmailAdditional)}+
                 </p>
                 <p className="text-[11px] text-white/50 leading-snug">{t.calculator.annualLabel}</p>
               </div>
