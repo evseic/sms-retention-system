@@ -296,11 +296,9 @@ const formatNumber = (num: number) => {
 const TRANSLATIONS = {
   LT: {
     nav: {
-      howItWorks: "Kaip veikia",
+      howItWorks: "Sistemos galimybės",
       calculator: "Skaičiuoklė",
-      sevenDays: "7 dienos",
       faq: "D.U.K.",
-      articles: "Straipsniai",
       results: "Rezultatai",
       bookConsultation: "Rezervuoti konsultaciją",
     },
@@ -467,11 +465,9 @@ const TRANSLATIONS = {
   },
   EN: {
     nav: {
-      howItWorks: "How it works",
+      howItWorks: "Capabilities",
       calculator: "Calculator",
-      sevenDays: "7 days",
       faq: "FAQ",
-      articles: "Articles",
       results: "Results",
       bookConsultation: "Book a consultation",
     },
@@ -882,7 +878,7 @@ export default function Home() {
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md border-b border-border-subtle shadow-sm"
+            ? "bg-white/80 backdrop-blur-[8px] border-b border-border-subtle shadow-sm"
             : "bg-transparent"
         }`}
       >
@@ -902,10 +898,10 @@ export default function Home() {
 
           <div className="hidden lg:flex items-center gap-7">
             <a 
-              href="#about" 
-              onClick={() => setActiveSection("about")}
+              href="#pillars" 
+              onClick={() => setActiveSection("pillars")}
               className={`text-[13px] font-bold py-1 transition-all relative ${
-                activeSection === "about" 
+                activeSection === "pillars" 
                   ? "text-deep-navy after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#0EA87E]" 
                   : "text-on-surface-variant/80 hover:text-deep-navy"
               }`}
@@ -924,15 +920,15 @@ export default function Home() {
               {t.nav.calculator}
             </a>
             <a 
-              href="#workflow" 
-              onClick={() => setActiveSection("workflow")}
+              href="#results" 
+              onClick={() => setActiveSection("results")}
               className={`text-[13px] font-bold py-1 transition-all relative ${
-                activeSection === "workflow" 
+                activeSection === "results" 
                   ? "text-deep-navy after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#0EA87E]" 
                   : "text-on-surface-variant/80 hover:text-deep-navy"
               }`}
             >
-              {t.nav.sevenDays}
+              {t.nav.results}
             </a>
             <a 
               href="#faq" 
@@ -944,28 +940,6 @@ export default function Home() {
               }`}
             >
               {t.nav.faq}
-            </a>
-            <a 
-              href="#pricing" 
-              onClick={() => setActiveSection("articles")}
-              className={`text-[13px] font-bold py-1 transition-all relative ${
-                activeSection === "articles" 
-                  ? "text-deep-navy after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#0EA87E]" 
-                  : "text-on-surface-variant/80 hover:text-deep-navy"
-              }`}
-            >
-              {t.nav.articles}
-            </a>
-            <a 
-              href="#results" 
-              onClick={() => setActiveSection("results")}
-              className={`text-[13px] font-bold py-1 transition-all relative ${
-                activeSection === "results" 
-                  ? "text-deep-navy after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#0EA87E]" 
-                  : "text-on-surface-variant/80 hover:text-deep-navy"
-              }`}
-            >
-              {t.nav.results}
             </a>
           </div>
 
@@ -1204,7 +1178,7 @@ export default function Home() {
       </section>
 
       {/* Pillars Section - Redesigned as a Light Bento Grid */}
-      <section id="pillars" className="relative py-20 md:py-28 bg-surface-container-low text-on-surface overflow-hidden">
+      <section id="pillars" className="relative py-20 md:py-28 bg-[#F4F7F6] text-on-surface overflow-hidden">
         {/* Animated Background Blobs */}
         <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-emerald-growth/5 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-deep-navy/5 rounded-full blur-[140px] animate-float-reverse pointer-events-none z-0"></div>
@@ -1264,7 +1238,7 @@ export default function Home() {
       </section>
 
       {/* Interactive Workflow Section */}
-      <section id="workflow" className="py-20 md:py-28 bg-[#F3F8F6] text-on-surface overflow-hidden relative">
+      <section id="workflow" className="py-20 md:py-28 bg-[#F4F7F6] text-on-surface overflow-hidden relative">
         {/* Animated Background Blobs */}
         <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-emerald-growth/5 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
 
@@ -1386,40 +1360,34 @@ export default function Home() {
       </section>
 
       {/* Stats / Results Counters */}
-      <section id="results" className="py-20 md:py-28 bg-[#EAF1EE] border-b border-border-subtle relative overflow-hidden">
+      <section id="results" className="py-20 md:py-28 bg-[#F4F7F6] border-b border-border-subtle relative overflow-hidden">
         {/* Animated Background Blobs */}
         <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-emerald-growth/5 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
 
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
           <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
-            Skaičiai patys kalba už save
+            {t.stats.tag}
           </span>
           <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-deep-navy mb-16">
-            Mūsų pasiekiami rezultatai
+            {t.stats.title}
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-white border border-border-subtle rounded-xl shadow-sm relative z-10">
-              <p className="font-display text-3xl lg:text-4xl font-bold text-emerald-growth mb-2">+34%</p>
-              <p className="text-xs text-on-surface-variant font-semibold uppercase">vidutinis pajamų augimas</p>
-            </div>
-            <div className="p-6 bg-white border border-border-subtle rounded-xl shadow-sm relative z-10">
-              <p className="font-display text-3xl lg:text-4xl font-bold text-deep-navy mb-2">24/7</p>
-              <p className="text-xs text-on-surface-variant font-semibold uppercase">automatizuoti srautai</p>
-            </div>
-            <div className="p-6 bg-white border border-border-subtle rounded-xl shadow-sm relative z-10">
-              <p className="font-display text-3xl lg:text-4xl font-bold text-emerald-growth mb-2">&lt; 24h</p>
-              <p className="text-xs text-on-surface-variant font-semibold uppercase">{t.stats.items[2].label}</p>
-            </div>
-            <div className="p-6 bg-white border border-border-subtle rounded-xl shadow-sm relative z-10">
-              <p className="font-display text-3xl lg:text-4xl font-bold text-deep-navy mb-2">{t.stats.items[3].value}</p>
-              <p className="text-xs text-on-surface-variant font-semibold uppercase">{t.stats.items[3].label}</p>
-            </div>
+            {t.stats.items.map((item, idx) => (
+              <div key={idx} className="p-6 bg-white border border-border-subtle rounded-xl shadow-sm relative z-10">
+                <p className={`font-display text-3xl lg:text-4xl font-bold mb-2 ${idx % 2 === 0 ? "text-emerald-growth" : "text-deep-navy"}`}>
+                  {item.value}
+                </p>
+                <p className="text-xs text-on-surface-variant font-semibold uppercase">
+                  {item.label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Investment / Pricing Section */}
-      <section id="pricing" className="py-20 md:py-28 bg-[#F3F8F6] text-on-surface overflow-hidden relative border-t border-border-subtle">
+      <section id="pricing" className="py-20 md:py-28 bg-[#F4F7F6] text-on-surface overflow-hidden relative border-t border-border-subtle">
         <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-emerald-growth/5 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
         
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center mb-16">
@@ -1537,7 +1505,7 @@ export default function Home() {
       </section>
 
       {/* Quiz / Audit Section - Redesigned as Light theme */}
-      <section id="audit" className="relative py-20 md:py-28 bg-[#F3F8F6] text-on-surface border-y border-border-subtle overflow-hidden">
+      <section id="audit" className="relative py-20 md:py-28 bg-[#F4F7F6] text-on-surface border-y border-border-subtle overflow-hidden">
         {/* Animated Background Blobs */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-growth/5 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
 
