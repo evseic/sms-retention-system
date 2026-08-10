@@ -128,55 +128,63 @@ const workflowStepsEN = [
 
 const faqItemsLT = [
   {
-    question: "Per kiek laiko pamatysiu rezultatus?",
-    answer: "Pirmieji rezultatai matomi jau po 3–6 savaičių. Įdiegus automatizuotus el. pašto srautus ir optimizavus kampanijas, el. pašto kanalas tampa vienu pelningiausių pardavimų augimo šaltinių. Stabilus augimas ir didžiausias poveikis rezultatams paprastai pasiekiami per 60–120 dienų.",
+    question: "Su kokiomis platformomis dirbate?",
+    answer: "Omnisend",
   },
   {
-    question: "Ar tinka mažesniam verslui ar tik dideliems?",
-    answer: "Tinka tiek mažesniems, tiek didesniems prekybos ar paslaugų verslams. Svarbiausia sąlyga — turėti bent minimalų klientų / kontaktų sąrašą (rekomenduojama nuo 500-1000 kontaktų), kad investicija greitai atsipirktų ir neštų aukštą ROI.",
+    question: "Ar tai tinka mažesniam verslui, ar tik dideliems?",
+    answer: "Mūsų klientų mėnesinė apyvarta svyruoja nuo 10 000 € iki 500 000 €+. Mažesnėms parduotuvėms el. paštas dažnai atneša didžiausią ROI — tiesiog reikia tinkamai suderinti pagrindus. Atsisakome dirbti tik su tais verslais, kurių mėnesinė apyvarta vis dar nesiekia 10 000 € — šiame etape investicija į el. paštą tiesiog neatsipirktų.",
   },
   {
-    question: "Ar privalau jau turėti didelį el. pašto sąrašą?",
-    answer: "Ne, didelio sąrašo nereikia. Pradėti galime ir su keliais šimtais kontaktų. Kartu su automatizacijomis svetainėje įdiegiame kontaktų rinkimo formas ir pop-up'us, kurie padeda kasdien organiškai ir greitai auginti jūsų gavėjų sąrašą.",
+    question: "Ar man jau reikia turėti didelį el. pašto sąrašą?",
+    answer: "Ne. Jei jūsų sąrašas mažas arba jo visai neturite — pirmasis žingsnis yra registracijos formos ir iššokantys langai (pop-up). Per 30–60 dienų sąrašas paprastai išauga 3–5 kartus. Dirbame su viskuo — nuo nulinių kontaktų sąrašų iki 50 000+ kontaktų duomenų bazių.",
+  },
+  {
+    question: "Kaip greitai pamatysiu rezultatus?",
+    answer: "Pirmieji rezultatai pasirodo per 2–4 savaites, kai paleidžiami pagrindiniai automatiniai srautai (sveikinimo serija, apleistas krepšelis, po-pirkiminis srautas). Stabilus +20–30 % pajamų padidėjimas iš el. pašto kanalo paprastai pasiekiamas per 60–90 dienų, kai įsibėgėja kampanijos ir segmentavimas.",
   },
   {
     question: "Ką gaunu už mėnesinį mokestį?",
-    answer: "El. pašto sistema, kuri dirba jūsų pardavimams.\n\nSukuriame ir valdome visą kanalą: nuo automatinių srautų ir segmentacijos iki reguliarių kampanijų, testavimo ir rezultatų analizės.\nJūs gaunate veikiančią sistemą, kuri padeda generuoti daugiau pajamų iš esamų klientų.",
+    answer: "Pilnas jūsų el. pašto kanalo valdymas: auditas, strategija, sukurtos 5+ automatinės sekos, reguliarios kampanijos (8 per mėnesį), tekstų rašymas, dizainas, A/B testavimas, segmentavimas, pristatymo rodiklių stebėjimas ir ataskaitos. Jokių papildomų sąskaitų — viskas įskaičiuota.",
   },
   {
-    question: "Ar tai tinka tik el. parduotuvėms?",
-    answer: "Ne, el. pašto rinkodara puikiai veikia ir vietiniams bei paslaugų verslams (klinikoms, salonams, automobilių servisams, B2B įmonėms). Ji padeda sugrąžinti neaktyvius klientus ir skatinti pakartotinius pirkimus ar registracijas.",
+    question: "Ar tai skirta tik el. parduotuvėms?",
+    answer: "El. prekyba yra pagrindinė mūsų sritis, tačiau sėkmingai dirbame ir su paslaugų verslais (agentūromis, konsultacijomis, kursais, B2B SaaS). Skiriasi tik strateginis akcentas — kai el. parduotuvė automatizuoja pirkimo srautus, paslaugų verslas naudoja el. paštą potencialių klientų pritraukimui ir esamų išlaikymui.",
   },
   {
-    question: "Kiek užtrunka projekto paleidimas?",
-    answer: "Pilnas sistemos paruošimas, techniniai pajungimai, dizaino suderinimas ir pirmųjų automatinių srautų aktyvavimas užtrunka iki 7 dienų. Per pirmąjį mėnesį sukuriamas tvirtas email marketingo pagrindas, o vėlesniuose etapuose dėmesys skiriamas augimui, rezultatų optimizavimui ir naujų kampanijų plėtrai.",
+    question: "Kiek laiko užtrunka paleidimas?",
+    answer: "Auditas ir strategija — per 12–24 valandas po pirmojo skambučio. Pagrindiniai automatiniai srautai — per 5 darbo dienas, o pirmoji kampanija startuoja per 2–3 savaites. Pilnas pagrindas paruošiamas per pirmąjį mėnesį, o tolesni mėnesiai skiriami augimui, optimizavimui ir naujų kampanijų kūrimui.",
   },
 ];
 
 const faqItemsEN = [
   {
-    question: "How soon will I see results?",
-    answer: "First results are visible within 3-6 weeks. After setting up automated email flows and optimizing campaigns, the email channel becomes one of the most profitable sales channels. Stable growth and maximum impact are usually achieved within 60-120 days.",
+    question: "Which platforms do you work with?",
+    answer: "Omnisend",
   },
   {
-    question: "Is this suitable for small businesses or only large ones?",
-    answer: "It suits both small and large service or e-commerce businesses. The main condition is having at least a minimal client/contact database (recommended 500-1000+ contacts) to make the investment pay off quickly and yield a high ROI.",
+    question: "Does this work for smaller businesses or only big ones?",
+    answer: "Monthly revenue among our clients ranges from €10,000 to €500,000+. For smaller stores, email often delivers the highest ROI — the fundamentals just need to be set up properly. We only turn away businesses whose monthly revenue is still under €10,000 — at that stage, the investment in email simply would not pay off.",
   },
   {
-    question: "Do I already need a large email list?",
-    answer: "No, a large list is not necessary. We can start with a few hundred contacts. Together with automations, we set up contact forms and pop-ups on your website to help grow your subscriber list organically and quickly.",
+    question: "Do I need a big email list already?",
+    answer: "No. If your list is small — or you do not have one at all — the first step is signup forms and pop-ups. Within 30-60 days the list typically grows 3-5x. We work with everything from zero-contact lists to 50,000+ contact databases.",
+  },
+  {
+    question: "How quickly will I see results?",
+    answer: "The first results show up within 2-4 weeks – once the core automated flows go live (welcome series, abandoned cart, post-purchase). A stable +20-30% revenue lift from the email channel is typically reached within 60-90 days, as campaigns and segmentation gain momentum.",
   },
   {
     question: "What do I get for the monthly fee?",
-    answer: "An email system that works for your sales.\n\nWe build and manage the entire channel: from automated flows and segmentation to regular campaigns, testing, and analytics.\nYou get a working system that generates more revenue from existing customers.",
+    answer: "Full management of your email channel: audit, strategy, 5+ automated flows built, regular campaigns (8 per month), copywriting, design, A/B testing, segmentation, deliverability monitoring and reporting. No extra invoices — everything is included.",
   },
   {
-    question: "Is this only for e-shops?",
-    answer: "No, email marketing works great for local and service businesses too (clinics, salons, auto repairs, B2B companies). It helps bring back inactive customers and drive repeat purchases or bookings.",
+    question: "Is this only for online stores?",
+    answer: "E-commerce is our core focus, but we also work successfully with service businesses (agencies, consulting, courses, B2B SaaS). Only the strategic emphasis differs — where an online store automates purchase flows, a service business uses email for lead nurturing and client retention.",
   },
   {
-    question: "How long does setup take?",
-    answer: "Full system setup, technical connections, design coordination, and first automated flows take up to 7 days. During the first month, a solid email marketing foundation is created, and later phases focus on growth, optimization, and campaign expansion.",
+    question: "How long does it take to launch?",
+    answer: "Audit and strategy — 12-24 hours after the first call. Core automated flows — 5 business days, with the first campaign launching within 2-3 weeks. The full foundation is live within the first month; the months after that are about growth, optimization and rolling out new campaigns.",
   },
 ];
 
@@ -328,12 +336,14 @@ const TRANSLATIONS = {
       text: "Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės. Sukuriame automatinius el. laiškus, kurie laiku ir vietoje sugrąžina jūsų buvusius klientus pakartotiniams vizitams ar užsakymams.",
     },
     calculator: {
+      tag: "SKAIČIUOKLĖ",
       title: "Kiek el. paštas galėtų uždirbti jums?",
-      contacts: "Turimų kontaktų skaičius:",
-      value: "Vidutinė paslaugos / krepšelio vertė:",
-      lost: "Prarandate kasmet",
-      recover: "Sugrąžinsime kas mėnesį",
-      cta: "Gauti išsamų mano bazės auditą",
+      desc: "Sėkmingos el. parduotuvės iš el. pašto kanalo generuoja 20-30% visų pajamų. Pastumkite slankiklį ir pamatykite savo skaičius.",
+      revenueLabel: "JŪSŲ MĖNESINĖ APYVARTA",
+      monthlyLabel: "galimos pajamos iš el. pašto / mėn. (20–30%)",
+      annualLabel: "papildomai per metus (skaičiuojant konservatyviai)",
+      note: "Vid. mūsų klientų rezultatas: +34% pajamų augimas iš el. pašto kanalo. Tikslų skaičių jūsų parduotuvei parodo auditas.",
+      cta: "Rezervuoti konsultaciją",
     },
     pillars: {
       tag: "Sistemos galimybės",
@@ -396,7 +406,7 @@ const TRANSLATIONS = {
         title: "Pilna sistema",
         desc: "Mėnesinis paketas, kuris padengia visą komunikacijos kanalą — be papildomų sąskaitų.",
         kaina: "KAINA",
-        priceValue: "400€",
+        priceValue: "800€",
         pricePeriod: "/ mėn.",
         avgResultLabel: "VIDUTINIS REZULTATAS",
         avgResultValue: "+20%",
@@ -423,7 +433,7 @@ const TRANSLATIONS = {
       backBtn: "← Atgal",
       disqualified: {
         title: "Apyvarta per maža",
-        desc: "Mūsų paslaugos efektyviausiai atsiperka paslaugų verslams, generuojantiems virš €5 000 mėnesinės apyvartos. Esant mažesnei apyvartai, €400/mėn. administravimo kaina gali neduoti teigiamo ROI.",
+        desc: "Mūsų paslaugos efektyviausiai atsiperka paslaugų verslams, generuojantiems virš €10 000 mėnesinės apyvartos. Esant mažesnei apyvartai, €800/mėn. administravimo kaina gali neduoti teigiamo ROI.",
         restart: "Pradėti iš naujo"
       },
       form: {
@@ -497,12 +507,14 @@ const TRANSLATIONS = {
       text: "Instead of spending budget on expensive ads (Facebook or Google) everyday, attracting completely new and cold visitors, we help you earn from your existing database. We create automated emails that return your past clients for repeat visits or orders at the right time and place.",
     },
     calculator: {
-      title: "How much would email earn for you?",
-      contacts: "Number of contacts:",
-      value: "Average service / cart value:",
-      lost: "Lost annually",
-      recover: "We will recover monthly",
-      cta: "Get a detailed audit of my database",
+      tag: "CALCULATOR",
+      title: "How much could email earn for you?",
+      desc: "Successful online stores generate 20-30% of all revenue from the email channel. Slide to see your numbers.",
+      revenueLabel: "YOUR MONTHLY REVENUE",
+      monthlyLabel: "potential email income / mo. (20–30%)",
+      annualLabel: "additional per year (conservative estimate)",
+      note: "Avg. client result: +34% revenue growth from the email channel. The exact number for your store is revealed by an audit.",
+      cta: "Book a consultation",
     },
     pillars: {
       tag: "System capabilities",
@@ -565,7 +577,7 @@ const TRANSLATIONS = {
         title: "Full system",
         desc: "Monthly package that covers the entire communication channel — no extra bills.",
         kaina: "PRICE",
-        priceValue: "400$",
+        priceValue: "800$",
         pricePeriod: "/ mo.",
         avgResultLabel: "AVERAGE RESULT",
         avgResultValue: "+20%",
@@ -592,7 +604,7 @@ const TRANSLATIONS = {
       backBtn: "← Back",
       disqualified: {
         title: "Turnover too low",
-        desc: "Our services are most effective for businesses generating over 5 000 $ monthly turnover. Below that, the 400$/mo. management fee may not yield a positive ROI.",
+        desc: "Our services are most effective for businesses generating over 10 000 $ monthly turnover. Below that, the 800$/mo. management fee may not yield a positive ROI.",
         restart: "Start over"
       },
       form: {
@@ -639,7 +651,7 @@ const questionsLT = [
     id: "turnover",
     title: "Mėnesinė apyvarta",
     subtitle: "Kokia maždaug jūsų verslo vidutinė mėnesinė apyvarta?",
-    options: ["Iki 5 000 €", "5 000 – 20 000 €", "20 000 – 50 000 €", "Daugiau nei 50 000 €"],
+    options: ["Iki 10 000 €", "10 000 – 20 000 €", "20 000 – 50 000 €", "Daugiau nei 50 000 €"],
   },
   {
     id: "currentUsage",
@@ -676,7 +688,7 @@ const questionsEN = [
     id: "turnover",
     title: "Monthly turnover",
     subtitle: "What is your business's average monthly turnover?",
-    options: ["Up to 5 000 $", "5 000 – 20 000 $", "20 000 – 50 000 $", "More than 50 000 $"],
+    options: ["Up to 10 000 $", "10 000 – 20 000 $", "20 000 – 50 000 $", "More than 50 000 $"],
   },
   {
     id: "currentUsage",
@@ -739,8 +751,7 @@ export default function Home() {
   const [activeDashboardStateIdx, setActiveDashboardStateIdx] = useState(0);
 
   // Database Calculator State
-  const [calcContacts, setCalcContacts] = useState(1500);
-  const [calcTicket, setCalcTicket] = useState(40);
+  const [calcRevenue, setCalcRevenue] = useState(10000);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -763,8 +774,9 @@ export default function Home() {
   }, [dashboardStates.length]);
 
   // Calculator logic values (smaller, more realistic coefficients: 20% lost annually, 10% recoverable monthly of the annual lost amount)
-  const lostAnnualRevenue = Math.round(calcContacts * calcTicket * 0.20);
-  const monthlyRecoverable = Math.round((calcContacts * calcTicket * 0.10) / 12);
+  const monthlyEmailLow = Math.round(calcRevenue * 0.20);
+  const monthlyEmailHigh = Math.round(calcRevenue * 0.30);
+  const annualEmailAdditional = monthlyEmailLow * 12;
 
   const handleStartQuiz = () => {
     setQuizStep("questions");
@@ -778,8 +790,8 @@ export default function Home() {
     const newAnswers = { ...answers, [questionId]: option };
     setAnswers(newAnswers);
 
-    // Disqualification check: if turnover is under 5,000 € / $
-    if (questionId === "turnover" && (option === "Iki 5 000 €" || option === "Up to 5 000 $")) {
+    // Disqualification check: if turnover is under 10,000 € / $
+    if (questionId === "turnover" && (option === "Iki 10 000 €" || option === "Up to 10 000 $")) {
       setQuizStep("disqualified");
       return;
     }
@@ -1114,75 +1126,78 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
-            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
-              {t.retention.tag}
+            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
+              <span className="w-6 h-px bg-emerald-growth"></span>
+              {t.calculator.tag}
             </span>
             <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-deep-navy leading-tight mb-6">
-              {t.retention.title1}<span className="text-emerald-growth italic">{t.retention.italic}</span>{t.retention.title2}
+              {t.calculator.title}
             </h2>
-            <p className="text-body-lg text-on-surface-variant leading-relaxed mb-6">
-              {t.retention.text}
+            <p className="text-body-lg text-on-surface-variant leading-relaxed mb-8">
+              {t.calculator.desc}
             </p>
+            <a
+              href="#audit"
+              className="inline-flex items-center gap-3 border-2 border-deep-navy text-deep-navy font-bold py-3.5 px-6 rounded-full text-sm transition-all hover:bg-deep-navy hover:text-white group"
+            >
+              <span>{t.calculator.cta}</span>
+              <div className="w-7 h-7 rounded-full bg-deep-navy group-hover:bg-white flex items-center justify-center transition-colors">
+                <svg className="w-4 h-4 text-white group-hover:text-deep-navy transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </a>
           </div>
 
           {/* Interactive Calculator widget */}
           <div className="bg-gradient-to-br from-[#0F2E3A] to-[#0B222C] text-white rounded-3xl p-6 md:p-8 shadow-xl border border-white/10">
-            <h3 className="font-display text-lg font-bold mb-4 text-white">{t.calculator.title}</h3>
-            <div className="space-y-6">
-              <div>
-                <div className="flex justify-between items-center text-sm font-semibold mb-2">
-                  <span className="text-white/80">{t.calculator.contacts}</span>
-                  <span className="text-emerald-growth font-bold">{formatNumber(calcContacts)}</span>
-                </div>
-                <input
-                  type="range"
-                  min="100"
-                  max="10000"
-                  step="100"
-                  value={calcContacts}
-                  onChange={(e) => setCalcContacts(Number(e.target.value))}
-                  className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald-growth"
-                />
-              </div>
+            {/* Revenue label + large number */}
+            <p className="text-[10px] uppercase tracking-widest text-white/50 font-bold mb-2">{t.calculator.revenueLabel}</p>
+            <p className="font-display text-4xl font-bold text-white mb-5">
+              {language === "LT" ? "€" : "$"}{formatNumber(calcRevenue)}
+            </p>
 
-              <div>
-                <div className="flex justify-between items-center text-sm font-semibold mb-2">
-                  <span className="text-white/80">{t.calculator.value}</span>
-                  <span className="text-emerald-growth font-bold">{calcTicket} {language === "LT" ? "€" : "$"}</span>
-                </div>
-                <input
-                  type="range"
-                  min="10"
-                  max="150"
-                  step="5"
-                  value={calcTicket}
-                  onChange={(e) => setCalcTicket(Number(e.target.value))}
-                  className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald-growth"
-                />
-              </div>
+            {/* Slider */}
+            <input
+              type="range"
+              min="1000"
+              max="200000"
+              step="1000"
+              value={calcRevenue}
+              onChange={(e) => setCalcRevenue(Number(e.target.value))}
+              className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald-growth mb-7"
+            />
 
-              <div className="pt-6 border-t border-white/10 grid grid-cols-2 gap-4 text-center">
-                <div className="p-3 bg-red-500/10 rounded-xl border border-red-500/20">
-                  <span className="text-[10px] text-white/60 uppercase font-bold">{t.calculator.lost}</span>
-                  <p className="font-display text-base md:text-lg font-bold text-red-400 mt-1">
-                    -{formatNumber(lostAnnualRevenue)} {language === "LT" ? "€" : "$"}
-                  </p>
-                </div>
-                <div className="p-3 bg-emerald-growth/10 rounded-xl border border-emerald-growth/20">
-                  <span className="text-[10px] text-white/60 uppercase font-bold">{t.calculator.recover}</span>
-                  <p className="font-display text-base md:text-lg font-bold text-emerald-growth mt-1">
-                    +{formatNumber(monthlyRecoverable)} {language === "LT" ? "€" : "$"}
-                  </p>
-                </div>
+            {/* Result cards */}
+            <div className="grid grid-cols-2 gap-4 mb-5">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
+                <p className="font-display text-2xl font-bold text-emerald-growth leading-tight mb-2">
+                  {language === "LT" ? "€" : "$"}{formatNumber(monthlyEmailLow)}–<br/>{formatNumber(monthlyEmailHigh)}
+                </p>
+                <p className="text-[11px] text-white/50 leading-snug">{t.calculator.monthlyLabel}</p>
               </div>
-
-              <a
-                href="#audit"
-                className="block text-center w-full bg-emerald-growth hover:bg-emerald-growth/90 text-deep-navy font-bold py-3.5 rounded-full text-sm transition-all"
-              >
-                {t.calculator.cta}
-              </a>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
+                <p className="font-display text-2xl font-bold text-white leading-tight mb-2">
+                  {language === "LT" ? "€" : "$"}{formatNumber(annualEmailAdditional)}+
+                </p>
+                <p className="text-[11px] text-white/50 leading-snug">{t.calculator.annualLabel}</p>
+              </div>
             </div>
+
+            {/* Note */}
+            <p className="text-[10px] text-white/30 leading-relaxed mb-6">{t.calculator.note}</p>
+
+            <a
+              href="#audit"
+              className="flex items-center justify-between w-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold py-3.5 px-5 rounded-full text-sm transition-all group"
+            >
+              <span>{t.calculator.cta}</span>
+              <div className="w-7 h-7 rounded-full bg-emerald-growth flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                <svg className="w-4 h-4 text-deep-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
       </section>
