@@ -1118,9 +1118,12 @@ export default function Home() {
                 </p>
               </div>
 
-            </div>
-            {/* Decorative stack shadow backing */}
-            <div className="absolute -top-4 -right-4 w-full h-full bg-[      {/* Intro Section with interactive Revenue Calculator */}
+            </div>{/* end dashboard card */}
+          </div>{/* end dashboard col */}
+        </div>{/* end hero grid */}
+      </section>{/* end hero section */}
+
+      {/* Intro Section with interactive Revenue Calculator */}
       <section id="about" className="relative py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-emerald-growth/5 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
 
@@ -1380,9 +1383,6 @@ export default function Home() {
             </div>
 
           </div>
-
-        </div>
-      </section>
 
         </div>
       </section>
