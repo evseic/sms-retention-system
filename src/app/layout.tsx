@@ -34,7 +34,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.omnisend = window.omnisend || [];
-              window.omnisend.push(["brandID", "6a32ec1f813d927fc4a68725"]);
+              window.omnisend.push(["brandID", "6a7b0859a589dfe14c45313b"]);
               window.omnisend.push(["track", "$pageViewed"]);
               !function(){var e=document.createElement("script");
               e.type="text/javascript",e.async=!0,
