@@ -890,7 +890,7 @@ export default function Home() {
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/80 backdrop-blur-[8px] border-b border-border-subtle shadow-sm"
+            ? "bg-white/85 backdrop-blur-[24px] border-b border-border-subtle shadow-sm"
             : "bg-transparent"
         }`}
       >
@@ -978,10 +978,10 @@ export default function Home() {
 
             <a
               href="#audit"
-              className="bg-forest-dark hover:bg-deep-navy text-white py-2.5 pl-5 pr-2.5 rounded-full flex items-center gap-2.5 hover:scale-95 transition-all text-xs sm:text-sm font-bold shrink-0 whitespace-nowrap"
+              className="bg-[#0B222C] hover:bg-[#0F2E3A] text-white py-2.5 pl-5 pr-2.5 rounded-full flex items-center gap-2.5 hover:scale-95 transition-all text-xs sm:text-sm font-bold shrink-0 whitespace-nowrap"
             >
               <span>{t.nav.bookConsultation}</span>
-              <div className="w-6 h-6 rounded-full bg-emerald-growth text-deep-navy flex items-center justify-center shrink-0">
+              <div className="w-6 h-6 rounded-full bg-[#0EA87E] text-white flex items-center justify-center shrink-0">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                 </svg>
@@ -1120,6 +1120,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pillars Section - Redesigned as a Light Bento Grid */}
+      <section id="pillars" className="relative py-20 md:py-28 bg-[#F4F7F6] text-on-surface overflow-hidden">
+        {/* Animated Background Blobs */}
+        <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-emerald-growth/5 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-deep-navy/5 rounded-full blur-[140px] animate-float-reverse pointer-events-none z-0"></div>
+
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+          <div className="max-w-3xl mb-16">
+            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
+              {t.pillars.tag}
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-deep-navy mb-4">
+              {t.pillars.title}
+            </h2>
+            <div className="h-1 w-12 bg-emerald-growth"></div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+            {t.pillars.list.map((pillar, idx) => (
+              <div key={idx} className="p-8 border border-border-subtle rounded-2xl bg-white hover:border-emerald-growth/40 transition-all shadow-sm hover:shadow-md">
+                <div className="text-emerald-growth mb-4 bg-secondary-container/30 w-12 h-12 rounded-xl flex items-center justify-center">
+                  {idx === 0 && (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                    </svg>
+                  )}
+                  {idx === 1 && (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5" />
+                    </svg>
+                  )}
+                  {idx === 2 && (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  )}
+                  {idx === 3 && (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2H9a2 2 0 01-2-2V4a2 2 0 012-2h2z" />
+                    </svg>
+                  )}
+                  {idx === 4 && (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  )}
+                  {idx === 5 && (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  )}
+                </div>
+                <h3 className="font-display text-lg font-bold text-deep-navy mb-2">{pillar.title}</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">{pillar.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Intro Section with interactive Revenue Calculator */}
       <section id="about" className="relative py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-emerald-growth/5 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
@@ -1198,66 +1258,6 @@ export default function Home() {
                 </svg>
               </div>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Pillars Section - Redesigned as a Light Bento Grid */}
-      <section id="pillars" className="relative py-20 md:py-28 bg-[#F4F7F6] text-on-surface overflow-hidden">
-        {/* Animated Background Blobs */}
-        <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-emerald-growth/5 rounded-full blur-[140px] animate-float-slow pointer-events-none z-0"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-deep-navy/5 rounded-full blur-[140px] animate-float-reverse pointer-events-none z-0"></div>
-
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-          <div className="max-w-3xl mb-16">
-            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
-              {t.pillars.tag}
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-deep-navy mb-4">
-              {t.pillars.title}
-            </h2>
-            <div className="h-1 w-12 bg-emerald-growth"></div>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-            {t.pillars.list.map((pillar, idx) => (
-              <div key={idx} className="p-8 border border-border-subtle rounded-2xl bg-white hover:border-emerald-growth/40 transition-all shadow-sm hover:shadow-md">
-                <div className="text-emerald-growth mb-4 bg-secondary-container/30 w-12 h-12 rounded-xl flex items-center justify-center">
-                  {idx === 0 && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                    </svg>
-                  )}
-                  {idx === 1 && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5" />
-                    </svg>
-                  )}
-                  {idx === 2 && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  )}
-                  {idx === 3 && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a2 2 0 01-2 2H9a2 2 0 01-2-2V4a2 2 0 012-2h2z" />
-                    </svg>
-                  )}
-                  {idx === 4 && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  )}
-                  {idx === 5 && (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  )}
-                </div>
-                <h3 className="font-display text-lg font-bold text-deep-navy mb-2">{pillar.title}</h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">{pillar.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
