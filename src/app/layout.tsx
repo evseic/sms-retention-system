@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SMSflow | El. pašto klientų išlaikymo sistemos",
+  title: "SMSflow | Pašto dėžutė,kuri uždirba",
   description: "El. pašto klientų išlaikymo sistemos",
   keywords: ["klientų išlaikymas", "el. pašto rinkodara", "marketingo automatizavimas", "naujienlaiškiai", "vietinis verslas"],
 };
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="lt" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
       <body className="font-sans bg-surface text-on-surface antialiased">
         {children}
         <script
