@@ -373,14 +373,18 @@ const TRANSLATIONS = {
       desc: "Ne mėnesiai derinimo. Žingsnis po žingsnio — nuo audito iki pilnai automatizuotų, pajamas nešančių el. pašto kanalų per vieną savaitę.",
     },
     stats: {
-      tag: "Skaičiai patys kalba už save",
-      title: "Mūsų pasiekiami rezultatai",
-      items: [
-        { value: "+34%", label: "vidutinis pajamų augimas" },
-        { value: "24/7", label: "automatizuoti srautai" },
-        { value: "< 24h", label: "audito paruošimas" },
-        { value: "50+", label: "dirbančių įmonių" }
-      ]
+      tag: "TIKRI REZULTATAI",
+      title: "Tikros pajamos iš el. pašto kanalo.",
+      revenueFromOmnisend: "Pajamos iš Omnisend",
+      campaigns: "Kampanijos",
+      automation: "Automatizacija",
+      totalStoreRevenue: "Bendra parduotuvės apyvarta",
+      revenueTab: "Pajamos",
+      ordersTab: "Užsakymai",
+      campaignsLegend: "Kampanijos",
+      automationLegend: "Automatizacija",
+      notFromOmnisendLegend: "Ne iš Omnisend",
+      orders: "užsakymai",
     },
     pricing: {
       tag: "INVESTICIJA",
@@ -549,14 +553,18 @@ const TRANSLATIONS = {
       desc: "Not months of alignment. Step by step — from audit to fully automated, revenue-generating email channels in one week.",
     },
     stats: {
-      tag: "The numbers speak for themselves",
-      title: "Our achievable results",
-      items: [
-        { value: "+34%", label: "average revenue growth" },
-        { value: "24/7", label: "automated flows" },
-        { value: "< 24h", label: "audit preparation" },
-        { value: "50+", label: "active clients" }
-      ]
+      tag: "REAL RESULTS",
+      title: "Real revenue from the email channel.",
+      revenueFromOmnisend: "Revenue from Omnisend",
+      campaigns: "Campaigns",
+      automation: "Automation",
+      totalStoreRevenue: "Total store revenue",
+      revenueTab: "Revenue",
+      ordersTab: "Orders",
+      campaignsLegend: "Campaigns",
+      automationLegend: "Automation",
+      notFromOmnisendLegend: "Not from Omnisend",
+      orders: "orders",
     },
     pricing: {
       tag: "INVESTMENT",
@@ -722,6 +730,145 @@ const questionsEN = [
   },
 ];
 
+const RESULTS_SLIDES = [
+  {
+    id: 1,
+    revenueFromOmnisend: "€37,288.95",
+    revenueFromOmnisendPill: "+72.3%",
+    ordersFromOmnisend: "603",
+    campaignsRevenue: "€21,881.06",
+    campaignsOrders: "356",
+    automationRevenue: "€15,407.89",
+    automationOrders: "247",
+    totalRevenue: "€89,609.95",
+    totalOrders: "1,444",
+    chartDates: ["Apr 15", "Apr 19", "Apr 23", "Apr 27", "May 1", "May 5", "May 9", "May 13"],
+    yAxisLabelsRevenue: ["€20K", "€16K", "€12K", "€8K", "€4K", "€0"],
+    yAxisMaxRevenue: 20000,
+    yAxisLabelsOrders: ["100", "80", "60", "40", "20", "0"],
+    yAxisMaxOrders: 100,
+    chartData: [
+      { date: "Apr 15", revenue: { campaigns: 800, automation: 600, notFromOmnisend: 1100 }, orders: { campaigns: 8, automation: 6, notFromOmnisend: 10 } },
+      { date: "Apr 17", revenue: { campaigns: 1000, automation: 900, notFromOmnisend: 1300 }, orders: { campaigns: 9, automation: 8, notFromOmnisend: 12 } },
+      { date: "Apr 19", revenue: { campaigns: 1200, automation: 1000, notFromOmnisend: 1800 }, orders: { campaigns: 11, automation: 9, notFromOmnisend: 15 } },
+      { date: "Apr 21", revenue: { campaigns: 1400, automation: 1100, notFromOmnisend: 2200 }, orders: { campaigns: 13, automation: 10, notFromOmnisend: 18 } },
+      { date: "Apr 23", revenue: { campaigns: 1800, automation: 1500, notFromOmnisend: 3200 }, orders: { campaigns: 16, automation: 12, notFromOmnisend: 24 } },
+      { date: "Apr 25", revenue: { campaigns: 1500, automation: 1300, notFromOmnisend: 2800 }, orders: { campaigns: 14, automation: 11, notFromOmnisend: 21 } },
+      { date: "Apr 27", revenue: { campaigns: 2200, automation: 1800, notFromOmnisend: 3900 }, orders: { campaigns: 18, automation: 14, notFromOmnisend: 29 } },
+      { date: "Apr 29", revenue: { campaigns: 2500, automation: 2200, notFromOmnisend: 4800 }, orders: { campaigns: 20, automation: 16, notFromOmnisend: 35 } },
+      { date: "May 1", revenue: { campaigns: 3200, automation: 2800, notFromOmnisend: 7200 }, orders: { campaigns: 25, automation: 20, notFromOmnisend: 50 } },
+      { date: "May 3", revenue: { campaigns: 4200, automation: 3800, notFromOmnisend: 11800 }, orders: { campaigns: 32, automation: 26, notFromOmnisend: 75 } },
+      { date: "May 5", revenue: { campaigns: 2100, automation: 1600, notFromOmnisend: 3400 }, orders: { campaigns: 19, automation: 13, notFromOmnisend: 28 } },
+      { date: "May 7", revenue: { campaigns: 1200, automation: 900, notFromOmnisend: 1900 }, orders: { campaigns: 11, automation: 8, notFromOmnisend: 16 } },
+      { date: "May 9", revenue: { campaigns: 1400, automation: 1100, notFromOmnisend: 2100 }, orders: { campaigns: 12, automation: 9, notFromOmnisend: 17 } },
+      { date: "May 11", revenue: { campaigns: 1600, automation: 1300, notFromOmnisend: 2500 }, orders: { campaigns: 13, automation: 10, notFromOmnisend: 19 } },
+      { date: "May 13", revenue: { campaigns: 1100, automation: 900, notFromOmnisend: 1700 }, orders: { campaigns: 9, automation: 8, notFromOmnisend: 14 } }
+    ]
+  },
+  {
+    id: 2,
+    revenueFromOmnisend: "€46,585.00",
+    revenueFromOmnisendPill: "+74.5%",
+    ordersFromOmnisend: "20",
+    campaignsRevenue: "€4,386.00",
+    campaignsOrders: "3",
+    automationRevenue: "€42,199.00",
+    automationOrders: "17",
+    totalRevenue: "€193,485.36",
+    totalOrders: "101",
+    chartDates: ["May 18", "May 25", "Jun 1", "Jun 8", "Jun 15"],
+    yAxisLabelsRevenue: ["€75K", "€60K", "€45K", "€30K", "€15K", "€0"],
+    yAxisMaxRevenue: 75000,
+    yAxisLabelsOrders: ["50", "40", "30", "20", "10", "0"],
+    yAxisMaxOrders: 50,
+    chartData: [
+      { date: "May 18", revenue: { campaigns: 800, automation: 3200, notFromOmnisend: 41000 }, orders: { campaigns: 1, automation: 2, notFromOmnisend: 21 } },
+      { date: "May 25", revenue: { campaigns: 1500, automation: 15500, notFromOmnisend: 56000 }, orders: { campaigns: 1, automation: 6, notFromOmnisend: 28 } },
+      { date: "Jun 1", revenue: { campaigns: 1200, automation: 20500, notFromOmnisend: 28300 }, orders: { campaigns: 1, automation: 8, notFromOmnisend: 15 } },
+      { date: "Jun 8", revenue: { campaigns: 686, automation: 2100, notFromOmnisend: 14714 }, orders: { campaigns: 0, automation: 1, notFromOmnisend: 8 } },
+      { date: "Jun 15", revenue: { campaigns: 200, automation: 899, notFromOmnisend: 4901 }, orders: { campaigns: 0, automation: 0, notFromOmnisend: 3 } }
+    ]
+  },
+  {
+    id: 3,
+    revenueFromOmnisend: "€41,226.93",
+    revenueFromOmnisendPill: "+76.4%",
+    ordersFromOmnisend: "646",
+    campaignsRevenue: "€19,269.95",
+    campaignsOrders: "296",
+    automationRevenue: "€21,956.98",
+    automationOrders: "350",
+    totalRevenue: "€116,358.65",
+    totalOrders: "1,810",
+    chartDates: ["Feb 8", "Feb 11", "Feb 14", "Feb 17", "Feb 20", "Feb 23", "Feb 26", "Feb 29", "Mar 1", "Mar 4", "Mar 7"],
+    yAxisLabelsRevenue: ["€15K", "€12K", "€9K", "€6K", "€3K", "€0"],
+    yAxisMaxRevenue: 15000,
+    yAxisLabelsOrders: ["250", "200", "150", "100", "50", "0"],
+    yAxisMaxOrders: 250,
+    chartData: [
+      { date: "Feb 8", revenue: { campaigns: 600, automation: 500, notFromOmnisend: 1200 }, orders: { campaigns: 9, automation: 8, notFromOmnisend: 18 } },
+      { date: "Feb 11", revenue: { campaigns: 1100, automation: 900, notFromOmnisend: 2500 }, orders: { campaigns: 16, automation: 13, notFromOmnisend: 38 } },
+      { date: "Feb 14", revenue: { campaigns: 1800, automation: 1500, notFromOmnisend: 4700 }, orders: { campaigns: 26, automation: 22, notFromOmnisend: 72 } },
+      { date: "Feb 17", revenue: { campaigns: 2200, automation: 2000, notFromOmnisend: 5800 }, orders: { campaigns: 32, automation: 28, notFromOmnisend: 88 } },
+      { date: "Feb 20", revenue: { campaigns: 300, automation: 200, notFromOmnisend: 700 }, orders: { campaigns: 4, automation: 3, notFromOmnisend: 11 } },
+      { date: "Feb 23", revenue: { campaigns: 400, automation: 300, notFromOmnisend: 900 }, orders: { campaigns: 6, automation: 4, notFromOmnisend: 14 } },
+      { date: "Feb 26", revenue: { campaigns: 500, automation: 400, notFromOmnisend: 1100 }, orders: { campaigns: 7, automation: 6, notFromOmnisend: 17 } },
+      { date: "Feb 29", revenue: { campaigns: 350, automation: 250, notFromOmnisend: 750 }, orders: { campaigns: 5, automation: 4, notFromOmnisend: 11 } },
+      { date: "Mar 1", revenue: { campaigns: 450, automation: 350, notFromOmnisend: 950 }, orders: { campaigns: 6, automation: 5, notFromOmnisend: 14 } },
+      { date: "Mar 4", revenue: { campaigns: 380, automation: 280, notFromOmnisend: 780 }, orders: { campaigns: 5, automation: 4, notFromOmnisend: 12 } },
+      { date: "Mar 7", revenue: { campaigns: 2800, automation: 1800, notFromOmnisend: 4000 }, orders: { campaigns: 40, automation: 26, notFromOmnisend: 60 } }
+    ]
+  },
+  {
+    id: 4,
+    revenueFromOmnisend: "€28,744.12",
+    revenueFromOmnisendPill: "+68.9%",
+    ordersFromOmnisend: "412",
+    campaignsRevenue: "€12,114.50",
+    campaignsOrders: "182",
+    automationRevenue: "€16,629.62",
+    automationOrders: "230",
+    totalRevenue: "€69,322.80",
+    totalOrders: "988",
+    chartDates: ["Jul 2", "Jul 9", "Jul 16", "Jul 23", "Jul 30"],
+    yAxisLabelsRevenue: ["€25K", "€20K", "€15K", "€10K", "€5K", "€0"],
+    yAxisMaxRevenue: 25000,
+    yAxisLabelsOrders: ["250", "200", "150", "100", "50", "0"],
+    yAxisMaxOrders: 250,
+    chartData: [
+      { date: "Jul 2", revenue: { campaigns: 2100, automation: 3400, notFromOmnisend: 9800 }, orders: { campaigns: 32, automation: 50, notFromOmnisend: 140 } },
+      { date: "Jul 9", revenue: { campaigns: 3200, automation: 4500, notFromOmnisend: 11200 }, orders: { campaigns: 48, automation: 65, notFromOmnisend: 160 } },
+      { date: "Jul 16", revenue: { campaigns: 2900, automation: 3800, notFromOmnisend: 8900 }, orders: { campaigns: 44, automation: 55, notFromOmnisend: 127 } },
+      { date: "Jul 23", revenue: { campaigns: 1500, automation: 2800, notFromOmnisend: 6200 }, orders: { campaigns: 22, automation: 40, notFromOmnisend: 88 } },
+      { date: "Jul 30", revenue: { campaigns: 2414, automation: 2129, notFromOmnisend: 4478 }, orders: { campaigns: 36, automation: 20, notFromOmnisend: 63 } }
+    ]
+  },
+  {
+    id: 5,
+    revenueFromOmnisend: "€58,920.50",
+    revenueFromOmnisendPill: "+79.8%",
+    ordersFromOmnisend: "812",
+    campaignsRevenue: "€25,410.20",
+    campaignsOrders: "348",
+    automationRevenue: "€33,510.30",
+    automationOrders: "464",
+    totalRevenue: "€168,430.00",
+    totalOrders: "2,380",
+    chartDates: ["Sep 1", "Sep 8", "Sep 15", "Sep 22", "Sep 29"],
+    yAxisLabelsRevenue: ["€75K", "€60K", "€45K", "€30K", "€15K", "€0"],
+    yAxisMaxRevenue: 75000,
+    yAxisLabelsOrders: ["500", "400", "300", "200", "100", "0"],
+    yAxisMaxOrders: 500,
+    chartData: [
+      { date: "Sep 1", revenue: { campaigns: 4500, automation: 5200, notFromOmnisend: 22000 }, orders: { campaigns: 62, automation: 72, notFromOmnisend: 310 } },
+      { date: "Sep 8", revenue: { campaigns: 6200, automation: 8100, notFromOmnisend: 31000 }, orders: { campaigns: 85, automation: 112, notFromOmnisend: 438 } },
+      { date: "Sep 15", revenue: { campaigns: 5400, automation: 7200, notFromOmnisend: 24000 }, orders: { campaigns: 74, automation: 100, notFromOmnisend: 339 } },
+      { date: "Sep 22", revenue: { campaigns: 4800, automation: 6900, notFromOmnisend: 18500 }, orders: { campaigns: 66, automation: 95, notFromOmnisend: 261 } },
+      { date: "Sep 29", revenue: { campaigns: 4510, automation: 6110, notFromOmnisend: 14009 }, orders: { campaigns: 61, automation: 85, notFromOmnisend: 198 } }
+    ]
+  }
+];
+
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [quizStep, setQuizStep] = useState<"intro" | "questions" | "form" | "success" | "disqualified">("intro");
@@ -754,6 +901,13 @@ export default function Home() {
 
   // Database Calculator State
   const [calcRevenue, setCalcRevenue] = useState(10000);
+
+  // Interactive Results Section State
+  const [activeResultSlideIdx, setActiveResultSlideIdx] = useState(0);
+  const [activeResultTab, setActiveResultTab] = useState<"revenue" | "orders">("revenue");
+  const [showCampaigns, setShowCampaigns] = useState(true);
+  const [showAutomation, setShowAutomation] = useState(true);
+  const [showNotFromOmnisend, setShowNotFromOmnisend] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -994,12 +1148,13 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-mesh-gradient">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-mesh-gradient">
         {/* Animated Background Blobs */}
         <div className="absolute top-1/4 left-1/4 w-[350px] h-[350px] bg-emerald-growth/10 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#0E3E34]/5 rounded-full blur-[120px] animate-float-reverse pointer-events-none z-0"></div>
 
-        <div className="grid md:grid-cols-2 gap-stack-lg items-center relative z-10">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+          <div className="grid md:grid-cols-2 gap-stack-lg items-center">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-wider mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-growth animate-pulse"></span>
@@ -1107,7 +1262,8 @@ export default function Home() {
             </div>{/* end dashboard card */}
           </div>{/* end dashboard col */}
         </div>{/* end hero grid */}
-      </section>{/* end hero section */}
+      </div>{/* end wrapper */}
+    </section>{/* end hero section */}
 
 
 
@@ -1378,30 +1534,330 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats / Results Counters */}
+      {/* Stats / Results Carousel Section */}
       <section id="results" className="py-20 md:py-28 bg-[#F4F7F6] border-b border-border-subtle relative overflow-hidden">
         {/* Animated Background Blobs */}
         <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] bg-emerald-growth/5 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
 
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
-          <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
-            {t.stats.tag}
-          </span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-deep-navy mb-16">
-            {t.stats.title}
-          </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.stats.items.map((item, idx) => (
-              <div key={idx} className="p-6 bg-white border border-border-subtle rounded-xl shadow-sm relative z-10">
-                <p className={`font-display text-3xl lg:text-4xl font-bold mb-2 ${idx % 2 === 0 ? "text-emerald-growth" : "text-deep-navy"}`}>
-                  {item.value}
-                </p>
-                <p className="text-xs text-on-surface-variant font-semibold uppercase">
-                  {item.label}
-                </p>
-              </div>
-            ))}
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+          {/* Section Header */}
+          <div className="mb-12 text-left">
+            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
+              <span className="w-6 h-[2px] bg-emerald-growth"></span>
+              {t.stats.tag}
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-deep-navy leading-tight">
+              {language === "LT" ? (
+                <>Tikros pajamos iš <span className="text-emerald-growth">el. pašto kanalo.</span></>
+              ) : (
+                <>Real revenue from <span className="text-emerald-growth">the email channel.</span></>
+              )}
+            </h2>
           </div>
+
+          {/* Carousel Main Container */}
+          <div className="relative group max-w-[1100px] mx-auto">
+            
+            {/* Left navigation arrow */}
+            <button
+              onClick={() => setActiveResultSlideIdx((prev) => (prev === 0 ? RESULTS_SLIDES.length - 1 : prev - 1))}
+              className="absolute left-[-20px] md:left-[-30px] top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white border border-border-subtle flex items-center justify-center text-deep-navy shadow-md hover:bg-surface-container-low transition-all cursor-pointer"
+              aria-label="Previous result"
+            >
+              <svg className="w-5 h-5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Right navigation arrow */}
+            <button
+              onClick={() => setActiveResultSlideIdx((prev) => (prev === RESULTS_SLIDES.length - 1 ? 0 : prev + 1))}
+              className="absolute right-[-20px] md:right-[-30px] top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white border border-border-subtle flex items-center justify-center text-deep-navy shadow-md hover:bg-surface-container-low transition-all cursor-pointer"
+              aria-label="Next result"
+            >
+              <svg className="w-5 h-5 stroke-current" fill="none" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Slide Box */}
+            <div className="bg-white rounded-3xl border border-border-subtle p-6 md:p-8 shadow-lg relative z-10 transition-all duration-500 overflow-hidden">
+              <div className="grid lg:grid-cols-12 gap-8 items-stretch">
+                
+                {/* Left Columns - Metrics */}
+                <div className="lg:col-span-4 flex flex-col justify-between gap-4">
+                  
+                  {/* Omnisend Card */}
+                  <div className="bg-[#F8FBFA] rounded-2xl border border-border-subtle p-5 flex flex-col justify-between relative overflow-hidden transition-all hover:border-emerald-growth/20">
+                    <div>
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-on-surface-variant/70 block mb-1">
+                        {t.stats.revenueFromOmnisend}
+                      </span>
+                      <div className="flex items-baseline gap-2.5 flex-wrap">
+                        <span className="text-2xl md:text-3xl font-display font-bold text-deep-navy tracking-tight">
+                          {RESULTS_SLIDES[activeResultSlideIdx].revenueFromOmnisend}
+                        </span>
+                        <span className="bg-[#E6F6F3] text-[#118A74] text-[10px] font-bold px-2 py-0.5 rounded-full border border-[#D0EDE6]">
+                          {RESULTS_SLIDES[activeResultSlideIdx].revenueFromOmnisendPill}
+                        </span>
+                      </div>
+                    </div>
+                    <span className="text-xs text-on-surface-variant/60 font-semibold mt-4 block">
+                      {RESULTS_SLIDES[activeResultSlideIdx].ordersFromOmnisend} {t.stats.orders}
+                    </span>
+                  </div>
+
+                  {/* Campaigns Card */}
+                  <div className="bg-white rounded-2xl border border-border-subtle p-5 flex flex-col justify-between transition-all hover:border-emerald-growth/20">
+                    <div>
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-on-surface-variant/70 block mb-1.5">
+                        {t.stats.campaigns}
+                      </span>
+                      <span className="text-xl font-display font-bold text-deep-navy">
+                        {RESULTS_SLIDES[activeResultSlideIdx].campaignsRevenue}
+                      </span>
+                    </div>
+                    <span className="text-xs text-on-surface-variant/60 font-medium mt-3 block">
+                      {RESULTS_SLIDES[activeResultSlideIdx].campaignsOrders} {t.stats.orders}
+                    </span>
+                  </div>
+
+                  {/* Automation Card */}
+                  <div className="bg-white rounded-2xl border border-border-subtle p-5 flex flex-col justify-between transition-all hover:border-emerald-growth/20">
+                    <div>
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-on-surface-variant/70 block mb-1.5">
+                        {t.stats.automation}
+                      </span>
+                      <span className="text-xl font-display font-bold text-deep-navy">
+                        {RESULTS_SLIDES[activeResultSlideIdx].automationRevenue}
+                      </span>
+                    </div>
+                    <span className="text-xs text-on-surface-variant/60 font-medium mt-3 block">
+                      {RESULTS_SLIDES[activeResultSlideIdx].automationOrders} {t.stats.orders}
+                    </span>
+                  </div>
+
+                  {/* Total Store Card */}
+                  <div className="bg-white rounded-2xl border border-border-subtle p-5 flex flex-col justify-between transition-all hover:border-emerald-growth/20">
+                    <div>
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-on-surface-variant/70 block mb-1.5">
+                        {t.stats.totalStoreRevenue}
+                      </span>
+                      <span className="text-xl font-display font-bold text-deep-navy">
+                        {RESULTS_SLIDES[activeResultSlideIdx].totalRevenue}
+                      </span>
+                    </div>
+                    <span className="text-xs text-on-surface-variant/60 font-medium mt-3 block">
+                      {RESULTS_SLIDES[activeResultSlideIdx].totalOrders} {t.stats.orders}
+                    </span>
+                  </div>
+
+                </div>
+
+                {/* Right Columns - Chart Area */}
+                <div className="lg:col-span-8 border border-border-subtle rounded-2xl p-4 md:p-6 flex flex-col justify-between min-h-[380px] bg-white relative">
+                  
+                  {/* Chart header: Tabs and Legend Checkboxes */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border-subtle pb-4 mb-6">
+                    
+                    {/* Tabs */}
+                    <div className="flex gap-4">
+                      <button
+                        onClick={() => setActiveResultTab("revenue")}
+                        className={`font-display text-sm font-bold pb-2 relative transition-all ${
+                          activeResultTab === "revenue" ? "text-deep-navy border-b-2 border-emerald-growth" : "text-on-surface-variant/50 hover:text-deep-navy"
+                        }`}
+                      >
+                        {t.stats.revenueTab}
+                      </button>
+                      <button
+                        onClick={() => setActiveResultTab("orders")}
+                        className={`font-display text-sm font-bold pb-2 relative transition-all ${
+                          activeResultTab === "orders" ? "text-deep-navy border-b-2 border-emerald-growth" : "text-on-surface-variant/50 hover:text-deep-navy"
+                        }`}
+                      >
+                        {t.stats.ordersTab}
+                      </button>
+                    </div>
+
+                    {/* Legend toggles */}
+                    <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-xs font-semibold text-on-surface-variant/80">
+                      
+                      {/* Campaigns */}
+                      <label className="flex items-center gap-1.5 cursor-pointer select-none">
+                        <input
+                          type="checkbox"
+                          checked={showCampaigns}
+                          onChange={(e) => setShowCampaigns(e.target.checked)}
+                          className="w-3.5 h-3.5 rounded accent-[#14B8A6] cursor-pointer"
+                        />
+                        <span className={`w-2.5 h-2.5 rounded-sm bg-[#14B8A6] inline-block`}></span>
+                        <span>{t.stats.campaignsLegend}</span>
+                      </label>
+
+                      {/* Automation */}
+                      <label className="flex items-center gap-1.5 cursor-pointer select-none">
+                        <input
+                          type="checkbox"
+                          checked={showAutomation}
+                          onChange={(e) => setShowAutomation(e.target.checked)}
+                          className="w-3.5 h-3.5 rounded accent-[#0E3E34] cursor-pointer"
+                        />
+                        <span className={`w-2.5 h-2.5 rounded-sm bg-[#0E3E34] inline-block`}></span>
+                        <span>{t.stats.automationLegend}</span>
+                      </label>
+
+                      {/* Not from Omnisend */}
+                      <label className="flex items-center gap-1.5 cursor-pointer select-none">
+                        <input
+                          type="checkbox"
+                          checked={showNotFromOmnisend}
+                          onChange={(e) => setShowNotFromOmnisend(e.target.checked)}
+                          className="w-3.5 h-3.5 rounded accent-[#83D944] cursor-pointer"
+                        />
+                        <span className={`w-2.5 h-2.5 rounded-sm bg-[#83D944] inline-block`}></span>
+                        <span>{t.stats.notFromOmnisendLegend}</span>
+                      </label>
+
+                    </div>
+
+                  </div>
+
+                  {/* The Chart Canvas Area */}
+                  <div className="flex-1 flex items-stretch gap-4 relative min-h-[220px]">
+                    
+                    {/* Y-Axis labels */}
+                    <div className="flex flex-col justify-between text-[10px] font-mono text-on-surface-variant/40 text-right w-10 shrink-0 pb-6">
+                      {(activeResultTab === "revenue"
+                        ? RESULTS_SLIDES[activeResultSlideIdx].yAxisLabelsRevenue
+                        : RESULTS_SLIDES[activeResultSlideIdx].yAxisLabelsOrders
+                      ).map((label, lIdx) => (
+                        <span key={lIdx}>{label}</span>
+                      ))}
+                    </div>
+
+                    {/* Bars viewport */}
+                    <div className="flex-1 relative flex justify-between items-end pb-6 border-b border-border-subtle/80">
+                      
+                      {/* Grid lines in background */}
+                      <div className="absolute inset-0 flex flex-col justify-between pointer-events-none pb-6">
+                        {[0, 1, 2, 3, 4, 5].map((_, idx) => (
+                          <div key={idx} className="w-full h-px border-t border-dashed border-border-subtle/60"></div>
+                        ))}
+                      </div>
+
+                      {/* Bar columns */}
+                      {RESULTS_SLIDES[activeResultSlideIdx].chartData.map((item, idx) => {
+                        const yMax = activeResultTab === "revenue" 
+                          ? RESULTS_SLIDES[activeResultSlideIdx].yAxisMaxRevenue 
+                          : RESULTS_SLIDES[activeResultSlideIdx].yAxisMaxOrders;
+
+                        const valCamp = activeResultTab === "revenue" ? item.revenue.campaigns : item.orders.campaigns;
+                        const valAuto = activeResultTab === "revenue" ? item.revenue.automation : item.orders.automation;
+                        const valOther = activeResultTab === "revenue" ? item.revenue.notFromOmnisend : item.orders.notFromOmnisend;
+
+                        const heightCamp = showCampaigns ? (valCamp / yMax) * 100 : 0;
+                        const heightAuto = showAutomation ? (valAuto / yMax) * 100 : 0;
+                        const heightOther = showNotFromOmnisend ? (valOther / yMax) * 100 : 0;
+                        const totalHeight = heightCamp + heightAuto + heightOther;
+
+                        return (
+                          <div
+                            key={idx}
+                            className="flex-1 flex flex-col items-center justify-end h-full group/bar relative px-0.5 sm:px-1"
+                          >
+                            
+                            {/* Hover Tooltip card */}
+                            <div className="absolute bottom-[105%] bg-deep-navy text-white text-[10px] rounded-lg p-2.5 shadow-md pointer-events-none opacity-0 group-hover/bar:opacity-100 transition-opacity z-40 w-32 border border-white/10 text-left">
+                              <p className="font-bold border-b border-white/10 pb-1 mb-1 text-[9px] uppercase tracking-wider">{item.date}</p>
+                              {showCampaigns && (
+                                <p className="flex justify-between gap-2">
+                                  <span className="text-[#14B8A6] font-semibold">{t.stats.campaignsLegend}:</span>
+                                  <span className="font-mono">{activeResultTab === "revenue" ? `€${valCamp}` : valCamp}</span>
+                                </p>
+                              )}
+                              {showAutomation && (
+                                <p className="flex justify-between gap-2">
+                                  <span className="text-[#14B8A6]/80 font-semibold">{t.stats.automationLegend}:</span>
+                                  <span className="font-mono">{activeResultTab === "revenue" ? `€${valAuto}` : valAuto}</span>
+                                </p>
+                              )}
+                              {showNotFromOmnisend && (
+                                <p className="flex justify-between gap-2">
+                                  <span className="text-[#83D944] font-semibold">{t.stats.notFromOmnisendLegend}:</span>
+                                  <span className="font-mono">{activeResultTab === "revenue" ? `€${valOther}` : valOther}</span>
+                                </p>
+                              )}
+                              <p className="flex justify-between gap-2 border-t border-white/10 pt-1 mt-1 font-bold">
+                                <span>Viso:</span>
+                                <span className="font-mono">
+                                  {activeResultTab === "revenue" 
+                                    ? `€${(showCampaigns ? valCamp : 0) + (showAutomation ? valAuto : 0) + (showNotFromOmnisend ? valOther : 0)}` 
+                                    : (showCampaigns ? valCamp : 0) + (showAutomation ? valAuto : 0) + (showNotFromOmnisend ? valOther : 0)
+                                  }
+                                </span>
+                              </p>
+                            </div>
+
+                            {/* Stacked Bar container */}
+                            <div 
+                              className="w-full sm:w-[16px] md:w-[22px] flex flex-col-reverse rounded-t-sm overflow-hidden transition-all duration-300 pointer-events-auto"
+                              style={{ height: `${Math.min(100, totalHeight)}%` }}
+                            >
+                              {/* Not from Omnisend segment (Bottom) */}
+                              <div
+                                className="bg-[#83D944] transition-all duration-300"
+                                style={{ height: `${(heightOther / (totalHeight || 1)) * 100}%` }}
+                              ></div>
+                              {/* Automation segment (Middle) */}
+                              <div
+                                className="bg-[#0E3E34] transition-all duration-300"
+                                style={{ height: `${(heightAuto / (totalHeight || 1)) * 100}%` }}
+                              ></div>
+                              {/* Campaigns segment (Top) */}
+                              <div
+                                className="bg-[#14B8A6] transition-all duration-300"
+                                style={{ height: `${(heightCamp / (totalHeight || 1)) * 100}%` }}
+                              ></div>
+                            </div>
+
+                            {/* Date Label (Only show some to avoid cluttering on mobile) */}
+                            <span className="absolute top-[102%] text-[9px] font-semibold text-on-surface-variant/40 whitespace-nowrap block mt-1">
+                              {RESULTS_SLIDES[activeResultSlideIdx].chartData.length > 8 
+                                ? (idx % 2 === 0 ? item.date : "") 
+                                : item.date
+                              }
+                            </span>
+
+                          </div>
+                        );
+                      })}
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            {/* Bottom dots pagination */}
+            <div className="flex justify-center items-center gap-2.5 mt-8">
+              {RESULTS_SLIDES.map((slide, sIdx) => (
+                <button
+                  key={slide.id}
+                  onClick={() => setActiveResultSlideIdx(sIdx)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    activeResultSlideIdx === sIdx ? "bg-[#0E3E34] scale-125" : "bg-border-subtle hover:bg-on-surface-variant/20"
+                  }`}
+                  aria-label={`Go to result ${sIdx + 1}`}
+                />
+              ))}
+            </div>
+
+          </div>
+
         </div>
       </section>
 
