@@ -461,6 +461,12 @@ const TRANSLATIONS = {
     },
     footer: {
       rights: "© 2026 SMSflow. Visos teisės saugomos."
+    },
+    founder: {
+      hello: "Labas.",
+      intro: "Esu Nikolajus (SMSflow įkūrėjas).",
+      text: "Mano tikslas — padėti jūsų e-parduotuvei uždirbti daugiau iš klientų, kuriuos jau turite. Nereikia leisti tūkstančių naujai reklamai, kai jūsų duomenų bazėje slepiasi neišnaudotas pelno potencialas.",
+      cta: "Rezervuoti konsultaciją",
     }
   },
   EN: {
@@ -630,6 +636,12 @@ const TRANSLATIONS = {
     },
     footer: {
       rights: "© 2026 SMSflow. All rights reserved."
+    },
+    founder: {
+      hello: "Hello.",
+      intro: "I am Nick (Founder of SMSflow).",
+      text: "My goal is to help your e-shop earn more from the customers you already have. No need to spend thousands on new ads when there is untapped profit potential hiding in your database.",
+      cta: "Book a consultation",
     }
   }
 };
@@ -1094,6 +1106,19 @@ export default function Home() {
           </div>{/* end dashboard col */}
         </div>{/* end hero grid */}
       </section>{/* end hero section */}
+
+      {/* Brand Logos Slider */}
+      <section className="border-y border-border-subtle py-8 bg-[#F4F7F6]/40 backdrop-blur-sm overflow-hidden relative z-10">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 md:justify-between opacity-35 grayscale contrast-120 hover:opacity-60 transition-opacity duration-300">
+            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">KAVOS KLUBAS</span>
+            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">GROŽIO OAZĖ</span>
+            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">MADOS KAMPELIS</span>
+            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">KNYGŲ NAMAI</span>
+            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">GĖLIŲ BUTIKAS</span>
+          </div>
+        </div>
+      </section>
 
       {/* Intro Section with interactive Revenue Calculator */}
       <section id="about" className="relative py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
@@ -1686,6 +1711,41 @@ export default function Home() {
                 </button>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="relative py-16 md:py-24 bg-[#F4F7F6]/30 overflow-hidden border-t border-border-subtle">
+        <div className="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+          <div className="bg-white border border-border-subtle rounded-3xl p-8 md:p-12 shadow-md flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            
+            {/* Founder Avatar Placeholder Card */}
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-[#0F2E3A] to-[#0B222C] flex-shrink-0 flex flex-col items-center justify-center border border-white/10 relative shadow-inner overflow-hidden group">
+              <span className="font-display text-4xl font-extrabold text-emerald-growth tracking-tighter">SMS</span>
+              <span className="text-[10px] uppercase font-bold text-white/50 tracking-widest mt-1">FLOW</span>
+              <div className="absolute inset-0 bg-emerald-growth/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+            </div>
+
+            {/* Founder Text Content */}
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-deep-navy mb-1">{t.founder.hello}</h3>
+              <p className="text-emerald-growth font-bold text-sm uppercase tracking-wide mb-4">{t.founder.intro}</p>
+              
+              <p className="text-body-md text-on-surface-variant leading-relaxed mb-6 font-medium">
+                {t.founder.text}
+              </p>
+
+              <a
+                href="#audit"
+                className="inline-flex items-center gap-3 bg-emerald-growth hover:bg-emerald-growth/90 text-deep-navy font-bold py-3 px-6 rounded-full text-xs transition-all shadow-sm group"
+              >
+                <span>{t.founder.cta}</span>
+                <svg className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
