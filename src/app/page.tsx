@@ -1709,41 +1709,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section className="relative py-16 md:py-24 bg-[#F4F7F6]/30 overflow-hidden border-t border-border-subtle">
-        <div className="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-          <div className="bg-white border border-border-subtle rounded-3xl p-8 md:p-12 shadow-md flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            
-            {/* Founder Avatar Placeholder Card */}
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-br from-[#0F2E3A] to-[#0B222C] flex-shrink-0 flex flex-col items-center justify-center border border-white/10 relative shadow-inner overflow-hidden group">
-              <span className="font-display text-4xl font-extrabold text-emerald-growth tracking-tighter">SMS</span>
-              <span className="text-[10px] uppercase font-bold text-white/50 tracking-widest mt-1">FLOW</span>
-              <div className="absolute inset-0 bg-emerald-growth/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-            </div>
-
-            {/* Founder Text Content */}
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-deep-navy mb-1">{t.founder.hello}</h3>
-              <p className="text-emerald-growth font-bold text-sm uppercase tracking-wide mb-4">{t.founder.intro}</p>
-              
-              <p className="text-body-md text-on-surface-variant leading-relaxed mb-6 font-medium">
-                {t.founder.text}
-              </p>
-
-              <a
-                href="#audit"
-                className="inline-flex items-center gap-3 bg-emerald-growth hover:bg-emerald-growth/90 text-deep-navy font-bold py-3 px-6 rounded-full text-xs transition-all shadow-sm group"
-              >
-                <span>{t.founder.cta}</span>
-                <svg className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section id="faq" className="relative py-20 md:py-28 bg-white overflow-hidden">
         {/* Animated Background Blobs */}
@@ -1831,19 +1796,16 @@ export default function Home() {
                 SMSflow
               </span>
             </a>
+            <p className="text-xs text-on-surface-variant/80 max-w-[240px] mt-1 text-center md:text-left font-medium leading-relaxed">
+              Email marketing agency for e-commerce stores and service businesses.
+            </p>
             
-            <div className="flex flex-col items-center md:items-start gap-2 text-xs text-on-surface-variant font-medium">
+            <div className="flex flex-col items-center md:items-start gap-2 text-xs text-on-surface-variant font-medium mt-2">
               <a href="mailto:info@smsflow.eu" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5 text-on-surface-variant/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 info@smsflow.eu
-              </a>
-              <a href="tel:+37067911191" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
-                <svg className="w-3.5 h-3.5 text-on-surface-variant/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                +370 679 11191
               </a>
             </div>
           </div>
