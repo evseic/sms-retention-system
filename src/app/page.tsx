@@ -872,7 +872,7 @@ const RESULTS_SLIDES = [
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [quizStep, setQuizStep] = useState<"intro" | "questions" | "form" | "success" | "disqualified">("intro");
-  const [language, setLanguage] = useState("LT");
+  const [language, setLanguage] = useState("EN");
   const [activeSection, setActiveSection] = useState("about");
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswers>({});
