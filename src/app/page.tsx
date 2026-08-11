@@ -296,7 +296,7 @@ const formatNumber = (num: number) => {
 const TRANSLATIONS = {
   LT: {
     nav: {
-      howItWorks: "Sistemos galimybės",
+      howItWorks: "Kaip veikia",
       calculator: "Skaičiuoklė",
       faq: "D.U.K.",
       results: "Rezultatai",
@@ -336,8 +336,9 @@ const TRANSLATIONS = {
       cta: "Rezervuoti konsultaciją",
     },
     pillars: {
-      tag: "Sistemos galimybės",
-      title: "Mūsų 6 klientų išlaikymo pilonai",
+      tag: "Kaip veikia el. pašto rinkodara",
+      title: "Uždirbkite iš to, ką jau turite.",
+      desc: "Vietoj to, kad kasdien leistumėte biudžetą brangiai reklamai („Facebook“ ar „Google“), pritraukdami visiškai naujus ir šaltus lankytojus, mes padedame uždirbti iš jūsų turimos duomenų bazės.",
       list: [
         {
           title: "Kontaktų surinkimas",
@@ -471,7 +472,7 @@ const TRANSLATIONS = {
   },
   EN: {
     nav: {
-      howItWorks: "Capabilities",
+      howItWorks: "How it works",
       calculator: "Calculator",
       faq: "FAQ",
       results: "Results",
@@ -511,8 +512,9 @@ const TRANSLATIONS = {
       cta: "Book a consultation",
     },
     pillars: {
-      tag: "System capabilities",
-      title: "Our 6 pillars of customer retention",
+      tag: "How Email Marketing Works",
+      title: "Email earns from what you already have.",
+      desc: "Instead of paying for new traffic over and over, email helps you earn more from the people who have already visited your store.",
       list: [
         {
           title: "Contact collection",
@@ -1107,18 +1109,7 @@ export default function Home() {
         </div>{/* end hero grid */}
       </section>{/* end hero section */}
 
-      {/* Brand Logos Slider */}
-      <section className="border-y border-border-subtle py-8 bg-[#F4F7F6]/40 backdrop-blur-sm overflow-hidden relative z-10">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 md:justify-between opacity-35 grayscale contrast-120 hover:opacity-60 transition-opacity duration-300">
-            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">KAVOS KLUBAS</span>
-            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">GROŽIO OAZĖ</span>
-            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">MADOS KAMPELIS</span>
-            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">KNYGŲ NAMAI</span>
-            <span className="font-display text-base md:text-lg font-black tracking-[0.15em] text-deep-navy">GĖLIŲ BUTIKAS</span>
-          </div>
-        </div>
-      </section>
+
 
       {/* Pillars Section - Redesigned as a Light Bento Grid */}
       <section id="pillars" className="relative py-20 md:py-28 bg-[#F4F7F6] text-on-surface overflow-hidden">
@@ -1128,13 +1119,16 @@ export default function Home() {
 
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
           <div className="max-w-3xl mb-16">
-            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest block mb-2">
+            <span className="text-emerald-growth font-bold text-xs uppercase tracking-widest flex items-center gap-2 mb-4">
+              <span className="w-6 h-px bg-emerald-growth"></span>
               {t.pillars.tag}
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-deep-navy mb-4">
+            <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-deep-navy leading-tight mb-6">
               {t.pillars.title}
             </h2>
-            <div className="h-1 w-12 bg-emerald-growth"></div>
+            <p className="text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
+              {t.pillars.desc}
+            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
