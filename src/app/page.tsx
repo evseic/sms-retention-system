@@ -679,7 +679,7 @@ export default function Home() {
   };
 
   const nextWorkflowStep = () => {
-    if (activeWorkflowStepIdx < workflowStepsEN.length - 1) {
+    if (activeWorkflowStepIdx < workflowSteps.length - 1) {
       setActiveWorkflowStepIdx(activeWorkflowStepIdx + 1);
     }
   };
