@@ -323,7 +323,7 @@ const TRANSLATIONS = {
       trust: "10+ el. parduotuvių pasitiki mumis",
     },
     dashboard: {
-      title: "SMSflow · automatizacijos",
+      title: "EmailFlow · automatizacijos",
       live: "GYVAI",
       earnedToday: "EL. PAŠTAS ŠIANDIEN UŽDIRBO",
       simulation: "Taip atrodo jūsų parduotuvės savaitė su el. pašto komunikacija – simuliacija pagal realius srautus"
@@ -397,7 +397,7 @@ const TRANSLATIONS = {
       italic: "jau šį mėnesį.",
       desc: "Vienas mėnesinis paketas, kuris padengia el. pašto kanalą — nuo strategijos iki kasdieninės priežiūros.",
       cardLeft: {
-        tag: "SMSFLOW · PAKETAS",
+        tag: "EMAILFLOW · PAKETAS",
         title: "+20% pajamų per 60 dienų.",
         desc: "Vienas mokestis. Pilna sistema. Augimas, kurio nereikia Jums prižiūrėti."
       },
@@ -412,7 +412,7 @@ const TRANSLATIONS = {
         avgResultValue: "+20%",
         avgResultSuffix: "pajamų",
         cta: "Gauti nemokamą auditą",
-        trust: "10+ el. parduotuvių pasitiki smsflow.lt",
+        trust: "10+ el. parduotuvių pasitiki emailflow.lt",
         checklist: [
           "Pilnai automatizuota el. pašto sistema",
           "4-6 tikslinės el. pašto kampanijos per mėnesį",
@@ -470,7 +470,7 @@ const TRANSLATIONS = {
       btn: "Registruotis"
     },
     footer: {
-      rights: "© 2026 SMSflow. Visos teisės saugomos."
+      rights: "© 2026 EmailFlow. Visos teisės saugomos."
     }
   },
   EN: {
@@ -494,7 +494,7 @@ const TRANSLATIONS = {
       trust: "10+ e-shops trust us",
     },
     dashboard: {
-      title: "SMSflow · automations",
+      title: "EmailFlow · automations",
       live: "LIVE",
       earnedToday: "EMAIL EARNED TODAY",
       simulation: "This is what your store's week looks like with email communication - simulation based on real flows"
@@ -568,7 +568,7 @@ const TRANSLATIONS = {
       italic: "this month.",
       desc: "One monthly package that covers the email channel — from strategy to daily maintenance.",
       cardLeft: {
-        tag: "SMSFLOW · PACKAGE",
+        tag: "EMAILFLOW · PACKAGE",
         title: "+20% revenue in 60 days.",
         desc: "One fee. Full system. Growth that you don't need to manage."
       },
@@ -583,7 +583,7 @@ const TRANSLATIONS = {
         avgResultValue: "+20%",
         avgResultSuffix: "revenue",
         cta: "Get free audit",
-        trust: "10+ e-shops trust smsflow.eu",
+        trust: "10+ e-shops trust emailflow.eu",
         checklist: [
           "Fully automated email system",
           "4-6 targeted email campaigns per month",
@@ -641,7 +641,7 @@ const TRANSLATIONS = {
       btn: "Register"
     },
     footer: {
-      rights: "© 2026 SMSflow. All rights reserved."
+      rights: "© 2026 EmailFlow. All rights reserved."
     }
   }
 };
@@ -896,10 +896,11 @@ export default function Home() {
       >
         <div className="max-w-container-max mx-auto h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center">
           <a href="#" className="flex items-center gap-1.5 hover:opacity-85 transition-opacity">
-            <span className="text-xl sm:text-2xl font-sans font-bold text-[#7c8fa6]">e</span>
-            <span className="text-xl sm:text-2xl font-sans font-extrabold text-deep-navy tracking-tight">
-              {language === "LT" ? "Laiškai" : "Emails"}
-            </span>
+            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-growth shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" />
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+            </svg>
+            <span className="text-xl sm:text-2xl font-sans font-extrabold text-deep-navy tracking-tight">EmailFlow</span>
           </a>
 
           <div className="hidden lg:flex items-center gap-7">
@@ -1704,7 +1705,7 @@ export default function Home() {
                 {/* Calendly Inline Widget */}
                 <div className="w-full rounded-xl overflow-hidden bg-white mb-6" style={{ height: "600px" }}>
                   <iframe 
-                    src="https://calendly.com/smsflow/smsflow" 
+                    src="https://calendly.com/emailflow/emailflow" 
                     width="100%" 
                     height="100%" 
                     frameBorder="0"
@@ -1800,24 +1801,21 @@ export default function Home() {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
             <a href="#" className="flex items-center gap-2 hover:opacity-85 transition-opacity">
-              <svg className="w-5 h-5 sm:w-6 h-6 md:w-8 md:h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
-                <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
-                      stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
-                <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
-                  SMS
-                </text>
+              <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-deep-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" />
+                <rect x="3" y="5" width="18" height="14" rx="2" />
               </svg>
               <span className="text-sm sm:text-base md:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
-                SMSflow
+                EmailFlow
               </span>
             </a>
             
             <div className="flex flex-col items-center md:items-start gap-2 text-xs text-on-surface-variant font-medium">
-              <a href="mailto:info@smsflow.eu" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
+              <a href="mailto:info@emailflow.eu" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5 text-on-surface-variant/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                info@smsflow.eu
+                info@emailflow.eu
               </a>
               <a href="tel:+37067911191" className="hover:text-emerald-growth transition-colors flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5 text-on-surface-variant/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">

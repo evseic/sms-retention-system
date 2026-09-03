@@ -1,2 +1,2 @@
-# sms-retention-system
-SMS and WhatsApp customer retention landing page and admin panel dashboard.
+# emailflow-retention-system
+Email customer retention landing page and admin panel dashboard.
