@@ -176,7 +176,7 @@ const formatNumber = (num: number) => {
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [quizStep, setQuizStep] = useState<"intro" | "questions" | "form" | "success" | "disqualified">("intro");
-  const [language, setLanguage] = useState("LT");
+
   const [activeSection, setActiveSection] = useState("about");
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswers>({});
@@ -378,11 +378,8 @@ export default function Home() {
       >
         <div className="max-w-container-max mx-auto h-20 px-margin-mobile md:px-margin-desktop flex justify-between items-center">
           <a href="#" className="flex items-center gap-1.5 hover:opacity-85 transition-opacity">
-            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-growth shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" />
-              <rect x="3" y="5" width="18" height="14" rx="2" />
-            </svg>
-            <span className="text-xl sm:text-2xl font-sans font-extrabold text-deep-navy tracking-tight">EmailFlow</span>
+            <span className="text-xl sm:text-2xl font-sans font-bold text-[#7c8fa6]">e</span>
+            <span className="text-xl sm:text-2xl font-sans font-extrabold text-deep-navy tracking-tight">Laiškai</span>
           </a>
 
           <div className="hidden lg:flex items-center gap-7">
@@ -455,25 +452,6 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-4">
-            {/* LT/EN Language Switcher Toggle */}
-            <div className="bg-[#EAF1EE] border border-border-subtle rounded-full p-1 flex items-center gap-0.5">
-              <button 
-                onClick={() => setLanguage("LT")}
-                className={`text-[10px] font-bold px-2.5 py-1 rounded-full transition-all ${
-                  language === "LT" ? "bg-[#0E3E34] text-white" : "text-on-surface-variant/70 hover:text-deep-navy"
-                }`}
-              >
-                LT
-              </button>
-              <button 
-                onClick={() => setLanguage("EN")}
-                className={`text-[10px] font-bold px-2.5 py-1 rounded-full transition-all ${
-                  language === "EN" ? "bg-[#0E3E34] text-white" : "text-on-surface-variant/70 hover:text-deep-navy"
-                }`}
-              >
-                EN
-              </button>
-            </div>
 
             <a
               href="#audit"
@@ -570,7 +548,7 @@ export default function Home() {
                 {dashboardStates[activeDashboardStateIdx].items.map((item) => (
                   <div
                     key={item.id}
-                    className="flex items-center justify-between p-3.5 bg-surface border border-border-subtle rounded-2xl transition-all duration-500 hover:border-emerald-growth/30 hover:shadow-sm animate-sms-pop"
+                    className="flex items-center justify-between p-3.5 bg-surface border border-border-subtle rounded-2xl transition-all duration-500 hover:border-emerald-growth/30 hover:shadow-sm animate-email-pop"
                   >
                     <div className="flex items-center gap-3.5 min-w-0">
                       <div className="w-9 h-9 rounded-xl bg-secondary-container/30 border border-secondary-container flex items-center justify-center shrink-0">
@@ -603,12 +581,7 @@ export default function Home() {
 
             </div>
             {/* Decorative stack shadow backing */}
-            <div className="absolute -top-4 -right-4 w-full h-full bg-[#1A2332] rounded-2xl -z-10"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro Section with interactive Revenue Calculator */}
+            <div className="absolute -top-4 -right-4 w-full h-full bg-[      {/* Intro Section with interactive Revenue Calculator */}
       <section id="about" className="relative py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-emerald-growth/5 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
 
@@ -773,8 +746,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
       {/* Interactive Workflow Section */}
       <section id="workflow" className="py-20 md:py-28 bg-[#F3F8F6] text-on-surface overflow-hidden relative">
         {/* Animated Background Blobs */}
@@ -1314,9 +1285,12 @@ export default function Home() {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           <div className="flex flex-col items-center md:items-start gap-4">
             <a href="#" className="flex items-center gap-2 hover:opacity-85 transition-opacity">
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-deep-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" />
-                <rect x="3" y="5" width="18" height="14" rx="2" />
+              <svg className="w-5 h-5 sm:w-6 h-6 md:w-8 md:h-8 text-deep-navy shrink-0" viewBox="0 0 100 100" fill="none">
+                <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
+                      stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
+                <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="20" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
+                  Email
+                </text>
               </svg>
               <span className="text-sm sm:text-base md:text-lg font-display font-bold text-deep-navy tracking-tight shrink-0">
                 EmailFlow
