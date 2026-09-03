@@ -35,7 +35,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     // Check if token is already saved in localStorage
-    const savedToken = localStorage.getItem("smsflow_admin_token");
+    const savedToken = localStorage.getItem("emailflow_admin_token");
     if (savedToken) {
       setToken(savedToken);
       setIsAuthenticated(true);
@@ -59,7 +59,7 @@ export default function AdminPage() {
       console.error(err);
       setAuthError(err.message || "Serverio klaida.");
       // Clear invalid token
-      localStorage.removeItem("smsflow_admin_token");
+      localStorage.removeItem("emailflow_admin_token");
       setIsAuthenticated(false);
     } finally {
       setIsLoading(false);
@@ -75,14 +75,14 @@ export default function AdminPage() {
     }
 
     // Attempt auth with user input token
-    localStorage.setItem("smsflow_admin_token", passwordInput);
+    localStorage.setItem("emailflow_admin_token", passwordInput);
     setToken(passwordInput);
     setIsAuthenticated(true);
     fetchLeads(passwordInput);
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("smsflow_admin_token");
+    localStorage.removeItem("emailflow_admin_token");
     setToken("");
     setIsAuthenticated(false);
     setPasswordInput("");
@@ -114,7 +114,7 @@ export default function AdminPage() {
             <svg className="w-10 h-10 mx-auto text-emerald-growth mb-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
             </svg>
-            <h1 className="font-display text-2xl font-bold tracking-tight text-white">SMSflow Admin</h1>
+            <h1 className="font-display text-2xl font-bold tracking-tight text-white">EmailFlow Admin</h1>
             <p className="text-xs text-white/50 mt-1">Prisijunkite prie administravimo skydelio</p>
           </div>
 
@@ -154,15 +154,12 @@ export default function AdminPage() {
       <header className="border-b border-white/5 bg-[#121824]/60 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto h-16 px-4 md:px-8 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 sm:w-6 h-6 text-emerald-growth" viewBox="0 0 100 100" fill="none">
-              <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
-                    stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
-              <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
-                SMS
-              </text>
+            <svg className="w-5 h-5 sm:w-6 h-6 text-emerald-growth" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" />
+              <rect x="3" y="5" width="18" height="14" rx="2" />
             </svg>
             <span className="font-display font-bold text-sm sm:text-base text-white tracking-tight">
-              SMSflow Admin
+              EmailFlow Admin
             </span>
             <span className="bg-emerald-growth/10 text-emerald-growth text-[9px] font-bold px-2 py-0.5 rounded-full">
               LIVE
