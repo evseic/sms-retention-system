@@ -16,8 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SMSflow | Pašto dėžutė,kuri uždirba",
-  description: "El. pašto klientų išlaikymo sistemos",
+  title: "EmailFlow | El. pašto klientų išlaikymo sistemos",
+  description: "The inbox that earns.",
   keywords: ["klientų išlaikymas", "el. pašto rinkodara", "marketingo automatizavimas", "naujienlaiškiai", "vietinis verslas"],
 };
 
@@ -27,14 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
+    <html lang="lt" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
       <body className="font-sans bg-surface text-on-surface antialiased">
         {children}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.omnisend = window.omnisend || [];
-              window.omnisend.push(["brandID", "6a7b0859a589dfe14c45313b"]);
+              window.omnisend.push(["brandID", "6a32ec1f813d927fc4a68725"]);
               window.omnisend.push(["track", "$pageViewed"]);
               !function(){var e=document.createElement("script");
               e.type="text/javascript",e.async=!0,
