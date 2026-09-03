@@ -57,7 +57,7 @@
 }
 
 /* iOS Message bubble pop animation */
-@keyframes sms-pop {
+@keyframes email-pop {
   0% {
     opacity: 0;
     transform: translateY(12px) scale(0.92);
@@ -68,6 +68,6 @@
   }
 }
 
-.animate-sms-pop {
-  animation: sms-pop 0.32s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+.animate-email-pop {
+  animation: email-pop 0.32s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
