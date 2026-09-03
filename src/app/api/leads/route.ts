@@ -36,9 +36,9 @@ export async function POST(request: Request) {
           .join("");
 
         await resend.emails.send({
-          from: "SMSflow Leads <onboarding@resend.dev>",
-          to: "info@smsflow.eu",
-          subject: `⚡️ Nauja užklausa iš SMSflow: ${website}`,
+          from: "EmailFlow Leads <onboarding@resend.dev>",
+          to: "info@emailflow.eu",
+          subject: `⚡️ Nauja užklausa iš EmailFlow: ${website}`,
           html: `
             <h2>Gauta nauja kvalifikacinės viktorinos užklausa</h2>
             <p><strong>Vardas:</strong> ${name}</p>
@@ -57,7 +57,7 @@ export async function POST(request: Request) {
       // 2. Send follow-up to client
       try {
         await resend.emails.send({
-          from: "SMSflow <onboarding@resend.dev>",
+          from: "EmailFlow <onboarding@resend.dev>",
           to: email,
           subject: "Sužinokite, kiek papildomų pajamų gali generuoti jūsų el. pašto kanalas",
           html: `
@@ -66,11 +66,11 @@ export async function POST(request: Request) {
                <p>Per 15–20 minučių parodysime, kur šiuo metu prarandate potencialius pardavimus ir kokios galimybės gali atnešti didžiausią grąžą jūsų el. parduotuvei.</p>
                <p style="font-weight: bold; margin-top: 24px;">📅 Rezervuokite strateginį pokalbį dabar:</p>
                <p style="margin: 16px 0;">
-                 <a href="https://calendly.com/smsflow/smsflow" style="display: inline-block; background-color: #10B981; color: #0B0F14; font-weight: bold; padding: 12px 28px; border-radius: 9999px; text-decoration: none;">Rezervuoti konsultaciją</a>
+                 <a href="https://calendly.com/emailflow/emailflow" style="display: inline-block; background-color: #10B981; color: #0B0F14; font-weight: bold; padding: 12px 28px; border-radius: 9999px; text-decoration: none;">Rezervuoti konsultaciją</a>
                </p>
                <p style="font-size: 14px; color: #64748B;">Vietų skaičius ribotas, todėl rekomenduojame rezervuoti laiką kuo anksčiau.</p>
                <hr style="border: 0; border-top: 1px solid #E2E8F0; margin: 30px 0;" />
-               <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>SMSflow komanda</strong><br />www.smsflow.lt</p>
+               <p style="font-size: 12px; color: #64748B;">Pagarbiai,<br /><strong>EmailFlow komanda</strong><br />www.emailflow.lt</p>
             </div>
           `,
         });
@@ -89,7 +89,7 @@ export async function POST(request: Request) {
           .map(([key, val]) => `*${key}:* ${val}`)
           .join("\n");
 
-        const text = `⚡️ *Nauja užklausa iš SMSflow!*
+        const text = `⚡️ *Nauja užklausa iš EmailFlow!*
 
 👤 *Vardas:* ${name}
 📧 *El. paštas:* ${email}
