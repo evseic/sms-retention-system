@@ -1,4 +1,4 @@
--- SQL Schema to initialize the leads table for the EmailFlow website survey.
+-- SQL Schema to initialize the leads table for the SMS Retention website survey.
 -- Run this in your Supabase project's SQL Editor (https://supabase.com dashboard).
 
 -- 1. Create the leads table
