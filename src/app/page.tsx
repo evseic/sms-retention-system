@@ -580,8 +580,15 @@ export default function Home() {
               </div>
 
             </div>
+            
             {/* Decorative stack shadow backing */}
-            <div className="absolute -top-4 -right-4 w-full h-full bg-[      {/* Intro Section with interactive Revenue Calculator */}
+            <div className="absolute -top-4 -right-4 w-full h-full bg-surface-container-low border border-border-subtle rounded-3xl -z-10 rotate-1"></div>
+            <div className="absolute -bottom-4 -left-4 w-full h-full bg-[#10B981]/5 border border-[#10B981]/20 rounded-3xl -z-20 -rotate-2"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro Section with interactive Revenue Calculator */}
       <section id="about" className="relative py-20 md:py-28 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute top-1/2 right-0 w-[300px] h-[300px] bg-emerald-growth/5 rounded-full blur-[100px] animate-float-slow pointer-events-none z-0"></div>
 
@@ -746,6 +753,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
       {/* Interactive Workflow Section */}
       <section id="workflow" className="py-20 md:py-28 bg-[#F3F8F6] text-on-surface overflow-hidden relative">
         {/* Animated Background Blobs */}
