@@ -154,9 +154,12 @@ export default function AdminPage() {
       <header className="border-b border-white/5 bg-[#121824]/60 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto h-16 px-4 md:px-8 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <svg className="w-5 h-5 sm:w-6 h-6 text-emerald-growth" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" />
-              <rect x="3" y="5" width="18" height="14" rx="2" />
+            <svg className="w-5 h-5 sm:w-6 h-6 text-emerald-growth" viewBox="0 0 100 100" fill="none">
+              <path d="M15 15 h70 a10 10 0 0 1 10 10 v45 a10 10 0 0 1 -10 10 h-45 l-15 15 v-15 h-10 a10 10 0 0 1 -10 -10 v-45 a10 10 0 0 1 10 -10 z" 
+                    stroke="currentColor" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round"/>
+              <text x="50" y="52" fontFamily="sans-serif" fontWeight="900" fontSize="20" fill="currentColor" textAnchor="middle" dominantBaseline="middle">
+                Email
+              </text>
             </svg>
             <span className="font-display font-bold text-sm sm:text-base text-white tracking-tight">
               EmailFlow Admin
